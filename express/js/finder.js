@@ -12,7 +12,8 @@ const test = document.getElementById("test");
             test.innerHTML = err;
         }
     }
-    function showPosition(position) {
+    
+function showPosition(position) {
   test.innerHTML = "Latitude: " + position.coords.latitude + 
   "<br>Longitude: " + position.coords.longitude;
 }
