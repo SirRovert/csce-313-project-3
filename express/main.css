@@ -5,3 +5,33 @@
     background-color: black;
     
 }
+
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.w3-theme-maroon {color:#fff !important; background-color:#800000 !important}
+.w3-theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
+.w3-theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
+.split {
+    height: 100%;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    top:50;
+    overflow-x: hidden;
+    padding-top:100px;
+}
+.left {
+    float: left;
+    background-color: #ffb3b3;
+}
+.right {
+    float: right;
+    background-color: #4d0000;
+}
+.centered {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}

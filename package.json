@@ -6,7 +6,8 @@
         "start": "node server.js"
     },
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "yelp-fusion": "^3.0.0"
     },
     "keywords": [
         "node",

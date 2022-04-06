@@ -8,17 +8,18 @@ function weatherAt(){
     longAndLat();
 }
 
-    function longAndLat() { //get the lat and long of the user's position
-        try {
-            navigator.geolocation.getCurrentPosition(longAndLatPosition);
+function longAndLat() { //get the lat and long of the user's position
+    try {
+        navigator.geolocation.getCurrentPosition(longAndLatPosition);
 
-        }
-        catch {
-            test1.innerHTML = err;
-        }
     }
-    function longAndLatPosition(position) {
-        //receives a large string of the current weather, temperature is in kelvin.
+    catch {
+        test1.innerHTML = err;
+    }
+}
+
+function longAndLatPosition(position) {
+    //receives a large string of the current weather, temperature is in kelvin.
     const latitude = position.coords.latitude; 
     const longitude = position.coords.longitude;
     const api_key = "a94c87c400672a317497ef1c938db6b4";
