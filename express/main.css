@@ -11,6 +11,8 @@ body {font-family: "Lato", sans-serif}
 .w3-theme-maroon {color:#fff !important; background-color:#800000 !important}
 .w3-theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
 .w3-theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
+.w3-theme-gray {color:#000 !important; background-color:gray !important}
+
 .split {
     height: 100%;
     width: 50%;
@@ -32,9 +34,12 @@ body {font-family: "Lato", sans-serif}
     left:0;
     border-color:gray;
     border-style:solid;
-    border-width:6px;
-    border-left-width:4px;
+    border-width:5px;
+    border-left-width:5px;
     border-right-width:0px;
+    border-radius:25px;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
 }
 .split_right {
     height: 100%;
@@ -47,9 +52,12 @@ body {font-family: "Lato", sans-serif}
     right:0;
     border-color:gray;
     border-style:solid;
-    border-width:6px;
+    border-width:5px;
     border-left-width:0px;
-    border-right-width:4px;
+    border-right-width:5px;
+    border-radius:25px;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
 }
 .left {
     left:0;
