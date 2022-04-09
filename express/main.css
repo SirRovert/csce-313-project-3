@@ -11,6 +11,7 @@ body {font-family: "Lato", sans-serif}
 .w3-theme-maroon {color:#fff !important; background-color:#800000 !important}
 .w3-theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
 .w3-theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
+
 .split {
     height: 100%;
     width: 50%;
@@ -20,6 +21,7 @@ body {font-family: "Lato", sans-serif}
     overflow-x: hidden;
     padding-top:100px;
 }
+
 .left {
     float: left;
     background-color: #ffb3b3;
@@ -34,4 +36,10 @@ body {font-family: "Lato", sans-serif}
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.map_ {
+    width: 300px;
+    height: 300px;
+    color: lightblue; 
 }
