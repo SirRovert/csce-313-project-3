@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>map testing</title>
+    <link rel="stylesheet" href="main.css">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
+
+  </head>
+
+  <body>
+
+    <iframe id="static"
+    width="600"
+    height="450"
+    style="border:0"
+    loading="lazy"
+    allowfullscreen
+    referrerpolicy="no-referrer-when-downgrade"
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw
+      &q=Space+Needle,Seattle+WA">
+    </iframe>
+    
+    <iframe id="direction" width="600" height="450" style="border:0" loading="lazy" allowfullscreen
+    src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJEzJREIa_QIYR-GkQRMwI9GE&destination=place_id:ChIJLwPMoJm1RIYRetVp1EtGm10&key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw"></iframe>
+
+
+    <form action="mapUpdate()">
+      <label for="place">Start: </label><br>
+      <input type="text" id="place" name="place"> <br>
+      <label for="dest"> Destination: </label><br>
+      <input type="text" id="dest" name="dest"><br>
+      <input type="submit" value="Submit">
+
+    </form>
+
+	<script src="map.js"></script>
+  </body>
+</html>
