@@ -16,36 +16,48 @@
 </header>
 
 <!-- Body -->
-<body>
+<body class=":w3-container w3-theme-gray">
     <!-- Split Left-->
-    <body class="w3-container w3-theme-maroon">
-      <div class = "split left">
-          <div class = "centered">
+    
+      <div class = "split_left w3-container w3-theme-maroon">
+          <div class = "centered_left">
+            <!-- JavaScrpit Geolocation -->
             <h1> JavaScript Geolocation</h1>
             <p> Click the button to get your coordinates.</p>
             <button onclick="getLocation()"> Try It ! </button>
             <p id ="test"></p>
+
+            <!-- Fuel Estimation-->
+            <h1>Fuel Estimation</h1>
+            <input type="text" placeholder="Distance in Mile" onblur="getDistance()">
+            <input type="text" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()">
+            <button onclick="eastimateCost()"> Estimate! </button>
+            <p id = "fuelCost"></p>
+
           </div>
       </div>
-
+      
+      
       <!-- Split Right -->
-      <div class = "split right">
-        <div class = "centered">
-            <p> Click button to get weather at Washington Monument</p>
+    
+      <div class = "split_right w3-container w3-theme-dark-maroon">
+        <div class = "centered_right">
+
+          <!-- Weather Button -->
+            <p> Click button to get weather at current location.</p>
             <button onclick="weatherAt()"> weather! </button> 
             <p id = "test1"></p>
-        </div>
-    </div>
 
-    <div class="split right">
-        <div class="centered">
+            <!-- Yelp API -->
             <p> here are some texts</p>
             <button onclick="yelpGet()"> find!</button>
             <p id="yelp_text"></p>
         </div>
     </div>
+    
     </body>
 
+<<<<<<< HEAD
     <div class="split left">
         <div class = "centered">
             <h1>Fuel Estimation</h1>
@@ -63,11 +75,13 @@
     </div>
 
     
+=======
+>>>>>>> 99b7816711f0a763240eff5bfb6b28aa936a1345
     <!-- Scrimpt Implementation -->
     <script type="text/javascript" src="js/finder.js"></script>
     <script type="text/javascript" src="js/weather.js"></script>
     <script type="text/javascript" src="js/fuel-price.js"></script>
     <script type="text/javascript" src="js/yelpAPI.js"></script>
-</body>
+
 
 </html>

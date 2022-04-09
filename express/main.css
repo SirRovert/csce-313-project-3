@@ -11,26 +11,68 @@ body {font-family: "Lato", sans-serif}
 .w3-theme-maroon {color:#fff !important; background-color:#800000 !important}
 .w3-theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
 .w3-theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
+<<<<<<< HEAD
+=======
+.w3-theme-gray {color:#000 !important; background-color:gray !important}
+>>>>>>> 99b7816711f0a763240eff5bfb6b28aa936a1345
 
 .split {
     height: 100%;
     width: 50%;
-    position: relative;
+    position: fixed;
     z-index: 1;
-    top:50;
+    top:0;
     overflow-x: hidden;
-    padding-top:100px;
+    padding-top:20px;
+    
+}
+.split_left {
+    height: 100%;
+    width: 35%;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    overflow-x: hidden;
+    padding-top:20px;
+    left:0;
+    border-color:gray;
+    border-style:solid;
+    border-width:5px;
+    border-left-width:5px;
+    border-right-width:0px;
+    border-radius:25px;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
+}
+.split_right {
+    height: 100%;
+    width: 65%;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    overflow-x: hidden;
+    padding-top:20px;
+    right:0;
+    border-color:gray;
+    border-style:solid;
+    border-width:5px;
+    border-left-width:0px;
+    border-right-width:5px;
+    border-radius:25px;
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
 }
 
 .left {
-    float: left;
+    left:0;
     background-color: #ffb3b3;
 }
 .right {
-    float: right;
+    right:0;
     background-color: #4d0000;
 }
 .centered {
+<<<<<<< HEAD
   position:relative;
   top: 50%;
   left: 50%;
@@ -42,4 +84,27 @@ body {font-family: "Lato", sans-serif}
     width: 300px;
     height: 300px;
     color: lightblue; 
+=======
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+.centered_left {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+.centered_right {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+>>>>>>> 99b7816711f0a763240eff5bfb6b28aa936a1345
 }
