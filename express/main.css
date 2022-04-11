@@ -84,6 +84,14 @@ body {font-family: "Lato", sans-serif}
     text-align: center;
     
 }
+.top_left {
+    position:absolute;
+    top: 5%;
+    left: 12%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
 .centered_right {
     position:absolute;
     top: 50%;

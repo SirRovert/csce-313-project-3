@@ -8,6 +8,7 @@
 
 <header>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="dropdownbtn.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -17,16 +18,31 @@
 
 <!-- Body -->
 <body class=":w3-container w3-theme-gray">
-  
+
     <!-- Split Left-->
     
       <div class = "split_left w3-container w3-theme-maroon">
+          <div class ="top_left">
+            <div class="dropdown">
+              <button class="dropbtn">Dropdown</button>
+              <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+              </div>
+            </div>
+          </div>
+
           <div class = "centered_left">
             <!-- JavaScrpit Geolocation -->
+            <!--  
               <h1> JavaScript Geolocation</h1>
               <p> Click the button to get your coordinates.</p>
               <button onclick="getLocation()"> Try It ! </button>
               <p id ="test"></p>
+            -->
+
+            
 
             <!-- Fuel Estimation-->
               <h1>Fuel Estimation</h1>
@@ -50,7 +66,7 @@
             <p id = "test1"></p>
 
           <!-- Yelp API -->
-            <p> here are some texts</p>
+            <p> Yelp Reccomendations </p>
             <button onclick="yelpGet()"> find!</button>
             <p id="yelp_text"></p>
         </div>
