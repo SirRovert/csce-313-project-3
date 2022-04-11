@@ -8,10 +8,10 @@
 
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-.w3-theme-maroon {color:#fff !important; background-color:#800000 !important}
-.w3-theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
-.w3-theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
-.w3-theme-gray {color:#000 !important; background-color:gray !important}
+.theme-maroon {color:#fff !important; background-color:#800000 !important}
+.theme-dark-maroon {color:#fff !important; background-color:#4d0000 !important}
+.theme-light-maroon {color:#000 !important; background-color:#ffb3b3 !important}
+.theme-gray {color:#000 !important; background-color:gray !important}
 
 .split {
     height: 100%;
