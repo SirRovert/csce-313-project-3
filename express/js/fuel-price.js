@@ -25,12 +25,20 @@ function getDistance() {
     return val;
 }
 
+function getMilesPerGallon() {
+    const val = document.querySelector('input').value;
+    console.log(val);
+    return val;
+}
+
+
 function eastimateCost() {
     let dis = getDistance();
     let fp = getGasPrice();
-    
-    const milePerGallon = 25.4;
-    let price = dis/milePerGallon*fp;
+    let mpg = getMilesPerGallon();
+    // const milePerGallon = 25.4;
+    // let price = dis/milePerGallon*fp;
+    let price = dis/mpg*fp;
     price = price.toFixed(2);
     fuelCost.innerHTML = "Estimate Cost: $ " + price;
 } 
