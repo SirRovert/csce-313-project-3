@@ -24,5 +24,11 @@
     color: black;
 }
 
+.api-tab {
+    border: 4px gray solid;
+    background-color: #834343;
+    border-radius: 5px;
+}
+
 .nav-item:hover {background-color: rgb(170, 167, 167); border-radius:5px;}
 

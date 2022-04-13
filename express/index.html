@@ -34,21 +34,23 @@
             </div>
               
             <!-- Fuel Estimation-->
-            <div id="Gas Calculator" class="tab">
+            <div id="Gas Calculator" class="tab api-tab">
+              
               <h1>Fuel Estimation</h1>
               <input type="number" id="Distance" name="Distance" placeholder="Distance in Mile" onblur="getDistance()">
               <input type="number" id="FuelCost" name="FuelCost" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()">
               <input type="number" id="MPG" name="MPG" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()">
               <button onclick="eastimateCost()"> Estimate! </button>
               <p id = "fuelCost"></p>
+           
             </div>
             
-            <div id="API2" class="tab" style="display:none">
+            <div id="API2" class="tab api-tab" style="display:none">
               <h2>API2</h2>
               <p>Insert your API here. </p>
             </div>
             
-            <div id="API3" class="tab" style="display:none">
+            <div id="API3" class="tab api-tab" style="display:none">
               <h2>API3</h2>
               <p>Insert your other API here, check "split left" in index.html for location.</p>
             </div>
@@ -64,7 +66,7 @@
       
     <!-- Split Right -->
     
-      <div class = "split_right theme-dark-maroon">
+      <div class = "container split_right theme-dark-maroon">
         <div class = "centered_right">
 
           <!-- Weather Button -->
