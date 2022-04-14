@@ -27,15 +27,15 @@
     src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJEzJREIa_QIYR-GkQRMwI9GE&destination=place_id:ChIJLwPMoJm1RIYRetVp1EtGm10&key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw"></iframe>
 
 
-    <form action="mapUpdate()">
-      <label for="place">Start: </label><br>
+    <form method="dialog">
+      <label for="place" id="start">Start: </label><br>
       <input type="text" id="place" name="place"> <br>
       <label for="dest"> Destination: </label><br>
       <input type="text" id="dest" name="dest"><br>
-      <input type="submit" value="Submit">
-
+      <input type="submit" value="Submit" onclick="changeName()">
     </form>
 
-	<script src="map.js"></script>
+
+	<script src="js/map.js"></script>
   </body>
 </html>
