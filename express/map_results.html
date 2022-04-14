@@ -5,13 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>map testing</title>
-    <link rel="stylesheet" href="main.css">
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
+
+    <style>
+      #map {
+      height: 100%;
+      }
+
+      html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      }
+    </style>
+    
+    <link rel="stylesheet" href="css/map.css">
+    <script src="js/map.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap">
+    </script>
 
   </head>
 
   <body>
 
+    <div id="map"></div>
+
+    Here are some texts
+  <!--
     <iframe id="static"
     width="600"
     height="450"
@@ -26,6 +46,7 @@
     <iframe id="direction" width="600" height="450" style="border:0" loading="lazy" allowfullscreen
     src="https://www.google.com/maps/embed/v1/directions?origin=place_id:ChIJEzJREIa_QIYR-GkQRMwI9GE&destination=place_id:ChIJLwPMoJm1RIYRetVp1EtGm10&key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw"></iframe>
 
+    <br>
 
     <form method="dialog">
       <label for="place" id="start">Start: </label><br>
@@ -35,7 +56,8 @@
       <input type="submit" value="Submit" onclick="changeName()">
     </form>
 
+    <br>
 
-	<script src="js/map.js"></script>
+    -->
   </body>
 </html>
