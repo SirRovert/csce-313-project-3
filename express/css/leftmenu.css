@@ -1,0 +1,41 @@
+/* Left Menu */
+
+.panel-default {
+    background:scroll;
+    left:0;
+    border-style:solid;
+    border-color:black;
+    border-width:5px;
+    height:100%;
+    width:100%;
+    
+}
+
+.nav-bar {
+    border-radius: 5px;
+    color: black;
+}
+.nav-item {
+    border: 1px gray solid;
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+.nav-padding {
+    padding-bottom: 10px;
+}
+
+.api-tab {
+    padding-top: 5px;
+    border: 2px gray solid;
+    background-color: #793030;
+    border-radius: 2px;
+    min-height: 92.5%;
+    padding-left: 5px;
+    padding-right: 5px;
+        
+}
+
+.nav-item:hover {background-color: rgb(170, 167, 167); border-radius:5px;}
+

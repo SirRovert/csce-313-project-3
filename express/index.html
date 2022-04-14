@@ -5,42 +5,70 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <meta charset="UTF-8">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/dropdownbtn.css">
+  <link rel="stylesheet" href="css/leftmenu.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
 
 <header>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script data-main="js/yelpAPI" src="js/require.js"></script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
+    
 </header>
 
 <!-- Body -->
-<body class=":w3-container w3-theme-gray">
+<body class="theme-gray">
+
     <!-- Split Left-->
     
-      <div class = "split_left w3-container w3-theme-maroon">
-          <div class = "centered_left">
-            <!-- JavaScrpit Geolocation -->
-            <h1> JavaScript Geolocation</h1>
-            <p> Click the button to get your coordinates.</p>
-            <button onclick="getLocation()"> Try It ! </button>
-            <p id ="test"></p>
-
+      <div class = "container split_left theme-maroon">
+            <div class="container-fluid">
+             <div class="nav-bar nav-padding">
+              <button class="nav-item" onclick="openTab('Gas Calculator')">Gas Calculator</button>
+              <button class="nav-item" onclick="openTab('API2')">API2</button>
+              <button class="nav-item" onclick="openTab('API3')">API3</button>
+             </div>
+            </div>
+              
             <!-- Fuel Estimation-->
-            <h1>Fuel Estimation</h1>
-            <input type="text" placeholder="Distance in Mile" onblur="getDistance()">
-            <input type="text" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()">
-            <button onclick="eastimateCost()"> Estimate! </button>
-            <p id = "fuelCost"></p>
+            <div id="Gas Calculator" class="tab api-tab">
+              
+              <h1>Fuel Estimation</h1>
+              <input type="number" id="Distance" name="Distance" style="width:300px" placeholder="Distance in Mile" onblur="getDistance()"><br>
+              <input type="number" id="FuelCost" name="FuelCost" style="width:300px" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
+              <input type="number" id="MPG" name="MPG" style="width:300px" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br>
+              <button onclick="eastimateCost()"> Estimate! </button><br>
+              <p id = "fuelCost"></p>
+           
+            </div>
+            <!-- API2 Implementation Here, replace all instances of "API2" with API name -->
+            <div id="API2" class="tab api-tab" style="display:none">
+              <h2>API2</h2>
+              <p>Insert your API here. </p>
+            </div>
+            
+            <!-- API3 Implementation Here replace all instances of "API3" with API name -->
+            <div id="API3" class="tab api-tab" style="display:none">
+              <h2>API3</h2>
+              <p>Insert your other API here, check "split left" in index.html for location.</p>
+              
+            </div>
 
+          
+
+          <div class = "centered_left">
+            
           </div>
+
       </div>
       
       
-      <!-- Split Right -->
+    <!-- Split Right -->
     
-      <div class = "split_right w3-container w3-theme-dark-maroon">
+      <div class = "container split_right theme-dark-maroon">
         <div class = "centered_right">
 
           <!-- Weather Button -->
@@ -48,8 +76,8 @@
             <button onclick="weatherAt()"> weather! </button> 
             <p id = "test1"></p>
 
-            <!-- Yelp API -->
-            <p> here are some texts</p>
+          <!-- Yelp API -->
+            <p> Yelp Reccomendations </p>
             <button onclick="yelpGet()"> find!</button>
             <p id="yelp_text"></p>
         </div>
@@ -57,28 +85,20 @@
     
 
 
-    <div class="split left">
-        <div class = "centered">
-            <h1>Fuel Estimation</h1>
-            <input type="text" placeholder="Distance in Mile" onblur="getDistance()">
-            <input type="text" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()">
-            <button onclick="eastimateCost()"> Estimate! </button>
-            <p id = "fuelCost"></p>
-        </div>
+    
 
-    </div>
-
-    can you see this content????
-    <div id="map_">
-        Here are some contents
-    </div>
+    
+    
 </body>
     
-    <!-- Scrimpt Implementation -->
+    <!-- Script Implementation -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/finder.js"></script>
     <script type="text/javascript" src="js/weather.js"></script>
     <script type="text/javascript" src="js/fuel-price.js"></script>
     <script type="text/javascript" src="js/yelpAPI.js"></script>
-
+    <script data-main="js/yelpAPI" src="js/require.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
+    <script type="text/javascript" src="js/leftmenu.js"></script>
 
 </html>
