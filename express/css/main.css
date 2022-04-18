@@ -102,6 +102,17 @@ body {
     text-align: center;
 }
 
+.bottom_right {
+    position:absolute;
+    bottom: 0.5%;
+    right: 0.5%;
+}
+
+.button-icon {
+    border-radius: 100px;
+    background-color:#4d0000;
+}
+
 #static {
     margin: 10px;
 }
