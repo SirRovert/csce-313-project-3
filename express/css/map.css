@@ -8,3 +8,12 @@ height: 100%;
 margin: 0;
 padding: 0;
 }
+
+input {
+    padding: 40px;
+    margin: 50px;
+}
+
+p{
+    padding: 20px;
+}

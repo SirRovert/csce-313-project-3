@@ -2,13 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>map testing</title>
 
-    <style>
+    <style type="text/css">
       #map {
-      height: 100%;
+      height: 50%;
       }
 
       html, body {
@@ -16,22 +15,56 @@
       margin: 0;
       padding: 0;
       }
+
     </style>
-    
+
     <link rel="stylesheet" href="css/map.css">
-    <script src="js/map.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap">
     </script>
+    <!-- 
+      <script type="text/javascript">
+      function initialize(lat = 0, long = 0) {
+        var mapOptions = {
+          center: new google.maps.LatLng(lat, long),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
 
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+      }
+    -->
+    </script>
   </head>
 
-  <body>
-
+  <body id="body1">
     <div id="map"></div>
+    <br>
 
-    Here are some texts
-  <!--
+    <input type="text" name="longitudeC" id="latitudeC">
+    <br>
+    <input type="text" name="locationName" id="locationName">
+
+    <button onclick="mapUpdate()">Submit</button>
+
+    <div id="para">
+      <p>
+        Here are some texts that would be changed.
+      </p>
+    </div>
+    
+    <script src="map.js"></script>
+  </body>
+</html>
+
+
+
+
+<!--
     <iframe id="static"
     width="600"
     height="450"
@@ -59,5 +92,3 @@
     <br>
 
     -->
-  </body>
-</html>
