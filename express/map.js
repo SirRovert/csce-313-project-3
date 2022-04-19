@@ -6,7 +6,12 @@ locationButton.addEventListener("click", function() {
       let long = position.coords.longitude;
       console.log(lat.toFixed(2));
       console.log(long.toFixed(2));
-      
+      map = new google.maps.Map(document.getElementById("Home"), {
+        center: { lat: parseInt(lat), lng: parseInt(long) },
+        zoom: 8,
+        mapTypeID: google.maps.MapTypeId.ROADMAP
+      });
+
     });
   });
 
