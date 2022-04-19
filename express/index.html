@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="css/leftmenu.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
 </head>
 
 <header>
@@ -54,16 +55,21 @@
             
             <!-- API3 Implementation Here replace all instances of "API3" with API name -->
             <div id="API3" class="tab api-tab" style="display:none">
-              <h2>API3</h2>
-              <p>Insert your other API here, check "split left" in index.html for location.</p>
-              
+                <h2>Map Direction</h2>
+                <p>Input your destination Below</p>
+                <label for="start" id="label1">Starting </label> <br>
+                <input type="text" id="start" name="start"> <br>
+                <label for="dest" id="label2">Destination</label> <br>
+                <input type="text" id="dest" name="dest"> <br>
+                <button onclick="mapUpdate()">Display</button> <br>
+                <button id="locationButt"> Get location</button> <br>
+                <div id="map"></div>
+                
             </div>
-
-          
-
-          <div class = "centered_left">
             
-          </div>
+            <div class = "centered_left">
+            
+            </div>
 
       </div>
       
@@ -110,5 +116,12 @@
     <script data-main="js/yelpAPI" src="js/require.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
     <script type="text/javascript" src="js/leftmenu.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script src="map.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap">
+    </script>
 
 </html>

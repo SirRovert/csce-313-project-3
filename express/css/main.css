@@ -116,3 +116,13 @@ body {
 #static {
     margin: 10px;
 }
+
+#map {
+    height: 300px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}

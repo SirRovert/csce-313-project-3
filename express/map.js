@@ -1,8 +1,20 @@
 
+const locationButton = document.getElementById("locationButt");
+locationButton.addEventListener("click", function() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      let lat = position.coords.latitude;
+      let long = position.coords.longitude;
+      console.log(lat.toFixed(2));
+      console.log(long.toFixed(2));
+      
+    });
+  });
+
 function mapUpdate(){
     
-    var input = document.getElementById("locationName").value;
-    Longitude = input;
+    var startVal = document.getElementById("start").value;
+    var destVal = document.getElementById("dest").value;
+
 
     //removes map div element
     const removeElem = document.getElementById("map");
@@ -25,11 +37,12 @@ function mapUpdate(){
     const bodyDiv = document.getElementsByTagName("body");
     const mainBody = document.getElementById("body1");
 
-    mainBody.appendChild(mapDiv);
+    const API3 = document.getElementById("API3");
+    API3.appendChild(mapDiv);
     //paraDiv.appendChild(mapDiv);
     //paraDiv.appendChild(mapDiv);
     
-    initMap(48.8566, 2.3522);
+    initMap(parseInt(startVal), parseInt(destVal));
 
 }
 
