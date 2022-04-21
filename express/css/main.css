@@ -130,3 +130,7 @@ html, body {
 #Home {
     height: 100%;
 }
+
+#Distance {
+    display: none;
+}
