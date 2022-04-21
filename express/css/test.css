@@ -13,10 +13,17 @@
 }
 
 .panel-medium {
-
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 100%;
+    height:8in;
 }
 
 .panel-large {
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 100%;
+    height:10in;
 
 }
 
