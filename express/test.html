@@ -11,23 +11,27 @@
 
         <!-- PANEL 1 -->
         <div class="panel-body">A Basic Panel
-
-            <div id="Gas Calculator" class="tab api-tab">
-              
-                <h1>Fuel Estimation</h1>
-                <input type="number" id="Distance" name="Distance" style="width:95%" placeholder="Distance in Mile" onblur="getDistance()"><br>
-                <input type="number" id="FuelCost" name="FuelCost" style="width:95%" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
-                <input type="number" id="MPG" name="MPG" style="width:95%" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br>
-                <button onclick="eastimateCost()"> Estimate! </button><br>
-                <p id = "fuelCost"></p>
-             
-              </div>
+            <p> </p>
+            <button onclick="TestsFunction()" Tests> Display Panel 2 </button>
+            
+           
             
         </div>
     </div>
     <!-- PANEL 2 -->
-    <div class="panel panel-2 panel-small">
+    <div id="TestsDiv" class="panel panel-2 panel-small" style="display:none">
         <div class="panel-body">The second basic panel, small sized.
+
+            <div id="Gas Calculator" class="tab api-tab">
+              
+                <h1>Fuel Estimation</h1>
+                <input type="number" id="Distance" name="Distance" style="width:40%" placeholder="Distance in Mile" onblur="getDistance()"><br>
+                <input type="number" id="FuelCost" name="FuelCost" style="width:40%" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
+                <input type="number" id="MPG" name="MPG" style="width:40%" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br>
+                <button onclick="eastimateCost()"> Estimate! </button><br>
+                <p id = "fuelCost"></p>
+             
+              </div>
 
         </div>
     </div>
@@ -69,6 +73,8 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?sensor=false">
     </script>
+        <script type="text/javascript" src="js/test.js"></script>
+
     <script src="map.js"></script>
     <script async
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap">
