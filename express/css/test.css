@@ -1,7 +1,15 @@
 .container-black {
-    background-color:purple;
+    background-color:#3A506B;
     padding-left: 0;
     padding-right:0;
+}
+
+
+.slide-wrapper {
+    transition: height 0.7s ease-in-out;
+    height: 0;
+    overflow:hidden;
+    
 }
 
 .panel-small {
@@ -77,3 +85,39 @@
     background-color: gray;
    
 }
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
+    }
+ } 
+
+ .slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    overflow: hidden;
+    background-color: #000; color: #FFF;
+    transition: all 1s;
+  }
+  
+  .slider.close {
+    top: 100%;
+    height: 0;
+  }
+
+  panel.slide-down {
+      height: 200px;
+      overflow:hidden;
+  }
+
+  panel.slide-down p {
+      animation: 5s slide-down;
+      margin-botton: 0%;
+  }
