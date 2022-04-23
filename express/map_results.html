@@ -1,63 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html>
   <head>
-    <meta charset="UTF-8">
+    <title>Displaying Text Directions With setPanel()</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-    <title>map testing</title>
-
-    <style type="text/css">
-      #map {
-      height: 50%;
-      }
-
-      html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      }
-
-    </style>
-
-    <link rel="stylesheet" href="css/map.css">
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?sensor=false">
-    </script>
-
-    <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap">
-    </script>
-    <!-- 
-      <script type="text/javascript">
-      function initialize(lat = 0, long = 0) {
-        var mapOptions = {
-          center: new google.maps.LatLng(lat, long),
-          zoom: 8,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-        };
-
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-        }
-      </script>
-    -->
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+    <script src="js/map2.js"></script>
   </head>
+  <body>
+    <div id="floating-panel">
+      <strong>Start:</strong>
+      <select id="start">
+        <option value="college station, tx">College Station</option>
+        <option value="austin, tx"> austin</option>
+        
+      </select>
+      <br />
+      <strong>End:</strong>
+      <select id="end">
+        <option value="chicago, il">Chicago</option>
 
-  <body id="body1">
-    <div id="map"></div>
-    <br>
-
-    <input type="text" name="longitudeC" id="latitudeC">
-    <br>
-    <input type="text" name="locationName" id="locationName">
-
-    <button onclick="mapUpdate()">Submit</button>
-
-    <div id="para">
-      <p>
-        Here are some texts that would be changed.
-      </p>
+      </select>
+    </div>
+    <div id="container">
+      <div id="map"></div>
+      <div id="sidebar"></div>
     </div>
     
-    <script src="map.js"></script>
+    <div id="submitContainer">
+      <button onclick="getLocation()"> Get location</button>
+      <label for="">Destination: </label>
+      <input type="text" id="dest" name="dest"> <br />
+      <input type="submit" value="Submit" onclick="changeDestination()">
+    </div>
+
+
+    
+    
+
+    <!-- 
+     The `defer` attribute causes the callback to execute after the full HTML
+     document has been parsed. For non-blocking uses, avoiding race conditions,
+     and consistent behavior across browsers, consider loading using Promises
+     with https://www.npmjs.com/package/@googlemaps/js-api-loader.
+    -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      defer
+    ></script>
   </body>
 </html>
 
