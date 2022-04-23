@@ -52,7 +52,7 @@ function SlideDown8in(wrapper_element) {
 }
 
 function SlideDown10in(wrapper_element) {
-    wrapper_element.style.height =  "8in";
+    wrapper_element.style.height =  "10in";
 }
 
 function SlideUp(element) {
