@@ -44,4 +44,22 @@ function eastimateCost() {
     fuelCost.innerHTML = "Estimate Cost: $ " + price;
 } 
 
+function toggleDist() {
+    var x = document.getElementById("Distance");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+}
+
+function toggleFuel() {
+    var x = document.getElementById("FuelPrice");
+    if (x.style.display === "block") {
+      x.style.display = "none";
+    } else {
+      x.style.display = "block";
+    }
+}
+
 // console.log(eastimateCost());
