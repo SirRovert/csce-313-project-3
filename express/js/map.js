@@ -1,5 +1,5 @@
 
-const locationButton = document.getElementById("locationButt");
+const locationButton = document.getElementById("getLocationButton");
 locationButton.addEventListener("click", function() {
     navigator.geolocation.getCurrentPosition(function(position) {
       let lat = position.coords.latitude;
