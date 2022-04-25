@@ -19,7 +19,7 @@ function getGasPrice() {
 }
 
 function getDistance() {
-    const val = document.getElementById('FuelCost').value;
+    const val = document.getElementById('FuelPrice').value;
     console.log(val);
     return val;
 }
@@ -31,7 +31,8 @@ function getMPG() {
 }
 
 
-function eastimateCost() {
+function estimateCost() {
+    fuelCost.innerHTML = "test1"
     const dis = getDistance();
     const fp = getGasPrice();
     const mpg = getMPG();
@@ -41,6 +42,7 @@ function eastimateCost() {
     
     price = price.toFixed(2);
     // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
+    // var x = document.getElementById("fuelCost");
     fuelCost.innerHTML = "Estimate Cost: $ " + price;
 } 
 
