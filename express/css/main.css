@@ -2,6 +2,7 @@
     background-color:#3A506B;
     padding-left: 0;
     padding-right:0;
+    scroll-behavior:smooth;
 }
 
 
@@ -16,7 +17,7 @@
     padding-left: 1in;
     padding-right: 1in;
     width: 100%;
-    height:6in;
+    min-height:6in;
 
 }
 
@@ -24,54 +25,61 @@
     padding-left: 1in;
     padding-right: 1in;
     width: 100%;
-    height:8in;
+    min-height:8in;
 }
 
 .panel-large {
     padding-left: 1in;
     padding-right: 1in;
     width: 100%;
-    height:10in;
+    min-height:10in;
 
 }
 
 .panel-1 {
-    background: linear-gradient(to bottom, #3A506B 0%, #1c2541 100%);
+    background: linear-gradient(to top, #7e57c2 0%, #6200ea 100%);
     top: 0;
     color: white;
     border-style:solid;
-    border-color:red;
-    border-width:1px;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #00ff00, #fff44f) 1;
     text-align:center;
     padding-top: 2in;
   
 }
 
 .panel-2 {
-    background: linear-gradient(to bottom, #1c2541 0%, gray 100%);
+    background: linear-gradient(315deg, #008080 0%, #87ceeb 100%);
     color: white;
     border-style:solid;
-    border-color:red;
-    border-width:1px;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #ec9f05, #ff4e00) 1;
+
     text-align:center;
     padding-top: 2in;
     
 }
 
 .panel-3 {
-    background: linear-gradient(to bottom, gray 0%, blue 100%);
+    background: linear-gradient(154deg, #a00000 0%, #f71735 100%);
     color: white;
     border-style:solid;
-    border-color:red;
-    border-width:1px;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+
 }
 
 .panel-4{
-    background: linear-gradient(to bottom, blue 0%, purple 100%);
+    background: linear-gradient(315deg, #fb7ba2 0%, #fc5296 100%);
     color: white;
     border-style:solid;
-    border-color:red;
-    border-width:1px;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+
 }
 
 ::-webkit-scrollbar {
