@@ -129,3 +129,12 @@
       animation: 5s slide-down;
       margin-bottom: 0%;
   }
+
+  
+#Distance {
+    display: none;
+}
+
+#FuelPrice {
+    display: none;
+}
