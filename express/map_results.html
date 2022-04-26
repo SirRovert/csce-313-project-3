@@ -6,22 +6,28 @@
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
     <link rel="stylesheet" type="text/css" href="css/map.css" />
+    <script src="js/yelpAPI.js" defer></script>
     <script src="js/map2.js"></script>
+    <script>
+      getLocation();
+    </script>
   </head>
   <body>
     <div id="floating-panel">
       <strong>Start:</strong>
       <select id="start">
-        <option value="college station, tx">College Station</option>
-        <option value="austin, tx"> austin</option>
+        <!--
+          <option value=""> Select Options</option>
+          <option value="college station, tx">College Station</option>
+        -->
         
-      </select>
-      <br />
+      </select><br />
+
       <strong>End:</strong>
       <select id="end">
-        <option value="chicago, il">Chicago</option>
-
+        
       </select>
+
     </div>
     <div id="container">
       <div id="map"></div>
@@ -29,13 +35,16 @@
     </div>
     
     <div id="submitContainer">
-      <button onclick="getLocation()"> Get location</button>
-      <label for="">Destination: </label>
+      <button onclick="getLocation()"> Get location</button> <br />
+
+      <label for="origin">Origin: </label>
+      <input type="text" id="origin" name="origin"> <br />
+      <input type="submit" value="Submit" onclick="changeOrigin()"> <br />
+
+      <label for="dest">Destination: </label>
       <input type="text" id="dest" name="dest"> <br />
-      <input type="submit" value="Submit" onclick="changeDestination()">
+      <input type="submit" value="Submit" onclick="changeDestination()"> <br />
     </div>
-
-
     
     
 
@@ -45,10 +54,14 @@
      and consistent behavior across browsers, consider loading using Promises
      with https://www.npmjs.com/package/@googlemaps/js-api-loader.
     -->
-    <script
+
+      <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
       defer
     ></script>
+
+
+
   </body>
 </html>
 
