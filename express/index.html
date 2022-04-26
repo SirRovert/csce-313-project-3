@@ -7,7 +7,7 @@
 <div class="container-fluid container-black">
     <div class ="panel-group">
 
-    <div id="panel_one" class="panel panel-default panel-1 panel-small">
+    <div id="panel_one" class="panel panel-default panel-1 panel-medium">
 
         <!-- PANEL 1 -->
         <div class="panel-body">
@@ -20,6 +20,9 @@
             <button onclick="SlideUp(panel_two_wrapper)"> Undisplay Panel 2! </button>
             <button onclick="SlideUp(panel_three_wrapper)"> Undisplay Panel 3! </button>
             <button onclick="SlideUp(panel_four_wrapper)"> Undisplay Panel 4! </button>
+            <p></p>
+            <input type="button" onClick="document.getElementById('panel_three').scrollIntoView();" />
+
            
             
         </div>

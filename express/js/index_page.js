@@ -42,17 +42,20 @@ function PopIn(element) {
 
 function SlideDown6in(wrapper_element) {
     wrapper_element.style.height =  "6in";
-    var body = document.getElementById("body");
-    document.documentElement.scrollTop = 100;
+    DelaytoScroll(wrapper_element);
     
 }
 
 function SlideDown8in(wrapper_element) {
     wrapper_element.style.height =  "8in";
+    DelaytoScroll(wrapper_element);
+
 }
 
 function SlideDown10in(wrapper_element) {
     wrapper_element.style.height =  "10in";
+    DelaytoScroll(wrapper_element);
+
 }
 
 function SlideUp(element) {
@@ -60,6 +63,17 @@ function SlideUp(element) {
     element.style.height = "0in";
 }
 
-function Destroy(element) {
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+}
+
+function DelaytoScroll(element) {
+    sleep(300);
+    element.scrollIntoView();
 
 }
+
