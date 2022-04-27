@@ -24,6 +24,9 @@ function initMap() {
   console.log("printing from initMap: " + lat + " " +  long);
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
+  const geocoder = new google.maps.Geocoder();
+  const service = new google.maps.DistanceMatrixService();
+
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 10,
     center: { lat: 37.0902, lng: -95.7129},
@@ -37,12 +40,26 @@ function initMap() {
 
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
   
+  //when a route is generated on the map
   const onChangeHandler = function () {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
+
+    /*
+    service.getDistanceMatrix(request).then((response) => {
+    // put response
+    document.getElementById("response").innerText = JSON.stringify(
+      response,
+      null,
+      2
+    );
+      */
+
+
   };
 
   document.getElementById("start").addEventListener("change", onChangeHandler);
   document.getElementById("end").addEventListener("change", onChangeHandler);
+
   console.log("printing from initMap: " + lat + " " +  long);
 }
 
