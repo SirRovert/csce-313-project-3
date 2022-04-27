@@ -1,4 +1,5 @@
 const fuelCost = document.getElementById("fuelCost");
+const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
 
 function getGasPrice() {
     const val = document.getElementById('Distance').value;
@@ -48,8 +49,9 @@ function estimateCost() {
   price = price.toFixed(2);
   // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
   // var x = document.getElementById("fuelCost");
+  // loadFuelPrice();
   fuelCost.innerHTML = "Estimate Cost: $ " + price;
-  loadFuelPrice();
+  // fuelPriceDisplay.innerHTML = "test";
 }
 
 function loadFuelPrice(){
@@ -84,5 +86,13 @@ function loadFuelPrice(){
 }
 
 function displayFuelPrice(data) {
+  console.log(data[0]);
+  console.log("Weekly avg Fuel Price: " + data[0].diesel_price);
+
+  const litrePerGallon = 3.78541;
+  let weeklyFuelPrice = data[0].diesel_price * litrePerGallon;
+  weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
   
+  const country = data[0].country;
+  fuelPriceDisplay.innerHTML = "Weekly AVG Diesel Price in " + country + ": " + weeklyFuelPrice;
 }
