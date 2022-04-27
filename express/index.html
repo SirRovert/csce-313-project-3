@@ -11,6 +11,7 @@
 
         <!-- PANEL 1 -->
         <div class="panel-body">
+            <h2> Welcome! </h2>
             <p> A Basic Panel </p>
             <p> Try displaying and undisplaying different combinations! </p>
             <button onclick="SlideDown6in(panel_two_wrapper)"> Display Panel 2 </button>
@@ -28,12 +29,11 @@
         </div>
     </div>
     <!-- PANEL 2 -->
-    <div id="panel_two_wrapper" class="slide-wrapper">
+    <div id="panel_two_wrapper" class="slide-wrapper hidden">
     <div id="panel_two" class="panel panel-2 panel-small">
         <div class="panel-body">The second basic panel, small sized.
 
             <div id="Gas Calculator" class="tab api-tab">
-              
               <h1>Fuel Estimation</h1>
               <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()">
               <label for="DisBox">Enter Distance Manually</label><br>
@@ -53,7 +53,7 @@
    
 
     <!-- PANEL 3 -->
-    <div id="panel_three_wrapper" class="slide-wrapper">
+    <div id="panel_three_wrapper" class="slide-wrapper hidden">
     <div id="panel_three" class="panel panel-3 panel-medium">
         <div class="panel-body">The third basic panel, medium sized.
 
@@ -62,7 +62,7 @@
 </div>
 
      <!-- PANEL 4 -->
-     <div id="panel_four_wrapper" class="slide-wrapper">
+     <div id="panel_four_wrapper" class="slide-wrapper hidden">
      <div id="panel_four" class="panel panel-4 panel-large">
         <div class="panel-body">The fourth basic panel, large sized.
 
