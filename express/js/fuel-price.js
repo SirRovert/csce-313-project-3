@@ -1,15 +1,3 @@
-/*
-// since the api doesn't work, we let the users input the current gas price
-function setup() {
-    createCanvas(200,200);
-    // HERE Api
-    let link = "https://fuel-v2.cc.api.here.com/fuel/stations.xml"
-    // Prox's Parameter: x-cord, y-cord, range
-    let prox = "?prox=52.516667,13.383333,5000"
-    let api_key = "&apiKey=jd8v2XkEgHFAXEum_Cg0o9o3_a6DfBOtUiakZE1AN2c"
-    loadJSON("api");
-}
-*/
 const fuelCost = document.getElementById("fuelCost");
 
 function getGasPrice() {
@@ -29,23 +17,7 @@ function getMPG() {
     console.log(val);
     return val;
 }
-
-
-function estimateCost() {
-    fuelCost.innerHTML = "test1"
-    const dis = getDistance();
-    const fp = getGasPrice();
-    const mpg = getMPG();
-    // const milePerGallon = 25.4;
-    // let price = dis/milePerGallon*fp;
-    let price = dis*fp/mpg;
-    
-    price = price.toFixed(2);
-    // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
-    // var x = document.getElementById("fuelCost");
-    fuelCost.innerHTML = "Estimate Cost: $ " + price;
-} 
-
+ 
 function toggleDist() {
     var x = document.getElementById("Distance");
     if (x.style.display === "block") {
@@ -64,4 +36,53 @@ function toggleFuel() {
     }
 }
 
-// console.log(eastimateCost());
+function estimateCost() {
+  fuelCost.innerHTML = "test1"
+  const dis = getDistance();
+  const fp = getGasPrice();
+  const mpg = getMPG();
+  // const milePerGallon = 25.4;
+  // let price = dis/milePerGallon*fp;
+  let price = dis*fp/mpg;
+  
+  price = price.toFixed(2);
+  // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
+  // var x = document.getElementById("fuelCost");
+  fuelCost.innerHTML = "Estimate Cost: $ " + price;
+  loadFuelPrice();
+}
+
+function loadFuelPrice(){
+
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Host': 'fuel-prices2.p.rapidapi.com',
+      'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
+    }
+  };
+  
+  /*
+  fetch('https://fuel-prices2.p.rapidapi.com/diesel/Portugal', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+  */
+  fetch('https://fuel-prices2.p.rapidapi.com/diesel/USA', options)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("NETWORK RESPONSE ERROR");
+      }
+    })
+    .then(data => {
+      console.log(data);
+      displayFuelPrice(data)
+    })
+    .catch((error) => console.error("FETCH ERROR:", error));
+}
+
+function displayFuelPrice(data) {
+  
+}
