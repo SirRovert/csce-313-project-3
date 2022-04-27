@@ -5,35 +5,40 @@
 
 <body id="body" style="opacity: 0;" class="container-black">
 <div class="container-fluid container-black">
-    <div class ="panel-group">
+<div class ="panel-group">
 
+    <!-- PANEL 1 -->
+    <div id="panel_one_wrapper" class="slide-wrapper">
     <div id="panel_one" class="panel panel-default panel-1 panel-medium">
-
-        <!-- PANEL 1 -->
         <div class="panel-body">
+            <h2> Welcome! </h2>
             <p> A Basic Panel </p>
             <p> Try displaying and undisplaying different combinations! </p>
-            <button onclick="SlideDown6in(panel_two_wrapper)"> Display Panel 2 </button>
-            <button onclick="SlideDown8in(panel_three_wrapper)"> Display Panel 3 </button>
-            <button onclick="SlideDown10in(panel_four_wrapper)"> Display Panel 4 </button>
+            <button onclick="SlideDown(panel_two_wrapper)"> Display Panel 2 </button>
+            <button onclick="SlideDown(panel_three_wrapper)"> Display Panel 3 </button>
+            <button onclick="SlideDown(panel_four_wrapper)"> Display Panel 4 </button>
             <p></p>
             <button onclick="SlideUp(panel_two_wrapper)"> Undisplay Panel 2! </button>
             <button onclick="SlideUp(panel_three_wrapper)"> Undisplay Panel 3! </button>
             <button onclick="SlideUp(panel_four_wrapper)"> Undisplay Panel 4! </button>
             <p></p>
-            <input type="button" onClick="document.getElementById('panel_three').scrollIntoView();" />
+            <button onclick="SlideDown(panel_two_wrapper); SlideDown(panel_three_wrapper); SlideDown(panel_four_wrapper); 
+            SlideDown(panel_five_wrapper); SlideDown(panel_six_wrapper); SlideDown(panel_seven_wrapper); SlideDown(panel_eight_wrapper);
+            SlideDown(panel_nine_wrapper); SlideDown(panel_ten_wrapper); SlideDown(panel_eleven_wrapper); SlideDown(panel_twelve_wrapper)"> Display All! </button>
 
-           
-            
+            <button onclick="SlideUp(panel_two_wrapper); SlideUp(panel_three_wrapper); SlideUp(panel_four_wrapper); 
+            SlideUp(panel_five_wrapper); SlideUp(panel_six_wrapper); SlideUp(panel_seven_wrapper); SlideUp(panel_eight_wrapper);
+            SlideUp(panel_nine_wrapper); SlideUp(panel_ten_wrapper); SlideUp(panel_eleven_wrapper); SlideUp(panel_twelve_wrapper)"> Undisplay All! </button>
+
         </div>
     </div>
+    </div>
     <!-- PANEL 2 -->
-    <div id="panel_two_wrapper" class="slide-wrapper">
-    <div id="panel_two" class="panel panel-2 panel-small">
-        <div class="panel-body">The second basic panel, small sized.
+    <div id="panel_two_wrapper" class="slide-wrapper hidden">
+    <div id="panel_two" class="panel panel-2 panel-medium">
+        <div class="panel-body">The second basic panel.
 
             <div id="Gas Calculator" class="tab api-tab">
-              
               <h1>Fuel Estimation</h1>
               <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()">
               <label for="DisBox">Enter Distance Manually</label><br>
@@ -44,32 +49,103 @@
               <input type="number" id="MPG" name="MPG" style="width:95%" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br>
               <button onclick="estimateCost()"> Estimate! </button><br>
               <p id = "fuelCost"></p>
+
              
             </div>
-
         </div>
     </div>
-</div>
+    </div>
    
 
     <!-- PANEL 3 -->
-    <div id="panel_three_wrapper" class="slide-wrapper">
+    <div id="panel_three_wrapper" class="slide-wrapper hidden">
     <div id="panel_three" class="panel panel-3 panel-medium">
-        <div class="panel-body">The third basic panel, medium sized.
+        <div class="panel-body">The third basic panel.
 
         </div>
     </div>
-</div>
+    </div>
 
      <!-- PANEL 4 -->
-     <div id="panel_four_wrapper" class="slide-wrapper">
-     <div id="panel_four" class="panel panel-4 panel-large">
-        <div class="panel-body">The fourth basic panel, large sized.
+     <div id="panel_four_wrapper" class="slide-wrapper hidden">
+     <div id="panel_four" class="panel panel-4 panel-medium">
+        <div class="panel-body">The fourth basic panel.
 
         </div>
     </div>
-</div>
+    </div>
 
+    <!-- PANEL 5 -->
+    <div id="panel_five_wrapper" class="slide-wrapper hidden">
+        <div id="panel_five" class="panel panel-5 panel-medium">
+           <div class="panel-body">The fifth basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 6 -->
+    <div id="panel_six_wrapper" class="slide-wrapper hidden">
+        <div id="panel_six" class="panel panel-6 panel-medium">
+           <div class="panel-body">The sixth basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 7 -->
+    <div id="panel_seven_wrapper" class="slide-wrapper hidden">
+        <div id="panel_seven" class="panel panel-7 panel-medium">
+           <div class="panel-body">The seventh basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 8 -->
+    <div id="panel_eight_wrapper" class="slide-wrapper hidden">
+        <div id="panel_eight" class="panel panel-8 panel-medium">
+           <div class="panel-body">The eighth basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 9 -->
+    <div id="panel_nine_wrapper" class="slide-wrapper hidden">
+        <div id="panel_nine" class="panel panel-9 panel-medium">
+           <div class="panel-body">The ninth basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 10 -->
+    <div id="panel_ten_wrapper" class="slide-wrapper hidden">
+        <div id="panel_ten" class="panel panel-10 panel-medium">
+           <div class="panel-body">The tenth basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 11 -->
+    <div id="panel_eleven_wrapper" class="slide-wrapper hidden">
+        <div id="panel_eleven" class="panel panel-11 panel-medium">
+           <div class="panel-body">The eleventh basic panel.
+   
+           </div>
+    </div>
+    </div>
+
+    <!-- PANEL 12 -->
+    <div id="panel_twelve_wrapper" class="slide-wrapper hidden">
+        <div id="panel_twelve" class="panel panel-12 panel-medium">
+           <div class="panel-body">The twelth basic panel.
+   
+           </div>
+    </div>
+    </div>
 
 </div>
 </div>

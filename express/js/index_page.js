@@ -54,25 +54,27 @@ function SlideDown8in(wrapper_element) {
 
 function SlideDown10in(wrapper_element) {
     wrapper_element.style.height =  "10in";
-    DelaytoScroll(wrapper_element);
+     DelaytoScroll(wrapper_element);
+    
 
 }
 
+function SlideDown(wrapper_element, panel) {
+    wrapper_element.style.height = "8in";
+    DelaytoScroll(wrapper_element);
+
+}
 function SlideUp(element) {
     element.style.display = "block";
     element.style.height = "0in";
 }
 
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-      currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-function DelaytoScroll(element) {
-    sleep(300);
+async function DelaytoScroll(element) {
+    await sleep(500); //sleep 500ms, same as .slide-wrapper transition time, 0.5 sec
     element.scrollIntoView();
 
 }
