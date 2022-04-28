@@ -61,6 +61,7 @@ function estimateCost() {
   
   // get fuel/gas type
   var gasType = getGasType();
+  console.log("type: " + gasType);
 
   let price = dis*fp/mpg;
   price = price.toFixed(2);
@@ -80,13 +81,7 @@ function loadFuelPrice(){
       'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
     }
   };
-  
-  /*
-  fetch('https://fuel-prices2.p.rapidapi.com/diesel/Portugal', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-  */
+
   fetch('https://fuel-prices2.p.rapidapi.com/diesel/USA', options)
     .then((response) => {
       if (response.ok) {
