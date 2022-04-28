@@ -42,6 +42,12 @@ function toggleFuel() {
     }
 }
 
+function getGasType() {
+  var x = document.getElementById("gasType")
+  var usrValue = x.value;
+  return usrValue;
+}
+
 function estimateCost() {
   const dis = getDistance();
   const fp = getGasPrice();
@@ -53,6 +59,9 @@ function estimateCost() {
     return;
   }
   
+  // get fuel/gas type
+  var gasType = getGasType();
+
   let price = dis*fp/mpg;
   price = price.toFixed(2);
   // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
