@@ -94,7 +94,8 @@ function getDieselPrice(){
     })
     .then(data => {
       console.log(data);
-      displayFuelPrice(data)
+      var type = "diesel";
+      displayFuelPrice(data, type);
     })
     .catch((error) => console.error("FETCH ERROR:", error));
 }
@@ -119,21 +120,36 @@ function getGasolinePrice(){
     })
     .then(data => {
       console.log(data);
-      // displayFuelPrice(data);
+      var type = "gasoline";
+      displayFuelPrice(data, type);
     })
     .catch((error) => console.error("FETCH ERROR:", error));
 }
 
-
-function displayFuelPrice(data) {
-  console.log(data[0]);
-  console.log("Weekly avg Fuel Price: " + data[0].diesel_price);
-
+function displayFuelPrice(data, type) {
   const litrePerGallon = 3.78541;
-  let weeklyFuelPrice = data[0].diesel_price * litrePerGallon;
-  weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
-  
+  console.log(data[0]);
   const country = data[0].country;
-  fuelPriceDisplay.innerHTML = "Weekly AVG Diesel Price in " + country + ": " + weeklyFuelPrice;
-  return weeklyFuelPrice;
+  
+  if (type == "diesel") {
+    console.log("Weekly avg Diesel: $" + data[0].diesel_price);
+    
+    let weeklyFuelPrice = data[0].diesel_price * litrePerGallon;
+    weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
+    
+    fuelPriceDisplay.innerHTML = "Weekly AVG Diesel Price in " + country + ": $" + weeklyFuelPrice;
+    return weeklyFuelPrice;
+  } 
+  else if (type == "gasoline") {
+    console.log("Weekly avg Gasoline: $" + data[0].gasoline_price);
+
+    let weeklyFuelPrice = data[0].gasoline_price * litrePerGallon;
+    weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
+
+    fuelPriceDisplay.innerHTML = "Weekly AVG Gasoline Price in " + country + ": $" + weeklyFuelPrice;
+    return weeklyFuelPrice;
+  }
+  else {
+    return NaN;
+  }
 }
