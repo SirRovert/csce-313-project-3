@@ -38,13 +38,19 @@ function toggleFuel() {
 }
 
 function estimateCost() {
-  fuelCost.innerHTML = "test1"
   const dis = getDistance();
   const fp = getGasPrice();
   const mpg = getMPG();
-  // const milePerGallon = 25.4;
-  // let price = dis/milePerGallon*fp;
+
+  // check if input is empty
+  if (dis == null || dis == "", fp == null || fp == "", mpg == null || mpg == "") {
+    fuelCost.innerHTML = "Invalid Inputs"
+    return;
+  }
+  
   let price = dis*fp/mpg;
+
+
   
   price = price.toFixed(2);
   // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
