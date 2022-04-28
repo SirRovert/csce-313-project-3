@@ -39,14 +39,22 @@
         <div class="panel-body">The second basic panel.
 
             <div id="Gas Calculator" class="tab api-tab">
-              <h1>Fuel Estimation</h1>
+              <h1>Fuel Estimation</h1><br>
+              <!-- Fuel Type -->
+              <lebel for="gasType"> select a gas type </lebel>
+              <select name="gasType" id="gasType">
+                  <option value=diesel>Diesel</option>
+                  <option value=gasoline>Gasoline</option>
+              </select><br>
+
+              <!-- Distance Input Box -->
               <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()">
               <label for="DisBox">Enter Distance Manually</label><br>
               <input type="checkbox" id="FuelCostBox" name="FuelCostBox" value="fuelcost" onclick="toggleFuel()">
               <label for="FuelCostBox">Enter Fuel Price Manually</label><br> 
               <input type="number" id="Distance" name="Distance" style="width:95%" placeholder="Distance in Mile" onblur="getDistance()"><br>
               <input type="number" id="FuelPrice" name="FuelPrice" style="width:95%" placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
-              <input type="number" id="MPG" name="MPG" style="width:95%" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br>
+              <input type="number" id="MPG" name="MPG" style="width:95%" placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br><br>
               <button onclick="estimateCost()"> Estimate! </button><br><br>
               
               <p id = "fuelPriceDisplay"></p>

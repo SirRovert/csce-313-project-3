@@ -103,4 +103,5 @@ function displayFuelPrice(data) {
   
   const country = data[0].country;
   fuelPriceDisplay.innerHTML = "Weekly AVG Diesel Price in " + country + ": " + weeklyFuelPrice;
+  return weeklyFuelPrice;
 }
