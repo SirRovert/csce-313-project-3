@@ -1,3 +1,5 @@
+const { response } = require("express");
+
 const fuelCost = document.getElementById("fuelCost");
 const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
 const distBox = document.getElementById("Distance");
@@ -101,8 +103,25 @@ function getGasolinePrice(){
   
   const options = {
     method: 'GET',
-    
-  }
+    headers: {
+      'X-RapidAPI-Host': 'fuel-prices2.p.rapidapi.com',
+      'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
+    }
+  };
+
+  fetch('https://fuel-prices2.p.rapidapi.com/gasoline/USA', options)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("NETWORK RESONSE ERROR");
+      }
+    })
+    .then(data => {
+      console.log(data);
+      // displayFuelPrice(data);
+    })
+    .catch((error) => console.error("FETCH ERROR:", error));
 }
 
 
