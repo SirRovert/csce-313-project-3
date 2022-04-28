@@ -72,7 +72,7 @@ function estimateCost() {
   // fuelPriceDisplay.innerHTML = "test";
 }
 
-function loadFuelPrice(){
+function getDieselPrice(){
 
   const options = {
     method: 'GET',
@@ -96,6 +96,15 @@ function loadFuelPrice(){
     })
     .catch((error) => console.error("FETCH ERROR:", error));
 }
+
+function getGasolinePrice(){
+  
+  const options = {
+    method: 'GET',
+    
+  }
+}
+
 
 function displayFuelPrice(data) {
   console.log(data[0]);
