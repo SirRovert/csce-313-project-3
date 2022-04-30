@@ -44,17 +44,6 @@ function initMap() {
   const onChangeHandler = function () {
     calculateAndDisplayRoute(directionsService, directionsRenderer);
 
-    /*
-    service.getDistanceMatrix(request).then((response) => {
-    // put response
-    document.getElementById("response").innerText = JSON.stringify(
-      response,
-      null,
-      2
-    );
-      */
-
-
   };
 
   document.getElementById("start").addEventListener("change", onChangeHandler);
@@ -62,6 +51,8 @@ function initMap() {
 
   console.log("printing from initMap: " + lat + " " +  long);
 }
+
+
 
 function changeOrigin(){
   userInput = document.getElementById("origin").value;

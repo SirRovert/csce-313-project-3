@@ -16,7 +16,27 @@
         <option value="TRANSIT">Transit</option>
       </select>
     </div>
-    <div id="map"></div>
+
+
+    <div id="container">
+        <div id="map"></div>
+        <div id="sidebar">
+          <h3 style="flex-grow: 0">Request</h3>
+          <pre style="flex-grow: 1" id="request"></pre>
+          <h3 style="flex-grow: 0">Response</h3>
+          <pre style="flex-grow: 1" id="response"></pre>
+        </div>
+    </div>
+
+    <div id="userInput">
+        <button onclick="getLocation()" id="LocButton"> Get location</button> <br />
+        <button id="updateButton">Update</button>
+
+        <label for="dest">Destination: </label>
+        <input type="text" id="dest" name="dest"> <br />
+        <input type="submit" value="Submit" onclick="changeDestination()"> <br />
+    </div> 
+
 
     <!-- 
      The `defer` attribute causes the callback to execute after the full HTML
