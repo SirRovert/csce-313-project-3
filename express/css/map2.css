@@ -3,7 +3,9 @@
  * that contains the map. 
  */
  #map {
-    height: 100%;
+    height: 6in;
+    z-index: 10;
+    position:fixed;
   }
   
   /* 
@@ -17,10 +19,12 @@
   }
   
   #floating-panel {
-    position: absolute;
-    top: 10px;
-    left: 25%;
-    z-index: 5;
+    position: relative;
+    top:0.5in;
+    left: 3in;
+    height: 40px;
+    width: 240px;
+    
     background-color: #fff;
     padding: 5px;
     border: 1px solid #999;
@@ -28,11 +32,15 @@
     font-family: "Roboto", "sans-serif";
     line-height: 30px;
     padding-left: 10px;
+    z-index: 210;
+    color:black;
+    
   }
 
   #container {
     height: 100%;
-    display: flex;
+    display:block;
+    
   }
   
   #sidebar {
@@ -42,17 +50,21 @@
     max-width: 30rem;
     height: 100%;
     box-sizing: border-box;
-    overflow: auto;
+    color:black;
+    
   }
   
   #map {
-    flex-basis: 0;
-    flex-grow: 4;
-    height: 100%;
+    
+    left:0;
+    height: 6in;
+    width: 12in;
+    
   }
   
   #sidebar {
     flex-direction: column;
+   
   }
 
   #userInput {

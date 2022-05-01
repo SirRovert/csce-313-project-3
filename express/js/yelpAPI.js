@@ -10,4 +10,4 @@ function getLocation(){
   });
 }
 
-getLocation();
+//getLocation();
