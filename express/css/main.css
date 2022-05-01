@@ -29,7 +29,7 @@
     padding-left: 1in;
     padding-right: 1in;
     width: 100%;
-    min-height:8in;
+    height: 100%;
 }
 
 .panel-large {
@@ -83,7 +83,7 @@
     border-width: 0in;
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
-
+    height: 100%;
 }
 
 ::-webkit-scrollbar {

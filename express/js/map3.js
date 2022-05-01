@@ -25,6 +25,11 @@ function getLocation(){
   });
 }
 
+function changeDestination(){
+    coord2 = document.getElementById("dest").value;
+}
+
+
 function initMap() {
     const bounds = new google.maps.LatLngBounds();
     const directionsRenderer = new google.maps.DirectionsRenderer();
