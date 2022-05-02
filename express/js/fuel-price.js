@@ -1,4 +1,4 @@
-const { response } = require("express");
+// const { response } = require("express");
 
 const fuelCost = document.getElementById("fuelCost");
 const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
@@ -51,19 +51,30 @@ function getGasType() {
 }
 
 function estimateCost() {
-  const dis = getDistance();
-  const fp = getGasPrice();
-  const mpg = getMPG();
+  var gasType = getGasType();
+  console.log("type: " + gasType);
+  var dis = getDistance();
+  var fp = getGasPrice();
+  var mpg = getMPG();
+
+  // if manual distance inbox is unckecked, get distance from Josh's map api
+  if (distBox.style.display === "none") {
+    // TODO: get distance calculated form point A to B from Josh
+    dis = 200;
+  }
+  
+  if (fuelBox.style.display === "none") {
+    // check for gasType 
+    if (gasType) {
+
+    }
+  }
 
   // check if input is empty
-  if (dis == null || dis == "", fp == null || fp == "", mpg == null || mpg == "") {
+  if (dis == null || dis == "" || fp == null || fp == "" || mpg == null || mpg == "") {
     fuelCost.innerHTML = "Invalid Inputs"
     return;
   }
-  
-  // get fuel/gas type
-  var gasType = getGasType();
-  console.log("type: " + gasType);
 
   let price = dis*fp/mpg;
   price = price.toFixed(2);
