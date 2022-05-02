@@ -107,7 +107,8 @@ function initMap() {
       .catch((e) => window.alert("Directions request failed due to " + status));
   }
   
-  window.initMap = initMap;
+  //window.initMap = initMap;
+  window.onload = initMap();
 
   
   
