@@ -5,13 +5,13 @@ const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
 const distBox = document.getElementById("Distance");
 const fuelBox = document.getElementById("FuelPrice");
 
-function getGasPrice() {
+function getDistance() {
     const val = document.getElementById('Distance').value;
     console.log(val);
     return val;
 }
 
-function getDistance() {
+function getGasPrice() {
     const val = document.getElementById('FuelPrice').value;
     console.log(val);
     return val;
@@ -53,29 +53,68 @@ function getGasType() {
 function estimateCost() {
   var gasType = getGasType();
   console.log("type: " + gasType);
-  var dis = getDistance();
-  var fp = getGasPrice();
-  var mpg = getMPG();
+  
+  var dis;
+  var fp;
+  var mpg;
 
+  // Limiting the number of API request, check for possible invalid inputs before requesting
   // if manual distance inbox is unckecked, get distance from Josh's map api
-  if (distBox.style.display === "none") {
+  if (!document.getElementById('DisBox').checked) {
     // TODO: get distance calculated form point A to B from Josh
     dis = 200;
-  }
-  
-  if (fuelBox.style.display === "none") {
-    // check for gasType 
-    if (gasType) {
-
+  } else if (document.getElementById('DisBox').checked) {
+    dis = getDistance();
+    if (dis == null || dis == "") {
+      fuelCost.innerHTML = "Invalid Distance"
+      console.log(dis);
+      return;
     }
   }
-
-  // check if input is empty
-  if (dis == null || dis == "" || fp == null || fp == "" || mpg == null || mpg == "") {
-    fuelCost.innerHTML = "Invalid Inputs"
-    return;
+  
+  var mpg = getMPG();
+  if (mpg == null || mpg == "") {
+    fuelCost.innerHTML = "Empty/Invalid MPG. Use 25.4 miles per gallon instead."
+    mpg = 25.4;
   }
 
+  if (!document.getElementById('FuelCostBox').checked) {
+    // check for gasType 
+    if (gasType == "diesel") {
+      getDieselPrice();
+      // fp = fuelPriceAPI;
+      // console.log("Diesel: $" + fp);
+    }
+    else if (gasType == "gasoline") {
+      getGasolinePrice();
+      // fp = fuelPriceAPI;
+      // console.log("gasoline: $" + fp);
+    }
+    else {
+      fuelCost.innerHTML = "Invalid Fuel Type";
+      return;
+    }
+  } else if (document.getElementById('FuelCostBox').checked) {
+    fp = getGasPrice(); // get gas price from input box
+    if (fp == null || fp == "") {
+      if (gasType == "diesel") {
+        fuelPriceDisplay.innerHTML = "Empty/Invalid Diesel Price. Use $5.08 per gallon instead (25-April-2022 data)"
+        fp = 5.08;
+      }
+      else if (gasType == "gasoline") {
+        fuelPriceDisplay.innerHTML = "Empty/Invalid Gasoline Price. Use $4.52 per gallon instead (25-April-2022 data)"
+        fp = 4.52;
+      }
+      let price = dis*fp/mpg;
+      console.log("Check dis: " + dis);
+      console.log("Check mpg: " + mpg);
+      console.log("Check fp: " + fp);
+      console.log("Check price" + price);
+
+      price = price.toFixed(2);
+      fuelCost.innerHTML = "Estimate Cost: $ " + price;
+    }
+  }  
   let price = dis*fp/mpg;
   price = price.toFixed(2);
   // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
@@ -86,7 +125,6 @@ function estimateCost() {
 }
 
 function getDieselPrice(){
-
   const options = {
     method: 'GET',
     headers: {
@@ -141,26 +179,32 @@ function displayFuelPrice(data, type) {
   const litrePerGallon = 3.78541;
   console.log(data[0]);
   const country = data[0].country;
+  var weeklyFuelPrice;
   
   if (type == "diesel") {
-    console.log("Weekly avg Diesel: $" + data[0].diesel_price);
+    console.log("Weekly Diesel per Litre: $" + data[0].diesel_price);
     
-    let weeklyFuelPrice = data[0].diesel_price * litrePerGallon;
+    weeklyFuelPrice = data[0].diesel_price * litrePerGallon;
     weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
     
     fuelPriceDisplay.innerHTML = "Weekly AVG Diesel Price in " + country + ": $" + weeklyFuelPrice;
-    return weeklyFuelPrice;
   } 
   else if (type == "gasoline") {
-    console.log("Weekly avg Gasoline: $" + data[0].gasoline_price);
+    console.log("Weekly Gasoline per Litre: $" + data[0].gasoline_price);
 
-    let weeklyFuelPrice = data[0].gasoline_price * litrePerGallon;
+    weeklyFuelPrice = data[0].gasoline_price * litrePerGallon;
     weeklyFuelPrice = weeklyFuelPrice.toFixed(2);
 
     fuelPriceDisplay.innerHTML = "Weekly AVG Gasoline Price in " + country + ": $" + weeklyFuelPrice;
-    return weeklyFuelPrice;
   }
-  else {
-    return NaN;
+  let localDist = getDistance();
+  let localMPG = getMPG();
+  if (localMPG == "" || localMPG == "") {
+    localMPG = 25.4;
   }
+  console.log(localDist + " " + localMPG);
+
+  let price = localDist*weeklyFuelPrice/localMPG;
+  price = price.toFixed(2);
+  fuelCost.innerHTML = "Estimate Cost: $ " + price;
 }
