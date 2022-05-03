@@ -9,6 +9,7 @@ var b_interval = 0;
 
 
 
+
 function fadeIn(element) {
     setInterval(show, 40, element);
     
@@ -62,12 +63,14 @@ function SlideDown15in(wrapper_element) {
 
 }
 
-function SlideDown(wrapper_element, panel) {
+function SlideDown(wrapper_element) {
     sleep(50);
     wrapper_element.style.height = "10in";
     DelaytoScroll(wrapper_element);
 
 }
+
+
 function SlideUp(element) {
     element.style.display = "block";
     element.style.height = "0in";
@@ -115,4 +118,36 @@ async function DelaytoScroll(element) {
     element.scrollIntoView();
 
 }
+
+//PANEL INPUT ACTION LISTENERS
+
+var panel1input = 0;
+var panel2input = 0;
+
+var textBox1 = document.getElementById("input_destination");
+    textBox1.addEventListener("keyup", function (event) {
+ if (event.key === "Enter") {
+    if (panel1input == 0) {
+        panel1input = 1;
+        s = "panel_two_wrapper"
+        document.getElementById(s).style.height = "10in";
+        var temp=document.getElementById(s)
+        DelaytoScroll(temp);
+    }
+ }
+});
+
+var textBox2 = document.getElementById("input_current_location");
+    textBox2.addEventListener("keyup", function (event) {
+ 
+ if (event.key === "Enter") {
+     if (panel2input == 0) {
+        panel2input = 1;
+        s = "panel_three_wrapper"
+        document.getElementById(s).style.height = "10in";
+        var temp=document.getElementById(s)
+        DelaytoScroll(temp);
+    }
+ }
+});
 

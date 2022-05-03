@@ -75,6 +75,8 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     height: 100%;
+    text-align:center;
+    padding-top: 2in;
 }
 
 .panel-3 {
@@ -86,7 +88,7 @@
     border-image: linear-gradient(to right, #ec9f05, #ff4e00) 1;
 
     text-align:center;
-    padding-top: 2in;
+    padding-top: 0.5in;
     
 }
 
