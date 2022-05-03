@@ -112,7 +112,9 @@ function initMap() {
       .then((response) => {
         directionsRenderer.setDirections(response);
       })
-      .catch((e) => window.alert("Directions request failed due to " + status));
+      // .catch((e) => window.alert("Directions request failed due to (test)" + status));
+      .catch((e) => console.log("Directions request failed due to " + status));
+      // commenting out alert so I can test other function easier, Jadepan
   }
   
   //window.initMap = initMap;
