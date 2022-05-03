@@ -39,12 +39,16 @@ function testAppend() {
     div.appendChild(heading);
     // listContainer.appendChild(price);
     // div.appendChild(listContainer);
-    locationsSearch("Dallas, Tx");
+    // locationsSearch("Dallas, Tx");
 }
 
 // get list of hotels in a cities, districts, places
 function locationsSearch(destination) {
     var query = destination;
+    console.log("Test old http: " + query);
+    query = query.replace(", ", "%2C%20");
+    console.log("Test new http: " + query);
+
     const options = {
         method: 'GET',
         headers: {
@@ -55,6 +59,8 @@ function locationsSearch(destination) {
 
     var fetchHttp = 'https://hotels4.p.rapidapi.com/locations/v2/search?query=';
     fetchHttp += query + '&locale=en_US&currency=USD';
+    console.log("check fetchHttp: " + fetchHttp);
+
 
     fetch(fetchHttp, options)
     .then((response) => {
