@@ -2,6 +2,8 @@
 
 var intervalID = 0;
 weight = 10;
+
+window.onload = scrollTo(0, 50);
 window.onload = fadeIn("body");
 var b_interval = 0;
 

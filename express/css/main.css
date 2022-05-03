@@ -63,6 +63,7 @@
     border-image: linear-gradient(to right, #00ff00, #fff44f) 1;
     text-align:center;
     padding-top: 2in;
+    overscroll-behavior-y:inherit;
   
 }
 
