@@ -40,6 +40,16 @@
 
 }
 
+.panel-xlarge {
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 100%;
+    height:10in;
+    border-style:none;
+    border-image:none;
+
+}
+
 .panel-1 {
     background: linear-gradient(to top, #7e57c2 0%, #6200ea 100%);
     top: 0;
@@ -86,7 +96,15 @@
 
 }
 
-
+.panel-L {
+    background: linear-gradient(to top, #7e57c2 0%, #6200ea 100%);
+    top: 0;
+    color: white;
+    text-align:center;
+    padding-top: 2in;
+    overflow:hidden;
+  
+}
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -144,3 +162,31 @@
 #FuelPrice {
     display: none;
 }
+
+
+
+<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
