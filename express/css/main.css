@@ -1,5 +1,5 @@
 .container-black {
-    background-color:#3A506B;
+    background:linear-gradient(to top, #6200ea 0%, #7e57c2 100%);
     padding-left: 0;
     padding-right:0;
     scroll-behavior:smooth;
@@ -7,11 +7,14 @@
 
 
 .slide-wrapper {
-    transition: height 0.5s ease-in-out;
-    
+    transition: height 0.3s ease-in-out;
     overflow:hidden;
+   
     
 }
+
+
+
 
 .hidden {
     height:0;
@@ -96,15 +99,7 @@
 
 }
 
-.panel-L {
-    background: linear-gradient(to top, #7e57c2 0%, #6200ea 100%);
-    top: 0;
-    color: white;
-    text-align:center;
-    padding-top: 2in;
-    overflow:hidden;
-  
-}
+
 
 ::-webkit-scrollbar {
     width: 12px;
@@ -165,7 +160,7 @@
 
 
 
-<style>
+
 a:link {
   color: green;
   background-color: transparent;
@@ -189,4 +184,3 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
-</style>

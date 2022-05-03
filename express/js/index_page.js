@@ -3,6 +3,7 @@
 var intervalID = 0;
 weight = 10;
 window.onload = fadeIn("body");
+var b_interval = 0;
 
 
 
@@ -15,7 +16,7 @@ function show(element) {
     var object = document.getElementById(element);
     opacity = Number(window.getComputedStyle(object).getPropertyValue("opacity"));
     if (opacity < 1) {
-        opacity = opacity + (0.02)*weight;
+        opacity = opacity + (0.01)*weight;
         object.style.opacity = opacity;
        if (opacity > 0.8) {
            if (weight > 1){
@@ -60,6 +61,7 @@ function SlideDown15in(wrapper_element) {
 }
 
 function SlideDown(wrapper_element, panel) {
+    sleep(50);
     wrapper_element.style.height = "10in";
     DelaytoScroll(wrapper_element);
 
@@ -73,8 +75,41 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+bsleep = 2;
+
+async function bounceUp() {
+    b_interval = 0;
+    while (b_interval < 299) {
+        if (b_interval < 90) {
+            window.scrollBy(0, -150);
+            await sleep(bsleep);
+            b_interval = b_interval + 150;
+        }
+        if (b_interval >= 90 && b_interval < 150) {
+            window.scrollBy(0, -50);
+            await sleep(bsleep);
+            b_interval = b_interval + 50;
+        }
+        if (b_interval >= 150) {
+            window.scrollBy(0, -3);
+            await sleep(bsleep);
+            b_interval = b_interval + 3;
+        }
+        
+       
+    }
+    
+}
+
+
+
+
+
+
 async function DelaytoScroll(element) {
-    await sleep(500); //sleep 500ms, same as .slide-wrapper transition time, 0.5 sec
+    
+    bounceUp();
+    await sleep(300); //sleep 500ms, same as .slide-wrapper transition time, 0.5 sec
     element.scrollIntoView();
 
 }
