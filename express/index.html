@@ -68,14 +68,7 @@
 
                         <div id="container">
                             <div id="map"></div>
-                            <!--
-                           <div id="sidebar">
-                           <h3 style="flex-grow: 0">Request</h3>
-                           <pre style="flex-grow: 1" id="request"></pre>
-                           <h3 style="flex-grow: 0">Response</h3>
-                           <pre style="flex-grow: 1" id="response"></pre>
-                         </div>
-                         -->
+                           
                         </div>
 
                         <div id="userInput">
@@ -85,6 +78,14 @@
                             <label for="dest">Destination: </label>
                             <input type="text" id="dest" name="dest"> <br />
                             <input type="submit" value="Submit" onclick="changeDestination()"> <br />
+                             
+                           <div id="sidebar">
+                           <h3 style="flex-grow: 0">Request</h3>
+                           <pre style="flex-grow: 1" id="request"></pre>
+                           <h3 style="flex-grow: 0">Response</h3>
+                           <pre style="flex-grow: 1" id="response"></pre>
+                         </div>
+                         
                         </div>
                     </div>
                 </div>
@@ -224,18 +225,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
-<script type="text/javascript" src="js/weather.js"></script>
-<script type="text/javascript" src="js/fuel-price.js"></script>
+
+
+
+
 <script type="text/javascript" src="js/yelpAPI.js"></script>
+<script type="text/javascript" src="js/fuel-price.js"></script>
+<script type="text/javascript" src="js/weather.js"></script>
+<script type="text/javascript" src="js/index_page.js"></script>
+<script type="text/javascript" src="js/leftmenu.js"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+<!--
+<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+    ></script>
+
+--->
+
 <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
-<script type="text/javascript" src="js/leftmenu.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false">
-</script>
-<script type="text/javascript" src="js/index_page.js"></script>
 
-<script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
-    defer></script>
+
 
 </html>

@@ -7,9 +7,9 @@ var coord2 = "houston, tx";
 var currentPosition;
 
 function getLocation(){
-    navigator.geolocation.getCurrentPosition(function(position) {
-    lat = position.coords.latitude;
-    long = position.coords.longitude;
+    navigator.geolocation.getCurrentPosition(parsePosition);
+   // lat = position.coords.latitude;
+    //long = position.coords.longitude;
     //initMap(parseInt(lat), parseInt(long));
     
     /*
@@ -19,10 +19,18 @@ function getLocation(){
     newOriginOption.id = userInput;
     selectList.add(newOriginOption);
     */
-    currentPosition = { lat: lat, lng: long};
-    coord1 = currentPosition;
-    console.log("printing from getLocation: " + currentPosition.lat + " " + currentPosition.lng);
-  });
+   // currentPosition = { lat: lat, lng: long};
+   // coord1 = currentPosition;
+    //console.log("printing from getLocation: " + currentPosition.lat + " " + currentPosition.lng);
+  //});
+}
+
+function parsePosition(position) {
+  lat = position.coords.latitude;
+  long = position.coords.longitude;
+  currentPosition = { lat: lat, lng: long};
+  coord1 = currentPosition;
+  console.log("printing from getLocation: " + currentPosition.lat + " " + currentPosition.lng);
 }
 
 function changeDestination(){
