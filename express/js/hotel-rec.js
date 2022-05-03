@@ -46,7 +46,10 @@ function testAppend() {
 function locationsSearch(destination) {
     var query = destination;
     console.log("Test old http: " + query);
-    query = query.replace(", ", "%2C%20");
+    
+    // Formatting string to http acceptable 
+    query = query.replace(",", "%2C");
+    query = query.replace(" ", "%20");
     console.log("Test new http: " + query);
 
     const options = {
