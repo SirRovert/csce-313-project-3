@@ -202,6 +202,11 @@ function displayFuelPrice(data, type) {
   if (localMPG == "" || localMPG == "") {
     localMPG = 25.4;
   }
+  // incase the distance input is invalid
+  if (localDist == "" || localDist == "") {
+    // 500 miles is based on if a person's capability to drive 8hrs a day with 15min break every 2 hours.
+    localDist = 500;
+  }
   console.log(localDist + " " + localMPG);
 
   let price = localDist*weeklyFuelPrice/localMPG;
