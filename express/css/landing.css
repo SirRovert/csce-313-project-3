@@ -1,0 +1,36 @@
+.container-black {
+    background:linear-gradient(to top, #6200ea 0%, #7e57c2 100%);
+    padding-left: 0;
+    padding-right:0;
+    scroll-behavior:smooth;
+}
+
+
+
+
+.slide-wrapper {
+    transition: height 0.5s ease-in-out;
+    
+    overflow:hidden;
+    
+}
+
+.panel-L {
+    background: linear-gradient(to top, #7e57c2 0%, #6200ea 100%);
+    top: 0;
+    color: white;
+    text-align:center;
+    padding-top: 2in;
+    overflow:hidden;
+
+}
+
+.panel-xlarge {
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 100%;
+    height:10in;
+    border-style:none;
+    border-image:none;
+
+}
