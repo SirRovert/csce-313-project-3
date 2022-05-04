@@ -17,7 +17,7 @@ function getHotelRec() {
     if (inputDestination) {
         let destination = inputDestination.value;
         if (destination) {
-            console.log(destination);
+            // console.log(destination);
             locationsSearch(destination)
         } else {
             console.log("Empty Input");
@@ -29,12 +29,11 @@ function getHotelRec() {
 // get list of hotels in a cities, districts, places
 function locationsSearch(destination) {
     var query = destination;
-    console.log("Test old http: " + query);
-
+    // console.log("Test old http: " + query);
     // Formatting string to http acceptable 
     query = query.replace(",", "%2C");
     query = query.replace(" ", "%20");
-    console.log("Test new http: " + query);
+    // console.log("Test new http: " + query);
 
     const options = {
         method: 'GET',
@@ -46,9 +45,8 @@ function locationsSearch(destination) {
 
     var fetchHttp = 'https://hotels4.p.rapidapi.com/locations/v2/search?query=';
     fetchHttp += query + '&locale=en_US&currency=USD';
-    console.log("check fetchHttp: " + fetchHttp);
-
-
+    // console.log("check fetchHttp: " + fetchHttp);
+    
     fetch(fetchHttp, options)
         .then((response) => {
             if (response.ok) {
@@ -58,7 +56,7 @@ function locationsSearch(destination) {
             }
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
             displayHotel(data);
         })
         .catch((error) => console.error("FETCH ERROR:", error));
@@ -67,7 +65,7 @@ function locationsSearch(destination) {
 async function displayHotel(data) {
     // try counting the number of hotel entites
     let num = Object.keys(data.suggestions[1].entities).length;
-    console.log("hotel num: " + num);
+    // console.log("hotel num: " + num);
 
     // For testing!
     // num = 1;
@@ -78,10 +76,7 @@ async function displayHotel(data) {
             let hotelName = data.suggestions[1].entities[i].name;
             let hotelID = data.suggestions[1].entities[i].destinationId;
             appendList(hotelName);
-            // appendHotelID(hotelName, hotelID);
-            // appendDetail(hotelName);
-            // getDetailSearch(hotelID);
-            
+           
             // readTextFile("../hotelDetailedTest.json", function (text) {
             //     var dataDetailed = JSON.parse(text);
             //     console.log(dataDetailed);
@@ -115,7 +110,7 @@ function getDetailSearch(locationID) {
     fetchHttp += locationID;
     fetchHttp += '&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&currency=USD&locale=en_US';
 	
-    console.log("fetchHttp: " + fetchHttp);
+    // console.log("fetchHttp: " + fetchHttp);
 
     fetch(fetchHttp, options)
     .then((response) => {
@@ -126,7 +121,7 @@ function getDetailSearch(locationID) {
         }
     })
     .then(data2 => {
-        console.log(data2);
+        // console.log(data2);
         displayHotelDetail(data2);
     })
     .catch((error) => console.error("FETCH ERROR:", error));
@@ -223,7 +218,7 @@ function appendList(n) {
     const div = document.getElementById("panel_hotel");
 
     const container = document.getElementById("container-hotel");
-    console.log("container: " + container);
+    // console.log("container: " + container);
     //deleteChild(container);
 
     const listContainer = document.createElement("div");
@@ -272,7 +267,7 @@ function appendButton(n) {
 
 function getPriceFromList(n) {
     // console.log("clickTest");
-    console.log({n});
+    // console.log({n});
     var guestNum = document.getElementById("guestNum").value;
     if (guestNum < 1) {
         guestNum = 1;
@@ -282,7 +277,7 @@ function getPriceFromList(n) {
     const hotelElement = n + "Price";
     const hotelPrice = document.getElementById(hotelElement);
     if (hotelPrice != null) {
-        console.log(hotelPrice);
+       //  console.log(hotelPrice);
         // hotelCostEstimation.innerHTML = hotelPrice.textContent;
         let text = hotelPrice.textContent;
         let price = text.replace( /^\D+/g, '');
