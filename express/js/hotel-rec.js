@@ -87,7 +87,7 @@ async function displayHotel(data) {
             //     console.log(dataDetailed);
             //     displayHotelDetail(dataDetailed);
             // });
-            await sleep(200);
+            await sleepHotel(200);
             getDetailSearch(hotelID);
         }
     }
@@ -97,7 +97,7 @@ async function displayHotel(data) {
     }
 }
 
-const sleep = (milliseconds) => {
+const sleepHotel = (milliseconds) => {
     return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
