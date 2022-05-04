@@ -24,28 +24,12 @@
             <div id="panel_one_wrapper" class="slide-wrapper">
                 <div id="panel_one" class="panel panel-default panel-1 panel-large">
                     <div class="panel-body">
-                        <h2> Welcome! </h2>
-                        <p> A Basic Panel </p>
-                        <p> Try displaying and undisplaying different combinations! </p>
-                        <button onclick="SlideDown(panel_two_wrapper)"> Display Panel 2 </button>
-                        <button onclick="SlideDown(panel_three_wrapper)"> Display Panel 3 </button>
-                        <button onclick="SlideDown(panel_four_wrapper)"> Display Panel 4 </button>
-                        <p></p>
-                        <button onclick="SlideUp(panel_two_wrapper)"> Undisplay Panel 2! </button>
-                        <button onclick="SlideUp(panel_three_wrapper)"> Undisplay Panel 3! </button>
-                        <button onclick="SlideUp(panel_four_wrapper)"> Undisplay Panel 4! </button>
-                        <p></p>
-                        <button
-                            onclick="SlideDown(panel_two_wrapper); SlideDown(panel_three_wrapper); SlideDown(panel_four_wrapper); 
-            SlideDown(panel_five_wrapper); SlideDown(panel_six_wrapper); SlideDown(panel_seven_wrapper); SlideDown(panel_eight_wrapper);
-            SlideDown(panel_nine_wrapper); SlideDown(panel_ten_wrapper); SlideDown(panel_eleven_wrapper); SlideDown(panel_twelve_wrapper)">
-                            Display All! </button>
-
-                        <button
-                            onclick="SlideUp(panel_two_wrapper); SlideUp(panel_three_wrapper); SlideUp(panel_four_wrapper); 
-            SlideUp(panel_five_wrapper); SlideUp(panel_six_wrapper); SlideUp(panel_seven_wrapper); SlideUp(panel_eight_wrapper);
-            SlideUp(panel_nine_wrapper); SlideUp(panel_ten_wrapper); SlideUp(panel_eleven_wrapper); SlideUp(panel_twelve_wrapper)">
-                            Undisplay All! </button>
+                        <h1> Where do you want to travel to? </h1> <br>
+                        
+                       
+                        <input type="text" id="input_destination"  style="width:40%"
+                                placeholder="e.x. 'Austin, TX'"   ><br><br>
+                        <p> Note: Hit Enter To Submit! </p>
 
                     </div>
                 </div>
@@ -54,7 +38,22 @@
             <!-- PANEL 2 -->
             <div id="panel_two_wrapper" class="slide-wrapper hidden">
                 <div id="panel_two" class="panel panel-2 panel-large">
-                    <div class="panel-body">The second basic panel.
+                    <div class="panel-body">
+                        <h1> Where are you travelling from? </h1> <br>
+                        
+                       
+                        <input type="text" id="input_current_location"  style="width:40%"
+                                placeholder="e.x. 'College Station, TX'"  ><br><br>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- PANEL 3 -->
+            <div id="panel_three_wrapper" class="slide-wrapper hidden">
+                <div id="panel_three" class="panel panel-3 panel-large">
+                    <div class="panel-body">
                         <div id="floating-panel">
                             <b>Mode of Travel: </b>
                             <select id="mode">
@@ -79,12 +78,8 @@
                             <input type="text" id="dest" name="dest"> <br />
                             <input type="submit" value="Submit" onclick="changeDestination()"> <br />
                              
-                           <div id="sidebar">
-                           <h3 style="flex-grow: 0">Request</h3>
-                           <pre style="flex-grow: 1" id="request"></pre>
-                           <h3 style="flex-grow: 0">Response</h3>
-                           <pre style="flex-grow: 1" id="response"></pre>
-                         </div>
+                           
+                         <button id="scrolltopanel5" onclick="SlideDown(panel_four_wrapper)"> Go to panel 4 </button>
                          
                         </div>
                     </div>
@@ -92,15 +87,14 @@
             </div>
 
 
-            <!-- PANEL 3 -->
-            <div id="panel_three_wrapper" class="slide-wrapper hidden">
-                <div id="panel_three" class="panel panel-3 panel-large">
-                    <div class="panel-body">The third basic panel.
-
+            <!-- PANEL 4 -->
+            <div id="panel_four_wrapper" class="slide-wrapper hidden">
+                <div id="panel_four" class="panel panel-4 panel-large">
+                    <div class="panel-body">The fourth basic panel.
                         <div id="Gas Calculator" class="tab api-tab">
                             <h1>Fuel Estimation</h1><br>
                             <!-- Fuel Type -->
-                            <lebel for="gasType"> select a gas type </lebel>
+                            <label for="gasType"> select a gas type </label>
                             <select name="gasType" id="gasType">
                                 <option value=diesel>Diesel</option>
                                 <option value=gasoline>Gasoline</option>
@@ -119,7 +113,7 @@
                             <input type="number" id="MPG" name="MPG" style="width:95%"
                                 placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br><br>
                             <button onclick="estimateCost()"> Estimate! </button>
-                            <button onclick="SlideDown(panel_four_wrapper)"> Scroll Down! </button><br><br>
+                            <button onclick="SlideDown(panel_five_wrapper)"> Scroll Down! </button><br><br>
 
                             <p id="fuelPriceDisplay"></p>
                             <p id="fuelCost"></p>
@@ -129,24 +123,13 @@
                 </div>
             </div>
 
-
-            <!-- PANEL 4 -->
-            <div id="panel_four_wrapper" class="slide-wrapper hidden">
-                <div id="panel_four" class="panel panel-4 panel-large">
-                    <div class="panel-body">The fourth basic panel.
-                        <li id="hotelList">First</li><br>
-                        <button onclick="getHotelRec()">Get Hotel Recommendation</button><br>
-                        <button onclick="appendList()">TEST APPEND</button>
-                    </div>
-                </div>
-            </div>
-
             <!-- PANEL 5 -->
             <div id="panel_five_wrapper" class="slide-wrapper hidden">
-                <div id="panel_five" class="panel panel-5 panel-large">
+                <div id="panel_hotel" class="panel panel-5 panel-large">
                     <div class="panel-body">The fifth basic panel.
-
-
+                        <li id="hotelList">First</li><br>
+                        <button onclick="append()">Test</button><br>
+                        <button onclick="SlideDown(panel_six_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -155,7 +138,7 @@
             <div id="panel_six_wrapper" class="slide-wrapper hidden">
                 <div id="panel_six" class="panel panel-6 panel-large">
                     <div class="panel-body">The sixth basic panel.
-
+                        <button onclick="SlideDown(panel_seven_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -164,7 +147,7 @@
             <div id="panel_seven_wrapper" class="slide-wrapper hidden">
                 <div id="panel_seven" class="panel panel-7 panel-large">
                     <div class="panel-body">The seventh basic panel.
-
+                        <button onclick="SlideDown(panel_eight_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -173,7 +156,7 @@
             <div id="panel_eight_wrapper" class="slide-wrapper hidden">
                 <div id="panel_eight" class="panel panel-8 panel-large">
                     <div class="panel-body">The eighth basic panel.
-
+                        <button onclick="SlideDown(panel_nine_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -182,7 +165,7 @@
             <div id="panel_nine_wrapper" class="slide-wrapper hidden">
                 <div id="panel_nine" class="panel panel-9 panel-large">
                     <div class="panel-body">The ninth basic panel.
-
+                        <button onclick="SlideDown(panel_ten_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -191,7 +174,7 @@
             <div id="panel_ten_wrapper" class="slide-wrapper hidden">
                 <div id="panel_ten" class="panel panel-10 panel-large">
                     <div class="panel-body">The tenth basic panel.
-
+                        <button onclick="SlideDown(panel_eleven_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -200,7 +183,7 @@
             <div id="panel_eleven_wrapper" class="slide-wrapper hidden">
                 <div id="panel_eleven" class="panel panel-11 panel-large">
                     <div class="panel-body">The eleventh basic panel.
-
+                        <button onclick="SlideDown(panel_twelve_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -251,5 +234,9 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
 
 
+<script>
+    
+
+</script>
 
 </html>

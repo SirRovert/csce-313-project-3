@@ -62,7 +62,7 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #00ff00, #fff44f) 1;
     text-align:center;
-    padding-top: 2in;
+    padding-top: 3.5in;
     overscroll-behavior-y:inherit;
   
 }
@@ -75,6 +75,8 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     height: 100%;
+    text-align:center;
+    padding-top: 2in;
 }
 
 .panel-3 {
@@ -86,7 +88,7 @@
     border-image: linear-gradient(to right, #ec9f05, #ff4e00) 1;
 
     text-align:center;
-    padding-top: 2in;
+    padding-top: 0.5in;
     
 }
 
@@ -97,7 +99,18 @@
     border-width: 0in;
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+    text-align:center;
+    padding-top: 2in;
 
+}
+
+.panel-5 {
+    background: linear-gradient(240deg, #7ed30f 0%, #7f8111 100%);
+    color: white;
+    border-style:solid;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
 }
 
 
