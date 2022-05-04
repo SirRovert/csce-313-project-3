@@ -90,9 +90,12 @@ class AutocompleteDirectionsHandler {
 
       if (mode === "ORIG") {
         this.originPlaceId = place.place_id;
+        console.log(place.place_id);
       } else {
         this.destinationPlaceId = place.place_id;
+        console.log(place.place_id);
       }
+
 
       this.route();
     });
