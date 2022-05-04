@@ -53,12 +53,6 @@ function locationsSearch(destination) {
 }
 
 function displayHotel(data) {
-    // console.log("in display name");
-    // Hotel_group
-    // console.log("1: " + data.suggestions[1].group);
-    // Entities in Hotel_Group
-    // console.log("2: " + data.suggestions[1].entities[0].name);
-
     // try counting the number of hotel entites
     let num = Object.keys(data.suggestions[1].entities).length;
     console.log("hotel num: " + num);
@@ -69,7 +63,17 @@ function displayHotel(data) {
             let hotelName = data.suggestions[1].entities[i].name;
             let hotelID = data.suggestions[1].entities[i].destinationId;
             appendList(hotelName);
-            appendDetail(hotelName);
+            appendHotelID(hotelName, hotelID);
+            // appendDetail(hotelName);
+            
+            // getDetailSearch(hotelID);
+            
+            readTextFile("../hotelDetailedTest.json", function (text) {
+                var dataDetailed = JSON.parse(text);
+                console.log(dataDetailed);
+                displayHotelDetail(dataDetailed);
+            });
+            
             appendButton(hotelName);
         }
     }
@@ -77,6 +81,52 @@ function displayHotel(data) {
         appendList("NO HOTEL FOUND FROM API");
         console.log("No hotel found in a given location");
     }
+}
+
+// locationName, locationID
+function getDetailSearch(locationID) {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+            'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
+        }
+    };
+    
+    var fetchHttp = 'https://hotels4.p.rapidapi.com/properties/get-details?id='
+    fetchHttp += locationID;
+    fetchHttp += '&checkIn=2020-01-08&checkOut=2020-01-15&adults1=1&currency=USD&locale=en_US';
+	
+    console.log("fetchHttp: " + fetchHttp);
+
+    fetch(fetchHttp, options)
+    .then((response) => {
+        if (response.ok) {
+            return response.json();
+        } else {
+            throw new Error("NETWORK RESONSE ERROR");
+        }
+    })
+    .then(data2 => {
+        console.log(data2);
+        displayHotelDetail(data2);
+    })
+    .catch((error) => console.error("FETCH ERROR:", error));
+}
+
+function displayHotelDetail(data) {
+    let hotelName = data.data.body.propertyDescription.name;
+    console.log("Name: " + hotelName);
+    // var hotelname = data.body;
+    // console.log("displayHotelDetail: " + hotelname);
+}
+
+function testDisplay() {
+    readTextFile("../hotelDetailedTest.json", function (text) {
+        var data2 = JSON.parse(text);
+        console.log(data2);
+        displayHotelDetail(data2);
+    });
 }
 
 function readTextFile(file, callback) {
@@ -117,9 +167,6 @@ function deleteChild(div) {
 function appendList(n) {
 
     const name = n;
-    const price = 200;
-    const rating = 7;
-    const review = "Good!"
 
     const div = document.getElementById("panel_hotel");
 
@@ -134,25 +181,10 @@ function appendList(n) {
     const heading = document.createElement("h1");
     heading.innerHTML = name;
     heading.style.marginLeft = "5px";
-    heading.style.marginRight = "20px";
-
-    const priceList = document.createElement("li");
-    priceList.innerHTML = "Current Price: $" + price;
-    priceList.style.margin = "10px 10px";
-
-    const ratingList = document.createElement("li");
-    ratingList.innerHTML = "Rating: " + rating + "/10";
-    ratingList.style.margin = "10px 10px";
-
-    const reviewList = document.createElement("li");
-    reviewList.innerHTML = "Review Summary: " + review;
-    reviewList.style.margin = "10px 10px";
+    heading.style.marginRight = "5px";
+    heading.style.width = "40%";
 
     listContainer.appendChild(heading);
-    // listContainer.appendChild(priceList);
-    // listContainer.appendChild(ratingList);
-    // listContainer.appendChild(reviewList);
-
     container.appendChild(listContainer);
     div.appendChild(container);
 }
@@ -194,6 +226,32 @@ function appendHotelID(n, id) {
     const listContainer = document.getElementById(n);
     const hotelID = document.createElement("li");
     hotelID.innerHTML = id;
-
-    listContainer.appendChild(test);
+    hotelID.style.margin = "auto";
+    listContainer.appendChild(hotelID);
 } 
+
+function appendError(n) {
+    const listContainer = document.getElementById(n);
+    const errorMessage = document.createElement("li");
+    errorMessage.innerHTML = "ERROR no data found";
+    errorMessage.style.margin = "auto";
+    listContainer.appendChild(errorMessage);
+}
+
+function hold() {
+    const priceList = document.createElement("li");
+    priceList.innerHTML = "Current Price: $" + price;
+    priceList.style.margin = "10px 10px";
+
+    const ratingList = document.createElement("li");
+    ratingList.innerHTML = "Rating: " + rating + "/10";
+    ratingList.style.margin = "10px 10px";
+
+    const reviewList = document.createElement("li");
+    reviewList.innerHTML = "Review Summary: " + review;
+    reviewList.style.margin = "10px 10px";
+
+    listContainer.appendChild(priceList);
+    listContainer.appendChild(ratingList);
+    listContainer.appendChild(reviewList);
+}
