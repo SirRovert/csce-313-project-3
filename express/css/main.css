@@ -89,6 +89,7 @@
 
     text-align:center;
     padding-top: 0.5in;
+    height: 100%;
     
 }
 
@@ -101,6 +102,7 @@
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
     padding-top: 2in;
+    height: 100%;
 
 }
 

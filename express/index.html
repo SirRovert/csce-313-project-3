@@ -9,8 +9,8 @@
 
     <!-- Google API module-->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="css/map2.css" />
-    <script src="js/map3.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/map.css" />
+    <script src="js/map.js"></script>
 
 </head>
 
@@ -53,35 +53,9 @@
             <!-- PANEL 3 -->
             <div id="panel_three_wrapper" class="slide-wrapper hidden">
                 <div id="panel_three" class="panel panel-3 panel-large">
-                    <div class="panel-body">
-                        <div id="floating-panel">
-                            <b>Mode of Travel: </b>
-                            <select id="mode">
-                                <option value="DRIVING">Driving</option>
-                                <option value="WALKING">Walking</option>
-                                <option value="BICYCLING">Bicycling</option>
-                                <option value="TRANSIT">Transit</option>
-                            </select>
-                        </div>
-
-
-                        <div id="container">
-                            <div id="map"></div>
-                           
-                        </div>
-
-                        <div id="userInput">
-                            <button onclick="getLocation()" id="LocButton"> Get location</button> <br />
-                            <button id="updateButton">Update</button>
-
-                            <label for="dest">Destination: </label>
-                            <input type="text" id="dest" name="dest"> <br />
-                            <input type="submit" value="Submit" onclick="changeDestination()"> <br />
-                             
-                           
-                         <button id="scrolltopanel5" onclick="SlideDown(panel_four_wrapper)"> Go to panel 4 </button>
-                         
-                        </div>
+                    <div class="panel-body" id="map_body">
+                        <div id="map"></div>
+                        Here are some texts
                     </div>
                 </div>
             </div>
@@ -230,14 +204,9 @@
     ></script>
 
 --->
-
-<script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkZRPmKswpyEfCvYONZVyLH3r2tUrYdYw&callback=initMap"></script>
-
-
-<script>
-    
-
-</script>
+<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&libraries=places&v=weekly"
+      defer
+></script>
 
 </html>
