@@ -2,6 +2,7 @@ function getHotelRec() {
     const container = document.getElementById("container-hotel");
     console.log("container: " + container);
     deleteChild(container);
+
     
     // OR CALL API currently reading from JSON
     readTextFile("../locationSearchTest.json", function (text) {
@@ -9,9 +10,11 @@ function getHotelRec() {
         console.log(data);
         displayHotel(data);
     });
-
+    
     // let destination = "houston";
     // locationsSearch(destination);
+
+
 }
 
 // get list of hotels in a cities, districts, places
@@ -57,15 +60,17 @@ function displayHotel(data) {
     let num = Object.keys(data.suggestions[1].entities).length;
     console.log("hotel num: " + num);
 
+    // For testing!
+    num = 1;
+
     if (num > 0) {
         for (let i = 0; i < num; i++) {
             // var hotelName = data.suggestions[1].entities[i].name;
             let hotelName = data.suggestions[1].entities[i].name;
             let hotelID = data.suggestions[1].entities[i].destinationId;
             appendList(hotelName);
-            appendHotelID(hotelName, hotelID);
+            // appendHotelID(hotelName, hotelID);
             // appendDetail(hotelName);
-            
             // getDetailSearch(hotelID);
             
             readTextFile("../hotelDetailedTest.json", function (text) {
@@ -74,7 +79,9 @@ function displayHotel(data) {
                 displayHotelDetail(dataDetailed);
             });
             
-            appendButton(hotelName);
+
+            // getDetailSearch(hotelID);
+
         }
     }
     else {
@@ -114,11 +121,45 @@ function getDetailSearch(locationID) {
     .catch((error) => console.error("FETCH ERROR:", error));
 }
 
-function displayHotelDetail(data) {
-    let hotelName = data.data.body.propertyDescription.name;
+function displayHotelDetail(rawData) {
+    let hotelName = rawData.data.body.propertyDescription.name;
     console.log("Name: " + hotelName);
-    // var hotelname = data.body;
-    // console.log("displayHotelDetail: " + hotelname);
+    
+    let textReview;
+    let rating;
+    let starRating;
+    let currentPrice;
+
+    if (rawData.data.body.guestReviews.brands.badgeText != undefined) {
+        textReview = rawData.data.body.guestReviews.brands.badgeText;
+        textReview = "Overall Review: " + textReview;
+        appendDetail(hotelName, textReview);
+    }
+    if (rawData.data.body.guestReviews.brands.rating != undefined) {
+        rating = rawData.data.body.guestReviews.brands.rating;
+        rating = "Review Rating: " + rating;
+        appendDetail(hotelName, rating);
+    }
+    if (rawData.data.body.propertyDescription.starRatingTitle != undefined ) {
+        starRating = rawData.data.body.propertyDescription.starRatingTitle;
+        starRating = "Star Rating: " + starRating;
+        appendDetail(hotelName, starRating);
+    }
+    if (rawData.data.body.propertyDescription.featuredPrice != undefined) {
+        currentPrice = rawData.data.body.propertyDescription.featuredPrice.currentPrice.formatted;
+        currentPrice = "Current Price: " + currentPrice;
+        appendPrice(hotelName, currentPrice);
+    }
+     
+    
+    console.log(
+        textReview + "\n" +
+        rating + "\n" +
+        starRating + "\n" +
+        currentPrice + "\n"
+    );
+    
+    appendButton(hotelName);
 }
 
 function testDisplay() {
@@ -189,19 +230,15 @@ function appendList(n) {
     div.appendChild(container);
 }
 
-function appendDetail(n) {
-    const listContainer = document.getElementById(n);
-
-    const test = document.createElement("p");
-    test.innerHTML = "HAHAHAAH it kinna works";
-
-    listContainer.appendChild(test);
-}
-
 function appendButton(n) {
     const listContainer = document.getElementById(n);
 
     const button = document.createElement("button");
+    const buttonID = n + "Button";
+    button.setAttribute("id", buttonID);
+    let parameter = "getPriceFromList('" + n + "')";
+    button.setAttribute("onclick", parameter);
+    
     // button.style.position = "absolute";
     button.style.width = "40px";
     button.style.height = "40px";
@@ -222,6 +259,41 @@ function appendButton(n) {
     listContainer.appendChild(button);
 }
 
+function getPriceFromList(n) {
+    // console.log("clickTest");
+    console.log({n});
+    var guestNum = document.getElementById("guestNum").value;
+    if (guestNum < 1) {
+        guestNum = 1;
+    } 
+    
+    const hotelCostEstimation = document.getElementById("hotelCostEstimation");
+    const hotelElement = n + "Price";
+    const hotelPrice = document.getElementById(hotelElement);
+    if (hotelPrice != null) {
+        console.log(hotelPrice);
+        // hotelCostEstimation.innerHTML = hotelPrice.textContent;
+        let text = hotelPrice.textContent;
+        let price = text.replace( /^\D+/g, '');
+        hotelCostEstimation.innerHTML = "Estimation: $" + price*guestNum;
+        hotelCostEstimation.style.fontSize = "30px";
+    }
+    else {
+        hotelCostEstimation.innerHTML = "We currently don't have price for this hotel";
+    }
+}
+
+function appendPrice(n, price) {
+    const listContainer = document.getElementById(n);
+    const priceLi = document.createElement("li");
+    let liName = n + "Price";
+    priceLi.setAttribute("id", liName);
+    priceLi.innerHTML = price;
+    priceLi.style.margin = "auto";
+    listContainer.appendChild(priceLi);
+}
+
+
 function appendHotelID(n, id) {
     const listContainer = document.getElementById(n);
     const hotelID = document.createElement("li");
@@ -229,6 +301,15 @@ function appendHotelID(n, id) {
     hotelID.style.margin = "auto";
     listContainer.appendChild(hotelID);
 } 
+
+function appendDetail(n, element) {
+    const listContainer = document.getElementById(n);
+    const elementLi = document.createElement("li");
+    elementLi.innerHTML = element;
+    elementLi.style.margin = "auto";
+    listContainer.appendChild(elementLi);
+}
+
 
 function appendError(n) {
     const listContainer = document.getElementById(n);
