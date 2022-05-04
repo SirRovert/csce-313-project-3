@@ -1,45 +1,69 @@
-const testList = [
-    {
-        "id": 1,
-        "name": "NYone",
-        "price": 300
-    },
-    {
-        "id": 2,
-        "name": "NYtwo",
-        "price": 221
-    },
-    {
-        "id": 3,
-        "name": "CCTV",
-        "price": 420
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function() {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
     }
-];
+    rawFile.send(null);
+}
 
-function testAppend() {
+function getHotelRec() {
+    // OR CALL API currently reading from JSON
+    readTextFile("../locationSearchTest.json", function(text){
+        var data = JSON.parse(text);
+        console.log(data);
+        displayName(data);
+    });
+}
+
+// appendList(name, price, rating)
+function appendList() {
+
+    const name = "test";
+    const price = 200;
+    const rating = 7;
+    const review = "Good!"
+
     const div = document.getElementById("panel_four");
+    div.style.margin = "auto";
     
     const listContainer = document.createElement("div");
     listContainer.style.width = "70%";
     listContainer.style.height = "auto";
     listContainer.style.padding = "35px 40px;";
-    listContainer.style.color = "#fff";
+    listContainer.style.backgroundColor = "#CBFFBE";
+    listContainer.style.color = "#000000";
     listContainer.style.borderRadius = "10px";
     listContainer.style.display = "flex";
+    listContainer.style.margin = "20px 20px";
+
 
     const heading = document.createElement("h1");
-    heading.innerHTML = "TEST HEADER!";
-    const test = document.createElement("p");
+    heading.innerHTML = name;
+    heading.style.marginLeft = "5px";
+    heading.style.marginRight = "20px";
 
-    test.innerHTML = testList[0].name;
-    console.log(test);
-    // const price = document.createElement("li");
-    // price.innerHTML = testList.value;
+    const priceList = document.createElement("li");
+    priceList.innerHTML = "Current Price: $" + price;
+    priceList.style.margin = "10px 10px";
+    
+    const ratingList = document.createElement("li");
+    ratingList.innerHTML = "Rating: " + rating + "/10";
+    ratingList.style.margin = "10px 10px";
 
-    div.appendChild(heading);
-    // listContainer.appendChild(price);
-    // div.appendChild(listContainer);
-    // locationsSearch("Dallas, Tx");
+    const reviewList = document.createElement("li");
+    reviewList.innerHTML = "Review Summary: " + review;
+    reviewList.style.margin = "10px 10px";
+
+    listContainer.appendChild(heading);
+    listContainer.appendChild(priceList);
+    listContainer.appendChild(ratingList);
+    listContainer.appendChild(reviewList);
+
+    div.appendChild(listContainer);
 }
 
 // get list of hotels in a cities, districts, places
@@ -75,6 +99,25 @@ function locationsSearch(destination) {
     })
     .then(data => {
       console.log(data);
+      displayName(data);
     })
     .catch((error) => console.error("FETCH ERROR:", error));
+}
+
+function displayName(data) {
+    hotelData = data;
+    console.log("in display name");
+    // Hotel_group
+    console.log("1: " + data.suggestions[1].group);
+    // Entities in Hotel_Group
+    console.log("2: " + data.suggestions[1].entities[0].name);
+
+    // try counting the number of hotel entites
+    let num = Object.keys(data.suggestions[1].entities).length;
+    console.log("3: " + num);
+
+    for (let i = 0; i < num; i++) {
+        appendList(data.suggestions[1].entities[num].name);
+    }
+
 }
