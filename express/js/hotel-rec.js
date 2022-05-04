@@ -5,14 +5,14 @@ function getHotelRec() {
 
     
     // OR CALL API currently reading from JSON
-    readTextFile("../locationSearchTest.json", function (text) {
-        var data = JSON.parse(text);
-        console.log(data);
-        displayHotel(data);
-    });
+    // readTextFile("../locationSearchTest.json", function (text) {
+    //     var data = JSON.parse(text);
+    //     console.log(data);
+    //     displayHotel(data);
+    // });
     
-    // let destination = "houston";
-    // locationsSearch(destination);
+    let destination = "houston";
+    locationsSearch(destination);
 
 
 }
@@ -61,7 +61,7 @@ function displayHotel(data) {
     console.log("hotel num: " + num);
 
     // For testing!
-    num = 1;
+    // num = 1;
 
     if (num > 0) {
         for (let i = 0; i < num; i++) {
@@ -73,14 +73,14 @@ function displayHotel(data) {
             // appendDetail(hotelName);
             // getDetailSearch(hotelID);
             
-            readTextFile("../hotelDetailedTest.json", function (text) {
-                var dataDetailed = JSON.parse(text);
-                console.log(dataDetailed);
-                displayHotelDetail(dataDetailed);
-            });
+            // readTextFile("../hotelDetailedTest.json", function (text) {
+            //     var dataDetailed = JSON.parse(text);
+            //     console.log(dataDetailed);
+            //     displayHotelDetail(dataDetailed);
+            // });
             
 
-            // getDetailSearch(hotelID);
+            getDetailSearch(hotelID);
 
         }
     }
