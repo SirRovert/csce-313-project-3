@@ -14,6 +14,82 @@ function getHotelRec() {
     // locationsSearch(destination);
 }
 
+// get list of hotels in a cities, districts, places
+function locationsSearch(destination) {
+    var query = destination;
+    console.log("Test old http: " + query);
+
+    // Formatting string to http acceptable 
+    query = query.replace(",", "%2C");
+    query = query.replace(" ", "%20");
+    console.log("Test new http: " + query);
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
+            'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
+        }
+    }
+
+    var fetchHttp = 'https://hotels4.p.rapidapi.com/locations/v2/search?query=';
+    fetchHttp += query + '&locale=en_US&currency=USD';
+    console.log("check fetchHttp: " + fetchHttp);
+
+
+    fetch(fetchHttp, options)
+        .then((response) => {
+            if (response.ok) {
+                return response.json();
+            } else {
+                throw new Error("NETWORK RESONSE ERROR");
+            }
+        })
+        .then(data => {
+            console.log(data);
+            displayHotel(data);
+        })
+        .catch((error) => console.error("FETCH ERROR:", error));
+}
+
+function displayHotel(data) {
+    // console.log("in display name");
+    // Hotel_group
+    // console.log("1: " + data.suggestions[1].group);
+    // Entities in Hotel_Group
+    // console.log("2: " + data.suggestions[1].entities[0].name);
+
+    // try counting the number of hotel entites
+    let num = Object.keys(data.suggestions[1].entities).length;
+    console.log("hotel num: " + num);
+
+    if (num > 0) {
+        for (let i = 0; i < num; i++) {
+            // var hotelName = data.suggestions[1].entities[i].name;
+            let hotelName = data.suggestions[1].entities[i].name;
+            let hotelID = data.suggestions[1].entities[i].destinationId;
+            appendList(hotelName);
+            appendDetail(hotelName);
+            appendButton(hotelName);
+        }
+    }
+    else {
+        appendList("NO HOTEL FOUND FROM API");
+        console.log("No hotel found in a given location");
+    }
+}
+
+function readTextFile(file, callback) {
+    var rawFile = new XMLHttpRequest();
+    rawFile.overrideMimeType("application/json");
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function () {
+        if (rawFile.readyState === 4 && rawFile.status == "200") {
+            callback(rawFile.responseText);
+        }
+    }
+    rawFile.send(null);
+}
 
 function listStyle(div) {
     div.style.width = "70%";
@@ -81,82 +157,6 @@ function appendList(n) {
     div.appendChild(container);
 }
 
-// get list of hotels in a cities, districts, places
-function locationsSearch(destination) {
-    var query = destination;
-    console.log("Test old http: " + query);
-
-    // Formatting string to http acceptable 
-    query = query.replace(",", "%2C");
-    query = query.replace(" ", "%20");
-    console.log("Test new http: " + query);
-
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'hotels4.p.rapidapi.com',
-            'X-RapidAPI-Key': 'f37fed8ef3msh6a79e97fbbd2b8dp18538fjsn25b950495a57'
-        }
-    }
-
-    var fetchHttp = 'https://hotels4.p.rapidapi.com/locations/v2/search?query=';
-    fetchHttp += query + '&locale=en_US&currency=USD';
-    console.log("check fetchHttp: " + fetchHttp);
-
-
-    fetch(fetchHttp, options)
-        .then((response) => {
-            if (response.ok) {
-                return response.json();
-            } else {
-                throw new Error("NETWORK RESONSE ERROR");
-            }
-        })
-        .then(data => {
-            console.log(data);
-            displayHotel(data);
-        })
-        .catch((error) => console.error("FETCH ERROR:", error));
-}
-
-function displayHotel(data) {
-    // console.log("in display name");
-    // Hotel_group
-    // console.log("1: " + data.suggestions[1].group);
-    // Entities in Hotel_Group
-    // console.log("2: " + data.suggestions[1].entities[0].name);
-
-    // try counting the number of hotel entites
-    let num = Object.keys(data.suggestions[1].entities).length;
-    console.log("hotel num: " + num);
-
-    if (num > 0) {
-        for (let i = 0; i < num; i++) {
-            // var hotelName = data.suggestions[1].entities[i].name;
-            let hotelName = data.suggestions[1].entities[i].name
-            appendList(hotelName);
-            appendDetail(hotelName);
-            appendButton(hotelName);
-        }
-    }
-    else {
-        appendList("NO HOTEL FOUND FROM API");
-        console.log("No hotel found in a given location");
-    }
-}
-
-function readTextFile(file, callback) {
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", file, true);
-    rawFile.onreadystatechange = function () {
-        if (rawFile.readyState === 4 && rawFile.status == "200") {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
-}
-
 function appendDetail(n) {
     const listContainer = document.getElementById(n);
 
@@ -191,5 +191,9 @@ function appendButton(n) {
 }
 
 function appendHotelID(n, id) {
+    const listContainer = document.getElementById(n);
+    const hotelID = document.createElement("li");
+    hotelID.innerHTML = id;
 
+    listContainer.appendChild(test);
 } 
