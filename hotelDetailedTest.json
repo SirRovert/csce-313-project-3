@@ -1,0 +1,428 @@
+{
+    "result": "OK",
+    "data": {
+        "body": {
+            "pdpHeader": {
+                "hotelId": "449518",
+                "destinationId": "1539827",
+                "pointOfSaleId": "HCOM_US",
+                "currencyCode": "USD",
+                "occupancyKey": "A1",
+                "hotelLocation": {
+                    "coordinates": {
+                        "latitude": 32.954349,
+                        "longitude": -96.837009
+                    },
+                    "resolvedLocation": "CITY:1539827:PROVIDED:PROVIDED",
+                    "locationName": "Addison"
+                }
+            },
+            "overview": {
+                "overviewSections": [
+                    {
+                        "title": "Main amenities",
+                        "type": "HOTEL_FEATURE",
+                        "content": [
+                            "126 guestrooms",
+                            "Daily housekeeping",
+                            "24-hour front desk",
+                            "Air conditioning",
+                            "Snack bar/deli",
+                            "Self-serve laundry",
+                            "Meeting room",
+                            "Free WiFi and free parking "
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "title": "What’s around",
+                        "type": "LOCATION_SECTION",
+                        "content": [
+                            "Addison Circle Park - 17 min walk",
+                            "Galleria Dallas - 2.6 mi / 4.1 km",
+                            "University of Texas at Dallas - 6.5 mi / 10.5 km",
+                            "Northwood Club - 3.7 mi / 5.9 km",
+                            "Shops at Willow Bend - 7.2 mi / 11.5 km",
+                            "Zero Gravity Thrill Amusement Park - 7.4 mi / 11.9 km",
+                            "Baylor Scott & White The Heart Hospital - 7.7 mi / 12.4 km",
+                            "Plaza at Preston Center - 7.7 mi / 12.4 km",
+                            "MoneyGram Soccer Park - 8 mi / 12.8 km",
+                            "Frontiers of Flight Museum - 8 mi / 12.9 km",
+                            "Richland College - 8.6 mi / 13.9 km"
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "type": "TAGLINE",
+                        "content": [
+                            "<b>Suburban motel in Addison </b>"
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "type": "HOTEL_FREEBIES",
+                        "content": [
+                            "Free WiFi and free parking"
+                        ],
+                        "contentType": "LIST"
+                    }
+                ]
+            },
+            "hotelWelcomeRewards": {
+                "applies": true,
+                "info": "You can collect Hotels.com® Rewards stamps here"
+            },
+            "propertyDescription": {
+                "clientToken": "flE623OwphEe4N0SfKAsrzPReEg.",
+                "address": {
+                    "countryName": "United States of America",
+                    "cityName": "Addison",
+                    "postalCode": "75001",
+                    "provinceName": "TX",
+                    "addressLine1": "4325 Beltline Road",
+                    "countryCode": "USA",
+                    "pattern": "AddressLine1,#AddressLine2,#CityName,#ProvinceName,#PostalCode,#CountryName",
+                    "fullAddress": "4325 Beltline Road, Addison, TX, 75001, United States of America"
+                },
+                "priceMatchEnabled": false,
+                "name": "Motel 6 Addison, TX - Dallas",
+                "starRatingTitle": "2 stars",
+                "starRating": 2,
+                "featuredPrice": {
+                    "beforePriceText": "Lowest price",
+                    "afterPriceText": "",
+                    "pricingAvailability": "available on 05/05/22",
+                    "pricingTooltip": "Price may be available on other dates",
+                    "currentPrice": {
+                        "formatted": "$67",
+                        "plain": 67
+                    },
+                    "taxInclusiveFormatting": false,
+                    "bookNowButton": false
+                },
+                "mapWidget": {
+                    "staticMapUrl": "https://maps-api-ssl.google.com/maps/api/staticmap?center=32.954349,-96.837009&format=jpg&sensor=false&key=AIzaSyDaDqDNrxWrxcURixO2l6TbtV68X0Klf4U&zoom=16&size=834x443&scale&signature&signature=tyVrBKeOaUT6xuBZah1QfsQ0RDo="
+                },
+                "renovationInfo": "Due to COVID-19, this property’s food and beverage options may be limited. ",
+                "roomTypeNames": [
+                    "Standard Room, 1 King Bed, Smoking",
+                    "Standard Room, 2 Queen Beds, Smoking",
+                    "Standard Room, 1 Queen Bed, Non Smoking",
+                    "Standard Room, 2 Queen Beds, Accessible, Non Smoking",
+                    "Standard Room, 1 King Bed, Non Smoking",
+                    "Standard Room, 2 Queen Beds, Non Smoking",
+                    "Standard Room, 1 King Bed, Accessible, Non Smoking",
+                    "Standard Room, 2 Queen Beds, Accessible, Non Smoking",
+                    "Deluxe Suite, 1 King Bed, Non Smoking, Kitchenette"
+                ],
+                "tagline": [
+                    "<b>Suburban motel in Addison </b>"
+                ],
+                "freebies": [
+                    "Free WiFi and free parking"
+                ]
+            },
+            "guestReviews": {
+                "brands": {
+                    "scale": 10,
+                    "formattedScale": "10",
+                    "rating": 7.2,
+                    "formattedRating": "7.2",
+                    "lowRating": false,
+                    "badgeText": "Good",
+                    "total": 902
+                }
+            },
+            "atAGlance": {
+                "keyFacts": {
+                    "hotelSize": [
+                        "126 rooms",
+                        "Arranged over 2 floors"
+                    ],
+                    "arrivingLeaving": [
+                        "Check-in time 3:00 PM-3:00 AM",
+                        "Check-out time is  11 AM"
+                    ],
+                    "specialCheckInInstructions": [
+                        "Front desk staff will greet guests on arrival. "
+                    ],
+                    "requiredAtCheckIn": [
+                        "Credit card required for incidental charges",
+                        "Government-issued photo ID may be required",
+                        "Minimum check-in age is 18"
+                    ]
+                },
+                "travellingOrInternet": {
+                    "travelling": {
+                        "children": [
+                            "Children stay free when occupying the parent or guardian's room, using existing bedding"
+                        ],
+                        "pets": [
+                            "Pets stay free (dogs and cats only)",
+                            "Service animals welcome",
+                            "2 per room"
+                        ],
+                        "extraPeople": []
+                    },
+                    "internet": [
+                        "Free WiFi in public areas",
+                        "Free WiFi in rooms"
+                    ]
+                },
+                "transportAndOther": {
+                    "transport": {
+                        "transfers": [],
+                        "parking": [
+                            "<em>Free</em> onsite self parking",
+                            "Wheelchair-accessible parking and van parking on site"
+                        ],
+                        "offsiteTransfer": []
+                    },
+                    "otherInformation": [],
+                    "otherInclusions": []
+                }
+            },
+            "amenities": [
+                {
+                    "heading": "At the motel",
+                    "listItems": [
+                        {
+                            "heading": "Food and drink",
+                            "listItems": [
+                                "Snack bar/deli"
+                            ]
+                        },
+                        {
+                            "heading": "Working away",
+                            "listItems": [
+                                "Number of meeting rooms -  1"
+                            ]
+                        },
+                        {
+                            "heading": "Services",
+                            "listItems": [
+                                "24-hour front desk",
+                                "Laundry facilities"
+                            ]
+                        },
+                        {
+                            "heading": "Facilities",
+                            "listItems": [
+                                "Number of buildings/towers -  5",
+                                "Year Built -  1990",
+                                "Designated smoking areas"
+                            ]
+                        },
+                        {
+                            "heading": "Accessibility",
+                            "listItems": [
+                                "Accessible bathroom",
+                                "In-room accessibility",
+                                "Roll-in shower",
+                                "Wheelchair-accessible path of travel",
+                                "Wheelchair-accessible parking",
+                                "Wheelchair-accessible public restroom",
+                                "Wheelchair-accessible concierge desk",
+                                "Wheelchair-accessible van parking",
+                                "Wheelchair-accessible registration desk",
+                                "Wheelchair-accessible pool"
+                            ]
+                        },
+                        {
+                            "heading": "Languages Spoken",
+                            "listItems": [
+                                "English"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "heading": "In the room",
+                    "listItems": [
+                        {
+                            "heading": "Home comforts",
+                            "listItems": [
+                                "Air conditioning"
+                            ]
+                        },
+                        {
+                            "heading": "Freshen up",
+                            "listItems": [
+                                "Private bathroom",
+                                "Shower/tub combination"
+                            ]
+                        },
+                        {
+                            "heading": "Be entertained",
+                            "listItems": [
+                                "TV",
+                                "Premium TV channels"
+                            ]
+                        },
+                        {
+                            "heading": "Stay connected",
+                            "listItems": [
+                                "Free WiFi",
+                                "Free local calls"
+                            ]
+                        },
+                        {
+                            "heading": "More",
+                            "listItems": [
+                                "Daily housekeeping",
+                                "Connecting/adjoining rooms available",
+                                "Access via exterior corridors"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "hygieneAndCleanliness": {
+                "title": "COVID-19: Hygiene and cleanliness",
+                "hygieneQualifications": {
+                    "title": "Official standards",
+                    "qualifications": [
+                        "This property advises that it adheres to Clean@6 (Motel 6) and SafeStay (AHLA - USA) cleaning and disinfection practices. "
+                    ]
+                },
+                "healthAndSafetyMeasures": {
+                    "title": "Enhanced health and safety measures",
+                    "description": "This property advises that enhanced cleaning and guest safety measures are currently in place.",
+                    "measures": [
+                        "Property is cleaned with disinfectant",
+                        "Staff wears personal protective equipment",
+                        "Property confirms they are implementing enhanced cleaning measures",
+                        "Shield between guests and staff in main contact areas",
+                        "Social distancing measures are in place",
+                        "Guests are provided with free hand sanitizer"
+                    ]
+                }
+            },
+            "smallPrint": {
+                "alternativeNames": [
+                    "6 Dallas Addison",
+                    "Motel 6 Dallas Addison",
+                    "6 Addison, Tx Dallas Addison",
+                    "Motel 6 Addison, TX - Dallas Motel",
+                    "Motel 6 Addison, TX - Dallas Addison",
+                    "Motel 6 Addison, TX - Dallas Motel Addison",
+                    "Addison Dallas",
+                    "Dallas Addison",
+                    "Motel 6 Addison",
+                    "Motel 6 Dallas Addison",
+                    "Addison Motel Six",
+                    "Addison Motel 6",
+                    "Motel Six Addison"
+                ],
+                "mandatoryFees": [],
+                "optionalExtras": [],
+                "policies": [
+                    "<p>The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation. </p><p>Only registered guests are allowed in the guestrooms. </p> <p>This property does not have elevators. </p><p>This property advises that enhanced cleaning and guest safety measures are currently in place.</p><p>Disinfectant is used to clean the property, and commonly-touched surfaces are cleaned with disinfectant between stays.</p><p>Social distancing measures are in place; staff at the property wear personal protective equipment; a shield is in place between staff and guests in main contact areas; guests are provided with hand sanitizer.</p><p>This property affirms that it follows the cleaning and disinfection practices of Clean@6 (Motel 6).</p><p>This property affirms that it adheres to the cleaning and disinfection practices of SafeStay (AHLA - USA).</p><p> This property welcomes guests of all sexual orientations and gender identities (LGBTQ friendly). </p>",
+                    "<p>The name on the credit card used at check-in to pay for incidentals must be the primary name on the guestroom reservation. </p><p>This property accepts credit cards, debit cards and cash.</p>"
+                ],
+                "mandatoryTaxesOrFees": false,
+                "display": true
+            },
+            "specialFeatures": {
+                "sections": []
+            },
+            "miscellaneous": {
+                "pimmsAttributes": "DoubleStamps|D13|TESCO",
+                "showLegalInfoForStrikethroughPrices": true,
+                "legalInfoForStrikethroughPrices": "The struck-out price is based on the property’s standard rate on our app, as determined and supplied by the property."
+            },
+            "pageInfo": {
+                "pageType": "dateless",
+                "errors": [
+                    {
+                        "fieldName": "arrivalDate",
+                        "errorMessages": [
+                            "Specified arrival date is before today’s date."
+                        ]
+                    }
+                ],
+                "errorKeys": [
+                    "MALFORMED_DATEFUL_REQUEST"
+                ]
+            },
+            "unavailable": {}
+        },
+        "common": {
+            "pointOfSale": {
+                "numberSeparators": ",.",
+                "brandName": "Hotels.com"
+            },
+            "tracking": {
+                "omniture": {
+                    "s.prop34": "2022.04.946",
+                    "s.eVar69": "Mob :: aApp",
+                    "s.currencyCode": "USD",
+                    "s.eVar26": "US:TX:HOUSTON:618",
+                    "s.eVar16": "Mob :: aApp",
+                    "s.products": "LOCAL;50556",
+                    "s.eVar29": "Mob :: aApp",
+                    "s.eVar40": "D=v0",
+                    "s.eVar95": "Unknown",
+                    "s.eVar41": "USD",
+                    "s.eVar31": "D=v0",
+                    "s.eVar4": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|",
+                    "s.eVar43": "en_US|HCOM_US|www.hotels.com",
+                    "s.eVar32": "D=v0",
+                    "s.eVar34": "H1068:005.001,H1871:007.002,M4869:001.000,M4953:001.000,M5342:000.000,M5756:001.000,M5758:001.000,M5759:001.000,M5760:001.000,M6271:001.000,M6439:000.000,M6553:000.000,M6946:000.000,M7296:000.000,M7305:000.000,M7308:000.000,M7353:000.000,M7362.0,M7635:000.000,M7844:000.000,M7983:000.000,M7990:000.000,M8033:000.000,M8248:000.000,M8336:000.000,M8400:000.000,M9035:000.000,M9056:000.000,M9167:000.000,M9168:000.000,M9469:000.000,M9475:000.000,M9493:000.000,M9629:000.000,M9733:007.001,M9810:000.000,M9890:000.000,M9924:000.000,M9930:000.000,M9974:000.000,M10013:002.001,M10025:000.000,M10049:000.000,M10057:000.000,M10101:000.000,M10268:000.000,M10291:000.000,M10335:000.000,M10473:000.000,M10517:000.000,M9215:001.000",
+                    "s.eVar13": "389367",
+                    "s.server": "www.hotels.com",
+                    "s.prop28": "0",
+                    "s.prop27": "9d04702a-9485-4576-be5a-584befbf6d90",
+                    "s.prop5": "389367",
+                    "s.eVar80": "",
+                    "s.prop48": "hotel details without dates description tab",
+                    "s.prop36": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|",
+                    "s.eVar93": "aws.us-west-2.unknown"
+                },
+                "pageViewBeaconUrl": "/taps/v1/PageView?deviceType=App-Phone&rooms=1&destRegionID=1539827&hotelIds=&adults=1&userAgent=PDE.4.1.432&userGuid=9d04702a-9485-4576-be5a-584befbf6d90&pageName=Hotel-IS&slots=HIS_Car_A,HIS_Car_B,HIS_Car_C,HIS_Car_D,HIS_Car_E,HIS_Car_F,HIS_Car_G,HIS_Car_H,HIS_Car_I,HIS_Car_J&children=0&culture=en_US&testVersionOverride=4200.0,7983.0,7561.0,7990.0,8434.0,9493.0,10473.0&domain=www.hotels.com&action=pageview&publisher=expedia&userIP=127.0.0.1&programId=1"
+            }
+        }
+    },
+    "transportation": {
+        "transportLocations": [
+            {
+                "category": "airport",
+                "locations": [
+                    {
+                        "name": "Dallas-Fort Worth Intl. Airport (DFW) -",
+                        "distance": "",
+                        "distanceInTime": "22 min drive"
+                    },
+                    {
+                        "name": "Love Field Airport (DAL) -",
+                        "distance": "",
+                        "distanceInTime": "16 min drive"
+                    }
+                ]
+            },
+            {
+                "category": "train-station",
+                "locations": [
+                    {
+                        "name": "Dallas Medical-Market Center Station -",
+                        "distance": "",
+                        "distanceInTime": "15 min drive"
+                    },
+                    {
+                        "name": "Dallas Union Station -",
+                        "distance": "",
+                        "distanceInTime": "16 min drive"
+                    },
+                    {
+                        "name": "West Irving Station -",
+                        "distance": "",
+                        "distanceInTime": "21 min drive"
+                    }
+                ]
+            }
+        ]
+    },
+    "neighborhood": {
+        "neighborhoodName": "Far North Dallas"
+    }
+}
