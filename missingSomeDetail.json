@@ -1,0 +1,540 @@
+{
+    "result": "OK",
+    "data": {
+        "body": {
+            "pdpHeader": {
+                "hotelId": "131200",
+                "destinationId": "1410382",
+                "pointOfSaleId": "HCOM_US",
+                "currencyCode": "USD",
+                "occupancyKey": "A1",
+                "hotelLocation": {
+                    "coordinates": {
+                        "latitude": 29.768461,
+                        "longitude": -95.459631
+                    },
+                    "resolvedLocation": "CITY:1410382:PROVIDED:PROVIDED",
+                    "locationName": "Houston"
+                }
+            },
+            "overview": {
+                "overviewSections": [
+                    {
+                        "title": "Main amenities",
+                        "type": "HOTEL_FEATURE",
+                        "content": [
+                            "289 smoke-free guestrooms",
+                            "Daily housekeeping",
+                            "3 restaurants and bar/lounge",
+                            "Full-service spa",
+                            "3 outdoor pools",
+                            "Breakfast available",
+                            "Free area shuttle",
+                            "4 indoor and 5 outdoor tennis courts",
+                            "Valet parking",
+                            "Business center",
+                            "Limo/town car service",
+                            "Childcare",
+                            "Free WiFi "
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "title": "What’s around",
+                        "type": "LOCATION_SECTION",
+                        "content": [
+                            "In Memorial",
+                            "Memorial Park - 30 min walk",
+                            "Toyota Center - 7.1 mi / 11.4 km",
+                            "CityCentre - 8 mi / 12.9 km",
+                            "Minute Maid Park - 8.4 mi / 13.5 km",
+                            "George R. Brown Convention Center - 8.7 mi / 14.1 km",
+                            "University of Houston - 9.2 mi / 14.8 km",
+                            "NRG Park - 9.3 mi / 14.9 km",
+                            "NRG Stadium - 9.8 mi / 15.8 km"
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "type": "TAGLINE",
+                        "content": [
+                            "<b>Luxury resort with 3 restaurants, near Memorial Park </b>"
+                        ],
+                        "contentType": "LIST"
+                    },
+                    {
+                        "type": "HOTEL_FREEBIES",
+                        "content": [
+                            "Free WiFi"
+                        ],
+                        "contentType": "LIST"
+                    }
+                ]
+            },
+            "hotelWelcomeRewards": {
+                "applies": true,
+                "info": "You can collect Hotels.com® Rewards stamps here"
+            },
+            "propertyDescription": {
+                "clientToken": "CINe8G98zsVEh46td7ThzcmVjkQ.",
+                "address": {
+                    "countryName": "United States of America",
+                    "cityName": "Houston",
+                    "postalCode": "77024",
+                    "provinceName": "TX",
+                    "addressLine1": "111 N Post Oak Ln",
+                    "countryCode": "USA",
+                    "pattern": "AddressLine1,#AddressLine2,#CityName,#ProvinceName,#PostalCode,#CountryName",
+                    "fullAddress": "111 N Post Oak Ln, Houston, TX, 77024, United States of America"
+                },
+                "priceMatchEnabled": false,
+                "name": "The Houstonian Hotel, Club & Spa",
+                "starRatingTitle": "4.5 stars",
+                "starRating": 4.5,
+                "mapWidget": {
+                    "staticMapUrl": "https://maps-api-ssl.google.com/maps/api/staticmap?center=29.768461,-95.459631&format=jpg&sensor=false&key=AIzaSyDaDqDNrxWrxcURixO2l6TbtV68X0Klf4U&zoom=16&size=834x443&scale&signature&signature=B-8ED6O5QbcrvCZmBO6ydoN0qc4="
+                },
+                "renovationInfo": "The following facilities are closed on Sunday, Monday, Tuesday, Wednesday, and Thursday: <ul><li>Full-service spa</li><li>Outdoor pool</li><li>Restaurant</li></ul><br/>\nThe following facilities are closed on Friday and Saturday: <ul><li>Full-service spa</li><li>Outdoor pool</li><li>Restaurant</li></ul>",
+                "roomTypeNames": [
+                    "Traditional Room, 1 King Bed, Accessible",
+                    "Traditional Room, 1 King Bed",
+                    "Traditional Room, 2 Double Beds",
+                    "Traditional Room, 1 King Bed with Sofa bed"
+                ],
+                "tagline": [
+                    "<b>Luxury resort with 3 restaurants, near Memorial Park </b>"
+                ],
+                "freebies": [
+                    "Free WiFi"
+                ]
+            },
+            "guestReviews": {
+                "brands": {
+                    "scale": 10,
+                    "formattedScale": "10",
+                    "rating": 9.2,
+                    "formattedRating": "9.2",
+                    "lowRating": false,
+                    "badgeText": "Superb",
+                    "total": 1000
+                }
+            },
+            "atAGlance": {
+                "keyFacts": {
+                    "hotelSize": [
+                        "This hotel has 289 rooms",
+                        "This hotel is arranged over 4 floors"
+                    ],
+                    "arrivingLeaving": [
+                        "Check-in time 4 PM-midnight",
+                        "Check-out time is  noon",
+                        "Express check-out"
+                    ],
+                    "specialCheckInInstructions": [
+                        "Front desk staff will greet guests on arrival. "
+                    ],
+                    "requiredAtCheckIn": [
+                        "Credit card, debit card, or cash deposit required for incidental charges",
+                        "Government-issued photo ID may be required",
+                        "Minimum check-in age is 21"
+                    ]
+                },
+                "travellingOrInternet": {
+                    "travelling": {
+                        "children": [],
+                        "pets": [
+                            "Pets not allowed",
+                            "Service animals welcome"
+                        ],
+                        "extraPeople": []
+                    },
+                    "internet": [
+                        "Free WiFi in public areas",
+                        "Free WiFi in rooms"
+                    ]
+                },
+                "transportAndOther": {
+                    "transport": {
+                        "transfers": [],
+                        "parking": [
+                            "Onsite self parking (USD 18.00 per night; includes in/out privileges)",
+                            "Onsite valet parking (USD 31.00 per night; includes in/out privileges)",
+                            "Wheelchair-accessible parking on site"
+                        ],
+                        "offsiteTransfer": [
+                            "<em>Free</em> area shuttle within 4 miles"
+                        ]
+                    },
+                    "otherInformation": [
+                        "Smoke-free property"
+                    ],
+                    "otherInclusions": []
+                }
+            },
+            "amenities": [
+                {
+                    "heading": "In the hotel",
+                    "listItems": [
+                        {
+                            "heading": "Taking the kids?",
+                            "listItems": [
+                                "Supervised childcare/activities (surcharge)"
+                            ]
+                        },
+                        {
+                            "heading": "Food and drink",
+                            "listItems": [
+                                "Cooked-to-order breakfast daily (surcharge)",
+                                "3 restaurants",
+                                "Bar/lounge",
+                                "Coffee shop/cafe",
+                                "Snack bar/deli",
+                                "Poolside bar",
+                                "24-hour room service",
+                                "Coffee/tea in a common area"
+                            ]
+                        },
+                        {
+                            "heading": "Things to do",
+                            "listItems": [
+                                "Fitness classes on site",
+                                "Basketball on site",
+                                "Pilates classes on site",
+                                "Playground on site",
+                                "Racquetball/squash on site",
+                                "Tennis lessons on site",
+                                "Yoga classes/instruction on site",
+                                "Hiking/biking trails nearby",
+                                "Mountain biking nearby"
+                            ]
+                        },
+                        {
+                            "heading": "Working away",
+                            "listItems": [
+                                "Business center",
+                                "Conference space",
+                                "Meeting rooms",
+                                "Conference space size (meters) -  2973",
+                                "Computer station"
+                            ]
+                        },
+                        {
+                            "heading": "Services",
+                            "listItems": [
+                                "24-hour front desk",
+                                "Concierge services",
+                                "Tours/ticket assistance",
+                                "Limo or town car service available",
+                                "Dry cleaning/laundry service",
+                                "Laundry facilities",
+                                "Hair salon",
+                                "Free newspapers in lobby",
+                                "Luggage storage",
+                                "Wedding services",
+                                "Multilingual staff",
+                                "Porter/bellhop"
+                            ]
+                        },
+                        {
+                            "heading": "Facilities",
+                            "listItems": [
+                                "Number of buildings/towers -  1",
+                                "Year Built -  1980",
+                                "Elevator",
+                                "ATM/banking",
+                                "Safe-deposit box at front desk",
+                                "Garden",
+                                "Fireplace in lobby"
+                            ]
+                        },
+                        {
+                            "heading": "Accessibility",
+                            "listItems": [
+                                "Braille or raised signage",
+                                "Accessible bathroom",
+                                "In-room accessibility",
+                                "Roll-in shower",
+                                "Wheelchair-accessible path of travel",
+                                "Wheelchair-accessible parking",
+                                "Assistive listening devices available"
+                            ]
+                        },
+                        {
+                            "heading": "Languages Spoken",
+                            "listItems": [
+                                "English",
+                                "Spanish"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "heading": "In the room",
+                    "listItems": [
+                        {
+                            "heading": "Home comforts",
+                            "listItems": [
+                                "In-room climate control (air conditioning)",
+                                "Minibar",
+                                "Coffee/tea maker",
+                                "Bathrobes",
+                                "Iron/ironing board"
+                            ]
+                        },
+                        {
+                            "heading": "Sleep well",
+                            "listItems": [
+                                "Hypo-allergenic bedding available",
+                                "Blackout drapes/curtains",
+                                "Turndown service",
+                                "Premium bedding"
+                            ]
+                        },
+                        {
+                            "heading": "Freshen up",
+                            "listItems": [
+                                "Private bathroom",
+                                "Shower only",
+                                "Free toiletries",
+                                "Hair dryer"
+                            ]
+                        },
+                        {
+                            "heading": "Be entertained",
+                            "listItems": [
+                                "55-inch flat-screen TV",
+                                "Pay movies",
+                                "Premium TV channels",
+                                "IPod docking station"
+                            ]
+                        },
+                        {
+                            "heading": "Stay connected",
+                            "listItems": [
+                                "Desk",
+                                "Free WiFi",
+                                "Free local calls"
+                            ]
+                        },
+                        {
+                            "heading": "Food and drink",
+                            "listItems": [
+                                "Refrigerator (on request)",
+                                "Microwave (on request)"
+                            ]
+                        },
+                        {
+                            "heading": "More",
+                            "listItems": [
+                                "Daily housekeeping",
+                                "In-room safe (laptop compatible)",
+                                "Connecting/adjoining rooms available"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "hygieneAndCleanliness": {
+                "title": "COVID-19: Hygiene and cleanliness",
+                "healthAndSafetyMeasures": {
+                    "title": "Enhanced health and safety measures",
+                    "description": "This property advises that enhanced cleaning and guest safety measures are currently in place.",
+                    "measures": [
+                        "Property is cleaned with disinfectant",
+                        "Staff wears personal protective equipment",
+                        "Property confirms they are implementing enhanced cleaning measures",
+                        "Shield between guests and staff in main contact areas",
+                        "Social distancing measures are in place",
+                        "Gap period enforced between guest stays - 48 hours",
+                        "Guests are provided with free hand sanitizer"
+                    ]
+                }
+            },
+            "smallPrint": {
+                "alternativeNames": [
+                    "Hotel Houstonian",
+                    "The Houstonian Hotel, Club & Spa Resort",
+                    "The Houstonian Hotel, Club & Spa Houston",
+                    "The Houstonian Hotel, Club & Spa Resort Houston",
+                    "Houstonian Club",
+                    "Houstonian Hotel",
+                    "Houstonian Hotel Club",
+                    "The Houstonian Hotel Club Spa",
+                    " Houstonian Hotel Houston ",
+                    "The Houstonian Hotel Houston ",
+                    " Houstonian Resort Houston",
+                    "The Houstonian Hotel, & Spa"
+                ],
+                "mandatoryFees": [],
+                "optionalExtras": [
+                    "<p><strong>Late check-out</strong> can be arranged for an extra charge of USD 50.00 (subject to availability)</p>",
+                    "<p><strong>Self parking</strong> costs USD 18.00 per night with in/out privileges</p><p><strong>Valet parking</strong> costs USD 31.00 per night with in/out privileges</p>",
+                    "<p><strong>Breakfast</strong> costs between USD 20 and USD 30 per person (approximately)</p>"
+                ],
+                "policies": [
+                    "<p>The property has connecting/adjoining rooms, which are subject to availability and can be requested by contacting the property using the number on the booking confirmation. </p><p>This property advises that enhanced cleaning and guest safety measures are currently in place.</p><p>Disinfectant is used to clean the property; commonly-touched surfaces are cleaned with disinfectant between stays; bed sheets and towels are laundered at a temperature of at least 60°C/140°F.</p><p>Social distancing measures are in place; staff at the property wear personal protective equipment; a shield is in place between staff and guests in main contact areas; periodic temperature checks are conducted on staff; temperature checks are available to guests; guests are provided with hand sanitizer.</p><p>Contactless check-out is available.</p><p>Each guestroom is kept vacant for a minimum of 48 hours between bookings.</p>",
+                    "<p>Reservations are required for massage services and spa treatments and can be made by contacting the property before arrival at the number on the booking confirmation. </p><p>This property accepts credit cards and cash.</p>"
+                ],
+                "mandatoryTaxesOrFees": false,
+                "display": true
+            },
+            "specialFeatures": {
+                "sections": [
+                    {
+                        "heading": "Spa",
+                        "freeText": "<strong>Trellis</strong> has 24 treatment rooms including rooms for couples. Services include deep-tissue massages, hot stone massages, sports massages, and Swedish massages. A variety of treatment therapies are provided, including aromatherapy and hydrotherapy. The spa is equipped with a spa tub and a steam room. <p>The spa is open daily. </p>",
+                        "listItems": [],
+                        "subsections": []
+                    },
+                    {
+                        "heading": "Dining",
+                        "freeText": "<strong>TRIBUTE</strong> - Overlooking the garden, this restaurant specializes in local cuisine and serves breakfast, lunch, and dinner. <br/>\n<p></p><strong>Manor House</strong> - Overlooking the garden, this restaurant serves lunch only. Open select days. <br/>\n<p></p><strong>Center Court Cafe</strong> - This café specializes in American cuisine and serves breakfast, lunch, and light fare. Open daily. <br/>\n<p></p><strong>The BAR</strong> - Onsite cocktail bar. Happy hour is offered. Open daily. ",
+                        "listItems": [],
+                        "subsections": []
+                    },
+                    {
+                        "heading": "Recreation",
+                        "freeText": "",
+                        "listItems": [],
+                        "subsections": [
+                            {
+                                "heading": "On Site",
+                                "listItems": [
+                                    "Fitness facilities",
+                                    "Health club",
+                                    "Indoor tennis courts - ",
+                                    "Outdoor tennis courts - ",
+                                    "Sauna",
+                                    "Steam room",
+                                    "Tennis on site",
+                                    "Fitness classes on site",
+                                    "Basketball on site",
+                                    "Pilates classes on site",
+                                    "Playground on site",
+                                    "Racquetball/squash on site",
+                                    "Tennis lessons on site",
+                                    "Yoga classes/instruction on site"
+                                ]
+                            },
+                            {
+                                "heading": "Nearby",
+                                "listItems": [
+                                    "Hiking/biking trails nearby",
+                                    "Mountain biking nearby"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "heading": "Awards and affiliations",
+                        "freeText": "The property is a member of Preferred Hotels & Resorts. ",
+                        "listItems": [],
+                        "subsections": []
+                    }
+                ]
+            },
+            "miscellaneous": {
+                "pimmsAttributes": "DoubleStamps|D13|TESCO",
+                "showLegalInfoForStrikethroughPrices": false
+            },
+            "pageInfo": {
+                "pageType": "dateless",
+                "errors": [
+                    {
+                        "fieldName": "arrivalDate",
+                        "errorMessages": [
+                            "Specified arrival date is before today’s date."
+                        ]
+                    }
+                ],
+                "errorKeys": [
+                    "MALFORMED_DATEFUL_REQUEST"
+                ]
+            },
+            "unavailable": {}
+        },
+        "common": {
+            "pointOfSale": {
+                "numberSeparators": ",.",
+                "brandName": "Hotels.com"
+            },
+            "tracking": {
+                "omniture": {
+                    "s.prop34": "2022.04.946",
+                    "s.eVar69": "Mob :: aApp",
+                    "s.currencyCode": "USD",
+                    "s.eVar26": "US:TX:AUSTIN:635",
+                    "s.eVar16": "Mob :: aApp",
+                    "s.products": "LOCAL;22016",
+                    "s.eVar29": "Mob :: aApp",
+                    "s.eVar40": "D=v0",
+                    "s.eVar95": "Unknown",
+                    "s.eVar41": "USD",
+                    "s.eVar31": "D=v0",
+                    "s.eVar4": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|",
+                    "s.eVar43": "en_US|HCOM_US|www.hotels.com",
+                    "s.eVar32": "D=v0",
+                    "s.eVar34": "H1068:005.001,H1871:007.002,M4869:001.000,M4953:001.000,M5342:000.000,M5756:001.000,M5758:001.000,M5759:001.000,M5760:001.000,M6271:001.000,M6439:000.000,M6553:000.000,M6946:000.000,M7296:000.000,M7305:000.000,M7308:000.000,M7353:000.000,M7362.0,M7635:000.000,M7844:000.000,M7983:000.000,M7990:000.000,M8033:000.000,M8248:000.000,M8336:000.000,M8400:000.000,M9035:000.000,M9056:000.000,M9167:000.000,M9168:000.000,M9469:000.000,M9475:000.000,M9493:000.000,M9629:000.000,M9733:007.001,M9810:000.000,M9890:000.000,M9924:000.000,M9930:000.000,M9974:000.000,M10013:002.001,M10025:000.000,M10049:000.000,M10057:000.000,M10101:000.000,M10268:000.000,M10291:000.000,M10335:000.000,M10473:000.000,M10517:000.000,M9215:001.000",
+                    "s.eVar13": "389367",
+                    "s.server": "www.hotels.com",
+                    "s.prop28": "0",
+                    "s.prop27": "763e3cfb-2cad-47ef-8495-5b0dcf5abf61",
+                    "s.prop5": "389367",
+                    "s.eVar80": "",
+                    "s.prop48": "hotel details without dates description tab",
+                    "s.prop36": "|SI:anonymous|VS:returnVisitor|HCR:notApplicable|FC:notApplicable|NS:unknown|TI:notApplicable|SM:notApplicable|IR:anonymous|",
+                    "s.eVar93": "aws.us-west-2.unknown"
+                },
+                "pageViewBeaconUrl": "/taps/v1/PageView?deviceType=App-Phone&rooms=1&destRegionID=1410382&hotelIds=&adults=1&userAgent=PDE.4.1.432&userGuid=763e3cfb-2cad-47ef-8495-5b0dcf5abf61&pageName=Hotel-IS&slots=HIS_Car_A,HIS_Car_B,HIS_Car_C,HIS_Car_D,HIS_Car_E,HIS_Car_F,HIS_Car_G,HIS_Car_H,HIS_Car_I,HIS_Car_J&children=0&culture=en_US&testVersionOverride=4200.0,7983.0,7561.0,7990.0,8434.0,9493.0,10473.0&domain=www.hotels.com&action=pageview&publisher=expedia&userIP=127.0.0.1&programId=1"
+            }
+        }
+    },
+    "transportation": {
+        "transportLocations": [
+            {
+                "category": "airport",
+                "locations": [
+                    {
+                        "name": "Houston William Hobby Airport (HOU) -",
+                        "distance": "",
+                        "distanceInTime": "23 min drive"
+                    },
+                    {
+                        "name": "George Bush Intercontinental Airport (IAH) -",
+                        "distance": "",
+                        "distanceInTime": "28 min drive"
+                    },
+                    {
+                        "name": "Houston, TX (EFD-Ellington Field) -",
+                        "distance": "",
+                        "distanceInTime": "33 min drive"
+                    }
+                ]
+            },
+            {
+                "category": "train-station",
+                "locations": [
+                    {
+                        "name": "Houston Station -",
+                        "distance": "",
+                        "distanceInTime": "10 min drive"
+                    }
+                ]
+            },
+            {
+                "category": "shuttle",
+                "locations": [
+                    {
+                        "name": "Free area shuttle"
+                    }
+                ]
+            }
+        ]
+    },
+    "neighborhood": {
+        "neighborhoodName": "Downtown Houston",
+        "neighborhoodImage": "https://a.cdn-hotels.com/gdcs/production199/d1984/8e369a90-1846-11e7-8f36-0242ac110004.jpg",
+        "neighborhoodShortDescription": "",
+        "neighborhoodLongDescription": "Downtown Houston is acclaimed for its theaters and live music, and visitors here can explore Downtown Aquarium and Discovery Green. This lively neighborhood in Houston is well-known for its entertainment, sports, and restaurants. <br/><br/>Noteworthy local college campuses include University of Houston - Downtown. For other things to see, check out Toyota Center and Minute Maid Park. "
+    }
+}
