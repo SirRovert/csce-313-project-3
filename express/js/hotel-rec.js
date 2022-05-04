@@ -1,6 +1,6 @@
 function getHotelRec() {
     const container = document.getElementById("container-hotel");
-    console.log("container: " + container);
+    // console.log("container: " + container);
     deleteChild(container);
 
     
@@ -11,10 +11,19 @@ function getHotelRec() {
     //     displayHotel(data);
     // });
     
-    let destination = "houston";
-    locationsSearch(destination);
 
-
+    // let destination = "houston";
+    const inputDestination = document.getElementById("destinationHotel");
+    if (inputDestination) {
+        let destination = inputDestination.value;
+        if (destination) {
+            console.log(destination);
+            locationsSearch(destination)
+        } else {
+            console.log("Empty Input");
+        }
+    }
+    //locationsSearch(destination);
 }
 
 // get list of hotels in a cities, districts, places
@@ -55,7 +64,7 @@ function locationsSearch(destination) {
         .catch((error) => console.error("FETCH ERROR:", error));
 }
 
-function displayHotel(data) {
+async function displayHotel(data) {
     // try counting the number of hotel entites
     let num = Object.keys(data.suggestions[1].entities).length;
     console.log("hotel num: " + num);
@@ -78,16 +87,18 @@ function displayHotel(data) {
             //     console.log(dataDetailed);
             //     displayHotelDetail(dataDetailed);
             // });
-            
-
+            await sleep(200);
             getDetailSearch(hotelID);
-
         }
     }
     else {
         appendList("NO HOTEL FOUND FROM API");
         console.log("No hotel found in a given location");
     }
+}
+
+const sleep = (milliseconds) => {
+    return new Promise(resolve => setTimeout(resolve, milliseconds))
 }
 
 // locationName, locationID
