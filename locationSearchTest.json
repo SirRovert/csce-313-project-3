@@ -1,0 +1,210 @@
+{
+    "term": "Dallas, Tx",
+    "moresuggestions": 10,
+    "autoSuggestInstance": null,
+    "trackingID": "95e41cf6c29348f6b71d7952cf6c251d",
+    "misspellingfallback": false,
+    "suggestions": [
+        {
+            "group": "CITY_GROUP",
+            "entities": [
+                {
+                    "geoId": "1000",
+                    "destinationId": "1486134",
+                    "landmarkCityDestinationId": null,
+                    "type": "CITY",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.78266,
+                    "longitude": -96.79844,
+                    "searchDetail": null,
+                    "caption": "<span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "Dallas"
+                },
+                {
+                    "geoId": "800026",
+                    "destinationId": "1327",
+                    "landmarkCityDestinationId": null,
+                    "type": "NEIGHBORHOOD",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.7803287374663,
+                    "longitude": -96.79903568239729,
+                    "searchDetail": null,
+                    "caption": "Downtown <span class='highlighted'>Dallas,</span> Dallas, Texas, United States of America",
+                    "name": "Downtown Dallas"
+                },
+                {
+                    "geoId": "6221268",
+                    "destinationId": "1747229",
+                    "landmarkCityDestinationId": null,
+                    "type": "NEIGHBORHOOD",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.78912385401153,
+                    "longitude": -96.79841279843093,
+                    "searchDetail": null,
+                    "caption": "Dallas Arts District, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "Dallas Arts District"
+                },
+                {
+                    "geoId": "6190847",
+                    "destinationId": "1732881",
+                    "landmarkCityDestinationId": null,
+                    "type": "NEIGHBORHOOD",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.78358396681097,
+                    "longitude": -96.77965954574266,
+                    "searchDetail": null,
+                    "caption": "Deep Ellum, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "Deep Ellum"
+                }
+            ]
+        },
+        {
+            "group": "HOTEL_GROUP",
+            "entities": [
+                {
+                    "geoId": "50556",
+                    "destinationId": "449518",
+                    "landmarkCityDestinationId": null,
+                    "type": "HOTEL",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.954349,
+                    "longitude": -96.837009,
+                    "searchDetail": null,
+                    "caption": "Motel 6 Addison, <span class='highlighted'>TX</span> - <span class='highlighted'>Dallas,</span> Addison, Texas, United States of America",
+                    "name": "Motel 6 Addison, TX - Dallas"
+                },
+                {
+                    "geoId": "487294",
+                    "destinationId": "173179",
+                    "landmarkCityDestinationId": null,
+                    "type": "HOTEL",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 33.090822,
+                    "longitude": -96.840959,
+                    "searchDetail": null,
+                    "caption": "The Westin Dallas Stonebriar Golf Resort & Spa, Frisco, Texas, United States of America",
+                    "name": "The Westin Dallas Stonebriar Golf Resort & Spa"
+                }
+            ]
+        },
+        {
+            "group": "LANDMARK_GROUP",
+            "entities": [
+                {
+                    "geoId": "6081103",
+                    "destinationId": "1659066",
+                    "landmarkCityDestinationId": "1486134",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.80364072267147,
+                    "longitude": -96.8266704709285,
+                    "searchDetail": null,
+                    "caption": "Dallas Market Center, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "Dallas Market Center"
+                },
+                {
+                    "geoId": "6081071",
+                    "destinationId": "296",
+                    "landmarkCityDestinationId": "1649314",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.790482,
+                    "longitude": -96.810284,
+                    "searchDetail": null,
+                    "caption": "American Airlines Center, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "American Airlines Center"
+                },
+                {
+                    "geoId": "500848",
+                    "destinationId": "1398",
+                    "landmarkCityDestinationId": "1486134",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.774864,
+                    "longitude": -96.801645,
+                    "searchDetail": null,
+                    "caption": "Kay Bailey Hutchison Convention Center, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "Kay Bailey Hutchison Convention Center"
+                },
+                {
+                    "geoId": "553248621587586997",
+                    "destinationId": "10455498",
+                    "landmarkCityDestinationId": "1486134",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.881067,
+                    "longitude": -96.905373,
+                    "searchDetail": null,
+                    "caption": "MoneyGram Soccer Park, <span class='highlighted'>Dallas,</span> Texas, United States of America",
+                    "name": "MoneyGram Soccer Park"
+                },
+                {
+                    "geoId": "500870",
+                    "destinationId": "1133",
+                    "landmarkCityDestinationId": "1690424",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.84205,
+                    "longitude": -96.78343,
+                    "searchDetail": null,
+                    "caption": "Southern Methodist University, University Park, Texas, United States of America",
+                    "name": "Southern Methodist University"
+                },
+                {
+                    "geoId": "500861",
+                    "destinationId": "1454896",
+                    "landmarkCityDestinationId": "1486134",
+                    "type": "LANDMARK",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.93007,
+                    "longitude": -96.82049,
+                    "searchDetail": null,
+                    "caption": "Galleria <span class='highlighted'>Dallas,</span> Dallas, Texas, United States of America",
+                    "name": "Galleria Dallas"
+                }
+            ]
+        },
+        {
+            "group": "TRANSPORT_GROUP",
+            "entities": [
+                {
+                    "geoId": "5719620",
+                    "destinationId": "1649342",
+                    "landmarkCityDestinationId": null,
+                    "type": "AIRPORT",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.897552,
+                    "longitude": -97.040434,
+                    "searchDetail": null,
+                    "caption": "<span class='highlighted'>Dallas,</span> <span class='highlighted'>TX</span>, United States of America (DFW-Dallas-Fort Worth Intl.)",
+                    "name": "Dallas, TX (DFW-Dallas-Fort Worth Intl.)"
+                },
+                {
+                    "geoId": "6027299",
+                    "destinationId": "1475912",
+                    "landmarkCityDestinationId": null,
+                    "type": "AIRPORT",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.84389,
+                    "longitude": -96.84975,
+                    "searchDetail": null,
+                    "caption": "<span class='highlighted'>Dallas,</span> <span class='highlighted'>TX</span>, United States of America (DAL-Love Field)",
+                    "name": "Dallas, TX (DAL-Love Field)"
+                },
+                {
+                    "geoId": "6027875",
+                    "destinationId": "1649349",
+                    "landmarkCityDestinationId": null,
+                    "type": "AIRPORT",
+                    "redirectPage": "DEFAULT_PAGE",
+                    "latitude": 32.82094,
+                    "longitude": -97.35487,
+                    "searchDetail": null,
+                    "caption": "Fort Worth, <span class='highlighted'>TX</span>, United States of America (FTW-Meacham Intl.)",
+                    "name": "Fort Worth, TX (FTW-Meacham Intl.)"
+                }
+            ]
+        }
+    ],
+    "geocodeFallback": false
+}
