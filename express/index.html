@@ -31,10 +31,10 @@
                         class="controls"
                         type="text"
                         placeholder="Enter an origin location"
+                        onblur="SlideDown(panel_two_wrapper)"
                       />
 
-                        <input type="text" id="input_destination"  style="width:40%"
-                                placeholder="e.x. 'Austin, TX'"   ><br><br>
+                       
 
                         <p> Note: Hit Enter To Submit! </p>
 
@@ -47,14 +47,6 @@
                 <div id="panel_two" class="panel panel-2 panel-large">
                     <div class="panel-body">
                         <h1> Where are you travelling to? </h1> <br>
-                        
-                        <input
-                            id="destination-input"
-                            class="controls"
-                            type="text"
-                            placeholder="Enter a destination location"
-                        />
-                       
                         <div id="mode-selector" class="controls">
                             <input
                               type="radio"
@@ -70,9 +62,17 @@
                             <input type="radio" name="type" id="changemode-driving" />
                             <label for="changemode-driving">Driving</label>
                           </div>
+                        <input
+                            id="destination-input"
+                            class="controls"
+                            type="text"
+                            placeholder="Enter a destination location"
+                            onblur="SlideDown(panel_three_wrapper)"
+                        />
+                       
+                       
                           
-                        <input type="text" id="input_current_location"  style="width:40%"
-                                placeholder="e.x. 'College Station, TX'"  ><br><br>
+                        
                     </div>
                 </div>
             </div>

@@ -123,8 +123,8 @@ async function DelaytoScroll(element) {
 
 var panel1input = 0;
 var panel2input = 0;
-
-var textBox1 = document.getElementById("input_destination");
+/*
+var textBox1 = document.getElementById("origin-input");
     textBox1.addEventListener("keyup", function (event) {
  if (event.key === "Enter") {
     if (panel1input == 0) {
@@ -150,4 +150,4 @@ var textBox2 = document.getElementById("input_current_location");
     }
  }
 });
-
+*/
