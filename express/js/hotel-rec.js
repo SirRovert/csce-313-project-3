@@ -19,28 +19,33 @@ function getHotelRec() {
     });
 }
 
-// appendList(name, price, rating)
-function appendList() {
 
-    const name = "test";
+function listStyle(div) {
+    div.style.width = "70%";
+    div.style.height = "auto";
+    div.style.padding = "35px 40px;";
+    div.style.backgroundColor = "#CBFFBE";
+    div.style.color = "#000000";
+    div.style.borderRadius = "10px";
+    div.style.display = "flex";
+    div.style.margin = "20px 20px";
+}
+
+// appendList(name, price, rating)
+function appendList(n) {
+
+    const name = n;
     const price = 200;
     const rating = 7;
     const review = "Good!"
 
-    const div = document.getElementById("panel_four");
+    const div = document.getElementById("panel_hotel");
     div.style.margin = "auto";
     
     const listContainer = document.createElement("div");
-    listContainer.style.width = "70%";
-    listContainer.style.height = "auto";
-    listContainer.style.padding = "35px 40px;";
-    listContainer.style.backgroundColor = "#CBFFBE";
-    listContainer.style.color = "#000000";
-    listContainer.style.borderRadius = "10px";
-    listContainer.style.display = "flex";
-    listContainer.style.margin = "20px 20px";
-
-
+    listContainer.setAttribute('id', n);
+    listStyle(listContainer);
+    
     const heading = document.createElement("h1");
     heading.innerHTML = name;
     heading.style.marginLeft = "5px";
@@ -64,6 +69,15 @@ function appendList() {
     listContainer.appendChild(reviewList);
 
     div.appendChild(listContainer);
+}
+
+function appendDetail(n) {
+    const listContainer = document.getElementById(n);
+
+    const test = document.createElement("p");
+    test.innerHTML = "HAHAHAAH it kinna works";
+
+    listContainer.appendChild(test);
 }
 
 // get list of hotels in a cities, districts, places
@@ -105,7 +119,6 @@ function locationsSearch(destination) {
 }
 
 function displayName(data) {
-    hotelData = data;
     console.log("in display name");
     // Hotel_group
     console.log("1: " + data.suggestions[1].group);
@@ -117,7 +130,9 @@ function displayName(data) {
     console.log("3: " + num);
 
     for (let i = 0; i < num; i++) {
-        appendList(data.suggestions[1].entities[num].name);
+        // var hotelName = data.suggestions[1].entities[i].name;
+        appendList(data.suggestions[1].entities[i].name);
+        appendDetail(data.suggestions[1].entities[i].name);
     }
 
 }
