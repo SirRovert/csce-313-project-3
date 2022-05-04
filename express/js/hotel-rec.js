@@ -131,8 +131,35 @@ function displayName(data) {
 
     for (let i = 0; i < num; i++) {
         // var hotelName = data.suggestions[1].entities[i].name;
-        appendList(data.suggestions[1].entities[i].name);
-        appendDetail(data.suggestions[1].entities[i].name);
+        let hotelName = data.suggestions[1].entities[i].name
+        appendList(hotelName);
+        appendDetail(hotelName);
+        appendButton(hotelName);
     }
 
 }
+
+function appendButton(n) {
+    const listContainer = document.getElementById(n);
+
+    const button = document.createElement("button");
+    // button.style.objectPosition = "50% 50%";
+    button.style.width = "40px";
+    button.style.height = "40px";
+    button.style.backgroundColor = "#7ed30f";
+    button.style.cursor = "pointer";
+    button.style.border = "2px solid white";
+    button.style.margin = "auto 20px";
+    button.style.borderRadius = "50%";
+    // button.style.paddingRight = "10px";
+
+
+    button.style.top = "50%";
+    button.style.left =  "50%";
+    button.innerHTML = "+";
+    button.style.fontWeight = "bold";
+    
+
+    listContainer.appendChild(button);
+}
+
