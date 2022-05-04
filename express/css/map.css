@@ -33,6 +33,8 @@ body {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
+
+
 #origin-input,
 #destination-input {
   background-color: #fff;
@@ -54,7 +56,10 @@ body {
   color: #fff;
   background-color: #4d90fe;
   margin-left: 12px;
-  padding: 5px 11px 0px 11px;
+  width:auto;
+  padding: 10px 11px 10px 11px;
+  justify-self:center;
+  border-radius: 25px;
 }
 
 #mode-selector label {

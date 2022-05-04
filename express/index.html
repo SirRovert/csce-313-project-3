@@ -34,9 +34,7 @@
                         onblur="SlideDown(panel_two_wrapper)"
                       />
 
-                       
-
-                        <p> Note: Hit Enter To Submit! </p>
+                    
 
                     </div>
                 </div>
@@ -47,14 +45,14 @@
                 <div id="panel_two" class="panel panel-2 panel-large">
                     <div class="panel-body">
                         <h1> Where are you travelling to? </h1> <br>
-                        <div id="mode-selector" class="controls">
+                        <div id="mode-selector" >
                             <input
                               type="radio"
                               name="type"
                               id="changemode-walking"
                               checked="checked"
                             />
-                            <label for="changemode-walking">Walking</label>
+                            <label for="changemode-walking" >Walking</label>
                     
                             <input type="radio" name="type" id="changemode-transit" />
                             <label for="changemode-transit">Transit</label>
@@ -85,6 +83,7 @@
                     <div class="panel-body" id="map_body">
                         <div id="map"></div>
                         Here are some texts
+                        <button onclick="SlideDown(panel_four_wrapper)"> Display Panel 3 </button>
                     </div>
                 </div>
             </div>
