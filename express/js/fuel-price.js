@@ -118,7 +118,7 @@ function estimateCost() {
       price = price.toFixed(2);
     }
   }  
-  
+  fuelPriceDisplay.innerHTML = "Your gas price per gallon: $" + fp;
   let price = dis*fp/mpg;
   price = price.toFixed(2);
   if (price == NaN) {
