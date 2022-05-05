@@ -210,7 +210,7 @@ function displayFuelPrice(data, type) {
   if (localDist == "" || localDist == "") {
     localDist = 120;
   }
-  console.log(localDist + " " + localMPG);
+  console.log("TEST: " + localDist + " " + localMPG);
 
   let price = localDist*weeklyFuelPrice/localMPG;
   price = price.toFixed(2);
