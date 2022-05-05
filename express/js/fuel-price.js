@@ -66,7 +66,10 @@ function estimateCost() {
   // if manual distance inbox is unckecked, get distance from Josh's map api
   if (!document.getElementById('DisBox').checked) {
     // TODO: get distance calculated form point A to B from Josh
-    dis = 200;
+    dis = 100;
+    var offset = getRandDist(-15, 15);
+    dis += offset;
+
   } else if (document.getElementById('DisBox').checked) {
     dis = getDistance();
     if (dis == null || dis == "") {
@@ -181,6 +184,13 @@ function getGasolinePrice(){
     .catch((error) => console.error("FETCH ERROR:", error));
 }
 
+function getRandDist(min, max) {
+  // For testing :D
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min);
+}
+
 function displayFuelPrice(data, type) {
   const litrePerGallon = 3.78541;
   console.log(data[0]);
@@ -210,7 +220,9 @@ function displayFuelPrice(data, type) {
   }
   // incase the distance input is invalid
   if (localDist == "" || localDist == "") {
-    localDist = 120;
+    localDist = 100;
+    var offset = getRandDist(-15, 15);
+    localDist += offset;
   }
   console.log("TEST: " + localDist + " " + localMPG);
 
