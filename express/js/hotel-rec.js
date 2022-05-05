@@ -11,13 +11,15 @@ function getHotelRec() {
     //     displayHotel(data);
     // });
     
-
+    // destination-input
     // let destination = "houston";
-    const inputDestination = document.getElementById("destinationHotel");
+    const inputDestination = document.getElementById("destination-input");
     if (inputDestination) {
         let destination = inputDestination.value;
         if (destination) {
-            // console.log(destination);
+            console.log(destination);
+            destination = destination.substring(0, destination.indexOf(", "));
+            console.log(destination);
             locationsSearch(destination)
         } else {
             console.log("Empty Input");
