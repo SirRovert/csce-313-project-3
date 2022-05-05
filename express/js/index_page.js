@@ -6,8 +6,16 @@ weight = 10;
 window.onload = scrollTo(0, 50);
 window.onload = fadeIn("body");
 var b_interval = 0;
+var price = 0.00;
 
 
+function increasePrice(num) {
+    price = price + num;
+
+    var str = "$" + price.toFixed(2);
+    s = "final_price_text"
+    document.getElementById(s).innerHTML =  str;
+}
 
 
 function fadeIn(element) {

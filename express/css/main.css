@@ -36,8 +36,8 @@
 }
 
 .panel-large {
-    padding-left: 1in;
-    padding-right: 1in;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
     width: 100%;
     min-height:10in;
 
@@ -174,7 +174,26 @@
     display: none;
 }
 
+.floating_bit {
+    background-color: pink;
+    color: purple;
+    position:fixed;
+    z-index: 10000000;
+    float:right;
+    bottom: 1%;
+    right: 1%;
+    width: 2.6in;
+    height: 1in;
+    border-radius: 25px;
+    text-align:center;
+}
 
+.floating_bit_text {
+    font-size:16px;
+    font-size:4vw;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    
+}
 
 
 a:link {
@@ -200,3 +219,5 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+
