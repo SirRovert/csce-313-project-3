@@ -271,9 +271,14 @@ function getPriceFromList(n) {
     // console.log("clickTest");
     // console.log({n});
     var guestNum = document.getElementById("guestNum").value;
+    var nightNum = document.getElementById("nightNum").value;
+    
     if (guestNum < 1) {
         guestNum = 1;
-    } 
+    }
+    if (nightNum < 1) {
+        nightNum = 1;
+    }
     
     const hotelCostEstimation = document.getElementById("hotelCostEstimation");
     const hotelElement = n + "Price";
@@ -283,7 +288,9 @@ function getPriceFromList(n) {
         // hotelCostEstimation.innerHTML = hotelPrice.textContent;
         let text = hotelPrice.textContent;
         let price = text.replace( /^\D+/g, '');
-        hotelCostEstimation.innerHTML = "Estimation: $" + price*guestNum;
+        let cost = price*guestNum*nightNum;
+        increasePrice(cost);
+        hotelCostEstimation.innerHTML = "Estimation cost: $" + cost + " for " + guestNum + " people for " + nightNum + " night(s)";
         hotelCostEstimation.style.fontSize = "30px";
     }
     else {
