@@ -89,7 +89,7 @@ async function displayHotel(data) {
         }
     }
     else {
-        appendList("NO HOTEL FOUND FROM API");
+        appendList("Sorry, no hotel found in our database");
         console.log("No hotel found in a given location");
     }
 }

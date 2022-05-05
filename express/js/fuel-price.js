@@ -112,16 +112,16 @@ function estimateCost() {
       console.log("Check price" + price);
 
       price = price.toFixed(2);
-      fuelCost.innerHTML = "Estimate Cost: $ " + price;
     }
   }  
+  
   let price = dis*fp/mpg;
   price = price.toFixed(2);
-  // fuelCost.innerHTML = "DIS: " + dis + " Fuel Cost: " + fp + " Miles/gallon: " + mpg;
-  // var x = document.getElementById("fuelCost");
-  // loadFuelPrice();
-  fuelCost.innerHTML = "Estimate Cost: $ " + price;
-  // fuelPriceDisplay.innerHTML = "test";
+  if (price == NaN) {
+    fuelCost.innerHTML = "Waiting For API";
+  } else {
+    fuelCost.innerHTML = "Estimate Cost: $ " + price;
+  }
 }
 
 function getDieselPrice(){
