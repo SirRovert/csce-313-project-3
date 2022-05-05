@@ -45,7 +45,7 @@ class AutocompleteDirectionsHandler {
     // Specify just the place data fields that you need.
     const destinationAutocomplete = new google.maps.places.Autocomplete(
       destinationInput,
-      { fields: ["place_id"] }
+      { fields: ["place_id"] }  
     );
 
     this.setupClickListener(
