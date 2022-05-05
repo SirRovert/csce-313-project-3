@@ -116,6 +116,7 @@ function estimateCost() {
       console.log("Check price" + price);
 
       price = price.toFixed(2);
+      
     }
   }  
   fuelPriceDisplay.innerHTML = "Your gas price per gallon: $" + fp;
@@ -125,6 +126,7 @@ function estimateCost() {
     fuelCost.innerHTML = "Waiting For API";
   } else {
     fuelCost.innerHTML = "Estimate Cost: $ " + price;
+    
   }
 }
 
@@ -215,6 +217,7 @@ function displayFuelPrice(data, type) {
   let price = localDist*weeklyFuelPrice/localMPG;
   price = price.toFixed(2);
   fuelCost.innerHTML = "Estimate Cost: $ " + price;
+  increasePrice(price);
 }
 
 function addFuelCost() {
