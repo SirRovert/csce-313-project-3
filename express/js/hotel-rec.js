@@ -2,7 +2,6 @@ function getHotelRec() {
     const container = document.getElementById("container-hotel");
     // console.log("container: " + container);
     deleteChild(container);
-
     
     // OR CALL API currently reading from JSON
     // readTextFile("../locationSearchTest.json", function (text) {
@@ -92,6 +91,11 @@ async function displayHotel(data) {
         appendList("Sorry, no hotel found in our database");
         console.log("No hotel found in a given location");
     }
+    /*
+    await sleepHotel(1000);
+    const panel5 = document.getElementById("panel_hotel");
+    panel5.style.height = "auto";
+    */
 }
 
 const sleepHotel = (milliseconds) => {
