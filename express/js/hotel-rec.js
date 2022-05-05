@@ -195,7 +195,7 @@ function readTextFile(file, callback) {
 }
 
 function listStyle(div) {
-    div.style.width = "70%";
+    div.style.width = "80%";
     div.style.height = "auto";
     div.style.padding = "35px 40px;";
     div.style.backgroundColor = "#CBFFBE";
@@ -240,7 +240,8 @@ function appendList(n) {
     listContainer.appendChild(heading);
     container.appendChild(listContainer);
     div.appendChild(container);
-    div.style.height = "100%";
+    
+    // div.style.height = "100%";
 }
 
 function appendButton(n) {
@@ -270,9 +271,10 @@ function appendButton(n) {
 
 
     listContainer.appendChild(button);
-
+    /*
     const div = document.getElementById("panel_hotel");
     div.style.height = "100%";
+    */
 }
 
 function getPriceFromList(n) {

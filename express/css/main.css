@@ -50,7 +50,16 @@
     height:10in;
     border-style:none;
     border-image:none;
+}
 
+.panel-large-adjustable {
+    padding-left: 1in;
+    padding-right: 1in;
+    width: 100%;
+    min-height: 10in;
+    height: auto;
+    border-style:none;
+    border-image:none;
 }
 
 .panel-1 {
