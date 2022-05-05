@@ -240,6 +240,7 @@ function appendList(n) {
     listContainer.appendChild(heading);
     container.appendChild(listContainer);
     div.appendChild(container);
+    div.style.height = "100%";
 }
 
 function appendButton(n) {
@@ -269,6 +270,9 @@ function appendButton(n) {
 
 
     listContainer.appendChild(button);
+
+    const div = document.getElementById("panel_hotel");
+    div.style.height = "100%";
 }
 
 function getPriceFromList(n) {
