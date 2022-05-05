@@ -16,7 +16,9 @@
 
 <body id="body" style="opacity: 0;" class="container-black">
 
-
+<div id="final_price" class="floating_bit">
+    <p id="final_price_text" class="floating_bit_text">$0.00</p>
+</div>
     <div class="container-fluid container-black">
         <div class="panel-group">
 
@@ -33,6 +35,8 @@
                         placeholder="Enter an origin location"
                         onblur="SlideDown(panel_two_wrapper)"
                         />
+
+                      <button onclick="increasePrice(7.35)">Increase Price Button! </button>
 
                     
 
