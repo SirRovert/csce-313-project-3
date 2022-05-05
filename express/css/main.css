@@ -180,8 +180,8 @@
     position:fixed;
     z-index: 10000000;
     float:right;
-    bottom: 1%;
-    right: 1%;
+    bottom: 2%;
+    right: 1.5%;
     width: 2.6in;
     height: 1in;
     border-radius: 25px;
@@ -189,8 +189,8 @@
 }
 
 .floating_bit_text {
-    font-size:16px;
-    font-size:4vw;
+    
+    font-size: 60px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     
 }
