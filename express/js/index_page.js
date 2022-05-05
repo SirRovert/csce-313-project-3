@@ -10,9 +10,10 @@ var price = 0.00;
 
 
 function increasePrice(num) {
-    price = price + num;
-
-    var str = "$" + price.toFixed(2);
+    const numFormat = Number(num);
+    price = price + numFormat;
+    const result = Number(price).toFixed(2);
+    var str = "$" + result;
     s = "final_price_text"
     document.getElementById(s).innerHTML =  str;
 }

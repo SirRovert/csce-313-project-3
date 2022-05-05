@@ -1,4 +1,5 @@
 // const { response } = require("express");
+// import { increasePrice } from './index_page';
 
 const fuelCost = document.getElementById("fuelCost");
 const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
@@ -54,6 +55,9 @@ function estimateCost() {
   var gasType = getGasType();
   console.log("type: " + gasType);
   
+  // const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
+  fuelPriceDisplay.innerHTML = "Processing. Please wait :D"
+
   var dis;
   var fp;
   var mpg;
@@ -180,7 +184,7 @@ function displayFuelPrice(data, type) {
   console.log(data[0]);
   const country = data[0].country;
   var weeklyFuelPrice;
-  
+
   if (type == "diesel") {
     console.log("Weekly Diesel per Litre: $" + data[0].diesel_price);
     
@@ -204,12 +208,22 @@ function displayFuelPrice(data, type) {
   }
   // incase the distance input is invalid
   if (localDist == "" || localDist == "") {
-    // 500 miles is based on if a person's capability to drive 8hrs a day with 15min break every 2 hours.
-    localDist = 500;
+    localDist = 120;
   }
   console.log(localDist + " " + localMPG);
 
   let price = localDist*weeklyFuelPrice/localMPG;
   price = price.toFixed(2);
   fuelCost.innerHTML = "Estimate Cost: $ " + price;
+}
+
+function addFuelCost() {
+  const fuelcost = document.getElementById("fuelCost");
+  let costTxt = fuelcost.textContent;
+  console.log("costTxt: ", costTxt);
+  // increasePrice(20);
+  var rgx = /^[0-9]*\.?[0-9]*$/; 
+  let cost = costTxt.replace(/[^0-9\.]/g,'');
+  console.log("cost: ", cost);
+  increasePrice(cost);
 }
