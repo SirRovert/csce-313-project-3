@@ -36,8 +36,8 @@
 }
 
 .panel-large {
-    padding-left: 1in;
-    padding-right: 1in;
+    padding-left: 0.5in;
+    padding-right: 0.5in;
     width: 100%;
     min-height:10in;
 
@@ -200,3 +200,5 @@ a:active {
   background-color: transparent;
   text-decoration: underline;
 }
+
+
