@@ -6,53 +6,7 @@ weight = 10;
 window.onload = scrollTo(0, 50);
 window.onload = fadeIn("body");
 var b_interval = 0;
-var price = 0.00;
-var gas_price = 0.00;
-var hotel_price = 0.00;
-var tax_price = 0.00;
 
-
-function increasePrice(num) { //increases price counter, and for total price
-    const numFormat = Number(num);
-    price = price + numFormat;
-    const result = Number(price).toFixed(2);
-    var str = "$" + result;
-    s = "final_price_text"
-    document.getElementById(s).innerHTML =  str;
-}
-
-function addGasSummary(num) { //add gas price to summary table
-    gas_price = num;
-    const numFormat = Number(num);
-    const result = Number(numFormat).toFixed(2);
-    var str = "Gas: $" + result;
-    var gasID = "summary_gas";
-    document.getElementById(gasID).innerHTML = str;
-}
-
-function addHotelSummary(num) { //add hotel price to summary table
-    hotel_price = num;
-    const numFormat = Number(num);
-    const result = Number(numFormat).toFixed(2);
-    var str1 = "Hotel: $" + result;
-    var hotelID = "summary_hotel";
-    document.getElementById(hotelID).innerHTML = str1;
-
-    //now calculate occupancy tax ~ 11% tax and update
- 
-}
-
-
-function addTaxSummary() {
-    tax_price = hotel_price/11; //assuming ~ 11% tax
-    const numFormat = Number(tax_price);
-    const result = Number(numFormat).toFixed(2);
-    var str = "Est. Tax: $" + result;
-    var taxID = "summary_tax";
-    document.getElementById(taxID).innerHTML = str; //update html field with new information
-    
-    
-}
 
 
 function fadeIn(element) {
@@ -152,13 +106,10 @@ async function bounceUp() {
 }
 
 
-
-
-
-
 async function DelaytoScroll(element) {
     
-    bounceUp();
+    //bounceUp();
+    window.scrollBy(0,-30);
     await sleep(300); //sleep 500ms, same as .slide-wrapper transition time, 0.5 sec
     element.scrollIntoView();
 
@@ -196,3 +147,51 @@ var textBox2 = document.getElementById("input_current_location");
  }
 });
 */
+
+var price = 0.00;
+var gas_price = 0.00;
+var hotel_price = 0.00;
+var tax_price = 0.00;
+
+
+function increasePrice(num) { //increases price counter, and for total price
+    const numFormat = Number(num);
+    price = price + numFormat;
+    const result = Number(price).toFixed(2);
+    var str = "$" + result;
+    s = "final_price_text"
+    document.getElementById(s).innerHTML =  str;
+}
+
+function addGasSummary(num) { //add gas price to summary table
+    gas_price = num;
+    const numFormat = Number(num);
+    const result = Number(numFormat).toFixed(2);
+    var str = "Gas: $" + result;
+    var gasID = "summary_gas";
+    document.getElementById(gasID).innerHTML = str;
+}
+
+function addHotelSummary(num) { //add hotel price to summary table
+    hotel_price = num;
+    const numFormat = Number(num);
+    const result = Number(numFormat).toFixed(2);
+    var str1 = "Hotel: $" + result;
+    var hotelID = "summary_hotel";
+    document.getElementById(hotelID).innerHTML = str1;
+
+    //now calculate occupancy tax ~ 11% tax and update
+ 
+}
+
+
+function addTaxSummary() {
+    tax_price = hotel_price/11; //assuming ~ 11% tax
+    const numFormat = Number(tax_price);
+    const result = Number(numFormat).toFixed(2);
+    var str = "Est. Tax: $" + result;
+    var taxID = "summary_tax";
+    document.getElementById(taxID).innerHTML = str; //update html field with new information
+    
+    
+}
