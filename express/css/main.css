@@ -14,6 +14,16 @@
 }
 
 
+.nice-button{
+    border-style:solid;
+    border-width: 1px;
+    background-color:#f8fafa;
+    border-color: rgb(163, 163, 163);
+    border-radius: 12px;
+    border-top-left-radius:20px;
+    border-bottom-right-radius:20px;
+    font-size:30px;
+}
 
 
 .hidden {
@@ -71,13 +81,20 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #00ff00, #fff44f) 1;
     text-align:center;
-    padding-top: 3.5in;
-    overscroll-behavior-y:inherit;
+    padding-top: 20rem;
+   
   
 }
 
+.origin-tab {
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
 .panel-2 {
-    background: linear-gradient(315deg, #fb7ba2 0%, #fc5296 100%);
+    background: linear-gradient(315deg, #c56380 0%, #f369a0 100%);
     color: white;
     border-style:solid;
     border-width: 0in;
@@ -85,7 +102,24 @@
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     height: 100%;
     text-align:center;
-    padding-top: 2in;
+    padding-top: 12rem;
+    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
+.dest-tab {
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
+.radio-checkbox {
+    border: 0px;
+    width: 2rem;
+    height: 2rem;
 }
 
 .panel-3 {
@@ -110,22 +144,26 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
-    padding-top: 2in;
+    padding-top: 3rem;
     height: 100%;
 
 
+}
+
+.fuel-heading{
+    font-size:45px;
 }
 
 .gas-div {
     width:50%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .gas-checkbox {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
 }
 
 .panel-5 {
@@ -134,8 +172,28 @@
     border-style:solid;
     border-width: 0in;
     border-bottom-width:0.05in;
+    text-align:center;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+    padding-top: 3rem;
 }
+
+.hotel-tab{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    
+}
+
+.hotel-input{
+    border-style:none;
+    border-radius: 10px;
+}
+
+.big-font {
+    font-size:60px; 
+}
+
 
 .panel-6 {
     background: linear-gradient(240deg, #d3b50f 0%, #b45312 100%);
@@ -145,12 +203,15 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
+    padding-top: 3rem;
 }
 
 .summary_class{
     font-size:80px;
-    background-color:black;
-    width:50%;
+    background-color:rgb(212, 212, 212);
+    color:black;
+    border-radius:25px;
+    width:30%;
     margin-left: auto;
     margin-right: auto;
 }
