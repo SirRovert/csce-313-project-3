@@ -27,7 +27,7 @@
                 <div id="panel_one" class="panel panel-default panel-1 panel-large">
                     <div class="panel-body">
                         <div id="orig-inputs" class="origin-tab">
-                         <p>Where are you from?</p> 
+                         <p>Where are you going from?</p> 
                         
                         <input
                         id="origin-input"
@@ -102,7 +102,10 @@
                 <div id="panel_four" class="panel panel-4 panel-large">
                     <div class="panel-body">
                         <div id="Gas Calculator" class="tab api-tab gas-div">
-                            <h1>Fuel Estimation</h1><br>
+                            <div id="fuel title" class="fuel-heading">
+                                <p>Fuel Estimation</p>
+                            </div>
+                            
                             <!-- Fuel Type -->
                             <label for="gasType"> Select a gas type: </label>
                             <select name="gasType" id="gasType">
@@ -112,11 +115,13 @@
                             </select><br>
 
                             <!-- Distance Input Box -->
-                            <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()" class="gas-checkbox">
-                            <label for="DisBox">Enter Distance Manually</label><br>
+                           
+                            <label for="DisBox">Enter Distance Manually</label>
+                            <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()" class="gas-checkbox"><br>
+                            
+                            <label for="FuelCostBox">Enter Fuel Price Manually</label>
                             <input type="checkbox" id="FuelCostBox" name="FuelCostBox" value="fuelcost" class="gas-checkbox"
-                                onclick="toggleFuel()">
-                            <label for="FuelCostBox">Enter Fuel Price Manually</label><br>
+                                onclick="toggleFuel()"> <br>
                             <input type="number" id="Distance" name="Distance" style="width:95%"
                                 placeholder="Distance in Mile" onblur="getDistance()"><br>
                             <input type="number" id="FuelPrice" name="FuelPrice" style="width:95%"
@@ -125,7 +130,7 @@
                                 placeholder="Vehicle Fuel Efficiency/MPG (avg is 25.4mpg)" onblur="getMPG()"><br><br>
                             <button onclick="estimateCost()" class="nice-button"> Estimate! </button>
                             <button onclick="addFuelCost()" class="nice-button"> Add Cost! </button>
-                            <button onclick="SlideDown(panel_five_wrapper)" class="nice-button"> Scroll Down! </button><br><br>
+                            <button onclick="SlideDown(panel_five_wrapper)" class="nice-button"> Scroll Down! </button><br>
 
                             <p id="fuelPriceDisplay"></p>
                             <p id="fuelCost"></p>
@@ -141,8 +146,11 @@
                     <div class="panel-body">
                         <div class="hotel-reccomendation">
                         <div id="hotel-page" class="hotel-tab">
-
-                        <p>Hotel Recommendation</p>
+                        
+                        <div id="hotel-title" class="big-font">
+                            <p>Hotel Recommendation</p>
+                        </div>
+                        
                         <!--
                             now getting destination from the Second Panel
                             <input type="text" id="destinationHotel" value="">
@@ -167,8 +175,8 @@
             <!-- PANEL 6 -->
             <div id="panel_six_wrapper" class="slide-wrapper hidden">
                 <div id="panel_six" class="panel panel-6 panel-large">
-                    <div class="panel-body">The sixth basic panel.
-                        <button onclick="SlideDown(panel_seven_wrapper)"> Scroll Down! </button><br><br>
+                    <div class="panel-body">
+                        
 
                         <div id="summary" class="summary_class">
                             <p> Summary:</p>
@@ -178,10 +186,10 @@
                             <p id="summary_total"> Total: $0.00</p>
                         </div>
                         <div id="f-left" class="floating-left">
-                            <p> Insert stuff here :p</p>
+                            <p> .</p>
                         </div>
                         <div id="f-right" class="floating-right">
-                            <p> And here too. </p>
+                            <p> . </p>
                         </div>
                     </div>
                 </div>

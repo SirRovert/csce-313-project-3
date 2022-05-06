@@ -56,7 +56,7 @@ function SlideDown8in(wrapper_element) {
 }
 
 function SlideDown15in(wrapper_element) {
-    wrapper_element.style.height =  "20in";
+    wrapper_element.style.height =  "15in";
      DelaytoScroll(wrapper_element);
     
 

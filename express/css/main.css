@@ -13,6 +13,7 @@
     
 }
 
+
 .nice-button{
     border-style:solid;
     border-width: 1px;
@@ -21,6 +22,7 @@
     border-radius: 12px;
     border-top-left-radius:20px;
     border-bottom-right-radius:20px;
+    font-size:30px;
 }
 
 
@@ -100,7 +102,7 @@
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     height: 100%;
     text-align:center;
-    padding-top: 6rem;
+    padding-top: 12rem;
     
     margin-left: auto;
     margin-right: auto;
@@ -142,22 +144,26 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
-    padding-top: 8rem;
+    padding-top: 3rem;
     height: 100%;
 
 
+}
+
+.fuel-heading{
+    font-size:45px;
 }
 
 .gas-div {
     width:50%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 25px;
+    font-size: 40px;
 }
 
 .gas-checkbox {
-    width: 1.2rem;
-    height: 1.2rem;
+    width: 1.4rem;
+    height: 1.4rem;
 }
 
 .panel-5 {
@@ -168,7 +174,7 @@
     border-bottom-width:0.05in;
     text-align:center;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
-    padding-top: 6rem;
+    padding-top: 3rem;
 }
 
 .hotel-tab{
@@ -184,6 +190,9 @@
     border-radius: 10px;
 }
 
+.big-font {
+    font-size:60px; 
+}
 
 
 .panel-6 {
@@ -194,12 +203,15 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
+    padding-top: 3rem;
 }
 
 .summary_class{
     font-size:80px;
-    background-color:black;
-    width:50%;
+    background-color:rgb(212, 212, 212);
+    color:black;
+    border-radius:25px;
+    width:30%;
     margin-left: auto;
     margin-right: auto;
 }
