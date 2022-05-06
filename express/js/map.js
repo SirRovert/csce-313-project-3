@@ -10,6 +10,9 @@ let destLat;
 let originLat;
 let originLng;
 
+let geocoder;
+let MatrixService;
+let distance;
 
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
@@ -18,12 +21,13 @@ function initMap() {
     zoom: 13,
   });
   service = new google.maps.places.PlacesService(map);
-
+  geocoder = new google.maps.Geocoder();
+  MatrixService = new google.maps.DistanceMatrixService();
 
   new AutocompleteDirectionsHandler(map);
 }
 
-function translatePlace_ID(placeID){
+function translatePlace_ID(placeID, type_){
   var placeIDString = String(placeID);
 
   const request = {
@@ -31,7 +35,6 @@ function translatePlace_ID(placeID){
       fields: ['geometry']
   }
 
-  console.log("translate function ran");
   service.getDetails(request, (place, status) => {
       if (
         status === google.maps.places.PlacesServiceStatus.OK &&
@@ -39,8 +42,13 @@ function translatePlace_ID(placeID){
         place.geometry &&
         place.geometry.location
       ) {
+        if(type_ == 'dest'){
           destLat = place.geometry.location.lat();
           destLng = place.geometry.location.lng();
+        } else if(type_ == 'origin'){
+          originLat = place.geometry.location.lat();
+          originLng = place.geometry.location.lng();
+        }
 
       }
   });
@@ -54,17 +62,66 @@ function findNearbySearch(search_type, lat, lng){
   };
 
   service.nearbySearch(request, callback);
-  console.log("query ran")
+  console.log(lat, lng);
 }
 
-function callback(results, status) {
-  if (status == google.maps.places.PlacesServiceStatus.OK) {
-    for (var i = 0; i < results.length; i++) {
-      console.log(results[i].name + " " + results[i].vicinity + " " + 
-      results[i].price_level + " " + results[i].rating);
+  function callback(results, status) {
+    var barCount = 1;
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+      for (var i = 0; i < results.length; i++) {
+        console.log(results[i].name + " " + results[i].vicinity + " " + 
+        results[i].price_level + " " + results[i].rating);
+        
+        //if result is not null
+        if(!(results[i].name == null) || !(results[i].name == "")){
+            var barName = document.getElementById(barCount + "R-name");
+            var barAddr = document.getElementById(barCount + "R-address");
+            var barPrice = document.getElementById(barCount + "R-price");
+            var barRate = document.getElementById(barCount + "R-rating");
+
+            barName.innerText = results[i].name;
+            barAddr.innerText = results[i].vicinity;
+            barPrice.innerText = "Price: " + results[i].price_level;
+            barRate.innerText = "Rating: " + results[i].rating;
+
+            barCount++;
+          }
+        }
+      }
     }
+
+  function distanceOfTrip(){
+    const request = {
+      origins: [{ lat: originLat, lng: originLng}],
+      destinations: [{ lat: destLat, lng: destLng}],
+      travelMode: google.maps.TravelMode.DRIVING,
+      unitSystem: google.maps.UnitSystem.METRIC,
+      avoidHighways: false,
+      avoidTolls: false,
+    };
+
+    MatrixService.getDistanceMatrix(request).then((response) => {
+      // put response
+      /*
+      document.getElementById("response").innerText = JSON.stringify(
+        response,
+        null,
+        2
+      );*/
+      var distanceElem = document.getElementById("distance-map");
+      var durationElem = document.getElementById("duration-map");
+      distance = 0.621 * parseInt(response.rows[0].elements[0].distance.text);
+
+      distanceElem.innerText = "Distance: " + distance + " miles";
+      durationElem.innerText = "Duration: " + response.rows[0].elements[0].duration.text;
+
+      console.log(response.rows[0].elements[0].distance.text);
+      console.log(response.rows[0].elements[0].duration.text);
+        
+      // show on map
+    });
+
   }
-}
 
 class AutocompleteDirectionsHandler {
   map;
@@ -149,10 +206,10 @@ class AutocompleteDirectionsHandler {
 
       if (mode === "ORIG") {
         this.originPlaceId = place.place_id;
-        console.log(place.place_id);
+        translatePlace_ID(place.place_id, 'origin');
       } else {
         this.destinationPlaceId = place.place_id;
-        translatePlace_ID(place.place_id);
+        translatePlace_ID(place.place_id, 'dest');
       }
 
 
@@ -188,64 +245,6 @@ class AutocompleteDirectionsHandler {
   }
 }
 
-function appendList(n) {
 
-  const name = n;
-
-  const div = document.getElementById("panel_hotel");
-
-  const container = document.getElementById("container-hotel");
-  // console.log("container: " + container);
-  //deleteChild(container);
-
-  const listContainer = document.createElement("div");
-  listContainer.setAttribute('id', n);
-  listStyle(listContainer);
-
-  const heading = document.createElement("h1");
-  heading.innerHTML = name;
-  heading.style.marginLeft = "5px";
-  heading.style.marginRight = "5px";
-  heading.style.width = "40%";
-
-  listContainer.appendChild(heading);
-  container.appendChild(listContainer);
-  div.appendChild(container);
-  
-  // div.style.height = "100%";
-}
-
-function appendButton(n) {
-  const listContainer = document.getElementById(n);
-
-  const button = document.createElement("button");
-  const buttonID = n + "Button";
-  button.setAttribute("id", buttonID);
-  let parameter = "getPriceFromList('" + n + "')";
-  button.setAttribute("onclick", parameter);
-  
-  // button.style.position = "absolute";
-  button.style.width = "40px";
-  button.style.height = "40px";
-  button.style.backgroundColor = "#7ed30f";
-  button.style.cursor = "pointer";
-  button.style.border = "2px solid white";
-  button.style.margin = "auto 20px";
-  button.style.borderRadius = "50%";
-  button.style.right = "5px";
-  // button.style.paddingRight = "10px";
-
-  button.style.top = "50%";
-  button.style.left = "50%";
-  button.innerHTML = "+";
-  button.style.fontWeight = "bold";
-
-
-  listContainer.appendChild(button);
-  /*
-  const div = document.getElementById("panel_hotel");
-  div.style.height = "100%";
-  */
-}
 
 window.initMap = initMap;

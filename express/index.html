@@ -26,6 +26,7 @@
             <div id="panel_one_wrapper" class="slide-wrapper">
                 <div id="panel_one" class="panel panel-default panel-1 panel-large">
                     <div class="panel-body">
+                        <button onclick="SlideDown(panel_seven_wrapper)"> Scroll Down! </button><br><br>
                         <div id="orig-inputs" class="origin-tab">
                          <p>Where are you going from?</p> 
                         
@@ -87,18 +88,18 @@
             <div id="panel_three_wrapper" class="slide-wrapper hidden">
                 <div id="panel_three" class="panel panel-3 panel-large">
                     <div class="panel-body" id="map_body">
+                        <h1>Map Direction: </h1>
                         <div id="map"></div>
-                        <h1>Does this look correct? Click "Next Panel" if so.</h1>
-<<<<<<< HEAD
-                        <button onclick="SlideDown(panel_four_wrapper)"> Next Panel </button>
-                        <button class="glow-on-hover" onclick="DelaytoScroll(panel_one_wrapper)"> Change Origin? </button>
-                        <button class="glow-on-hover" onclick="DelaytoScroll(panel_two_wrapper)"> Change Desination? </button>
-                        <button onclick="findNearbySearch('restaurant', destLat, destLng);">Restaurants Recommendations </button>
-=======
-                        <button class="nice-button" onclick="SlideDown(panel_four_wrapper)"> Next Panel </button>
+
+                        <div class="map_container">
+                            <h2 class="info_display" id="distance-map">Distance: </h2>
+                            <h2 class="info_display" id="duration-map">Duration: </h2>
+                        </div>
+
+                        <button onclick="distanceOfTrip()" class="nice-button">Display Durations</button>   
+                        <button class="nice-button" style="background-color: black;color: white" onclick="SlideDown(panel_four_wrapper)"> Next</button>
                         <button class="nice-button" onclick="DelaytoScroll(panel_one_wrapper)"> Change Origin? </button>
                         <button class="nice-button" onclick="DelaytoScroll(panel_two_wrapper)"> Change Desination? </button>
->>>>>>> 2b13b00465c42fb900740c1e352a3672c2d2af16
                     </div>
                 </div>
             </div>
@@ -207,6 +208,98 @@
                 <div id="panel_seven" class="panel panel-7 panel-large">
                     <div class="panel-body">The seventh basic panel.
                         <h1> Restaurants recommendations</h1>
+                        <button onclick="findNearbySearch('restaurant', destLat, destLng)" class="nice-button">Get Restaurants</button>
+
+                        <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="1R-name">Name: </p> 
+                               <p class="bar-field" id="1R-address">Adress: </p>
+                               <p class="bar-field" id="1R-price">Price: </p>
+                               <p class="bar-field" id="1R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="2R-name">Name: </p> 
+                               <p class="bar-field" id="2R-address">Adress: </p>
+                               <p class="bar-field" id="2R-price">Price: </p>
+                               <p class="bar-field" id="2R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="3R-name">Name: </p> 
+                               <p class="bar-field" id="3R-address">Adress: </p>
+                               <p class="bar-field" id="3R-price">Price: </p>
+                               <p class="bar-field" id="3R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="4R-name">Name: </p> 
+                               <p class="bar-field" id="4R-address">Adress: </p>
+                               <p class="bar-field" id="4R-price">Price: </p>
+                               <p class="bar-field" id="4R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="5R-name">Name: </p> 
+                               <p class="bar-field" id="5R-address">Adress: </p>
+                               <p class="bar-field" id="5R-price">Price: </p>
+                               <p class="bar-field" id="5R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="6R-name">Name: </p> 
+                               <p class="bar-field" id="6R-address">Adress: </p>
+                               <p class="bar-field" id="6R-price">Price: </p>
+                               <p class="bar-field" id="6R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="7R-name">Name: </p> 
+                               <p class="bar-field" id="7R-address">Adress: </p>
+                               <p class="bar-field" id="7R-price">Price: </p>
+                               <p class="bar-field" id="7R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="8R-name">Name: </p> 
+                               <p class="bar-field" id="8R-address">Adress: </p>
+                               <p class="bar-field" id="8R-price">Price: </p>
+                               <p class="bar-field" id="8R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="9R-name">Name: </p> 
+                               <p class="bar-field" id="9R-address">Adress: </p>
+                               <p class="bar-field" id="9R-price">Price: </p>
+                               <p class="bar-field" id="9R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
+                          <div id="bar-container">
+                            <div class="bar">
+                               <p class="bar-header" id="10R-name">Name: </p> 
+                               <p class="bar-field" id="10R-address">Adress: </p>
+                               <p class="bar-field" id="10R-price">Price: </p>
+                               <p class="bar-field" id="10R-rating">Rating: </p>
+                      
+                            </div>
+                          </div>
                         <button onclick="SlideDown(panel_eight_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>

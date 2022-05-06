@@ -76,3 +76,35 @@ body {
   font-weight: 300;
   
 }
+
+.bar {
+  width: 80%;
+  height: 60px;
+  padding: 0;
+  background: #CBFFBE;
+  color: #000000;
+  display: flex;
+  border-radius: 10px;
+  margin: 20px 20px;
+  border: 1px solid;
+  justify-content: space-between;
+}
+
+.bar-header{
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  margin: auto;
+}
+
+.bar-field{
+  font-size: 12px;
+  margin: auto;
+}
+
+.map_container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px; 
+}
+
