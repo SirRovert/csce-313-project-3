@@ -6,6 +6,7 @@ const fuelPriceDisplay = document.getElementById("fuelPriceDisplay");
 const distBox = document.getElementById("Distance");
 const fuelBox = document.getElementById("FuelPrice");
 
+// DISTANCE FOR JOSH :D
 function getDistance() {
     const val = document.getElementById('Distance').value;
     console.log(val);
@@ -51,6 +52,7 @@ function getGasType() {
   return usrValue;
 }
 
+// MASTER
 function estimateCost() {
   var gasType = getGasType();
   console.log("type: " + gasType);
@@ -65,7 +67,10 @@ function estimateCost() {
   // Limiting the number of API request, check for possible invalid inputs before requesting
   // if manual distance inbox is unckecked, get distance from Josh's map api
   if (!document.getElementById('DisBox').checked) {
+    // DISTANCE FOR JOSH :D
     // TODO: get distance calculated form point A to B from Josh
+    // If not checked, get distance from the map
+    
     dis = 100;
     var offset = getRandDist(-15, 15);
     dis += offset;
@@ -218,8 +223,9 @@ function displayFuelPrice(data, type) {
   if (localMPG == "" || localMPG == "") {
     localMPG = 25.4;
   }
+  // DISTANCE FOR JOSH :D
   // incase the distance input is invalid
-  if (localDist == "" || localDist == "") {
+  if (localDist == null || localDist == "") {
     localDist = 100;
     var offset = getRandDist(-15, 15);
     localDist += offset;
