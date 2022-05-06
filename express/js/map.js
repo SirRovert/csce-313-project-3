@@ -188,4 +188,64 @@ class AutocompleteDirectionsHandler {
   }
 }
 
+function appendList(n) {
+
+  const name = n;
+
+  const div = document.getElementById("panel_hotel");
+
+  const container = document.getElementById("container-hotel");
+  // console.log("container: " + container);
+  //deleteChild(container);
+
+  const listContainer = document.createElement("div");
+  listContainer.setAttribute('id', n);
+  listStyle(listContainer);
+
+  const heading = document.createElement("h1");
+  heading.innerHTML = name;
+  heading.style.marginLeft = "5px";
+  heading.style.marginRight = "5px";
+  heading.style.width = "40%";
+
+  listContainer.appendChild(heading);
+  container.appendChild(listContainer);
+  div.appendChild(container);
+  
+  // div.style.height = "100%";
+}
+
+function appendButton(n) {
+  const listContainer = document.getElementById(n);
+
+  const button = document.createElement("button");
+  const buttonID = n + "Button";
+  button.setAttribute("id", buttonID);
+  let parameter = "getPriceFromList('" + n + "')";
+  button.setAttribute("onclick", parameter);
+  
+  // button.style.position = "absolute";
+  button.style.width = "40px";
+  button.style.height = "40px";
+  button.style.backgroundColor = "#7ed30f";
+  button.style.cursor = "pointer";
+  button.style.border = "2px solid white";
+  button.style.margin = "auto 20px";
+  button.style.borderRadius = "50%";
+  button.style.right = "5px";
+  // button.style.paddingRight = "10px";
+
+  button.style.top = "50%";
+  button.style.left = "50%";
+  button.innerHTML = "+";
+  button.style.fontWeight = "bold";
+
+
+  listContainer.appendChild(button);
+  /*
+  const div = document.getElementById("panel_hotel");
+  div.style.height = "100%";
+  */
+}
+
 window.initMap = initMap;
