@@ -300,6 +300,7 @@ function getPriceFromList(n) {
         let price = text.replace( /^\D+/g, '');
         let cost = price*guestNum*nightNum;
         increasePrice(cost);
+        addHotelSummary(cost);
         hotelCostEstimation.innerHTML = "Estimation cost: $" + cost + " for " + guestNum + " people for " + nightNum + " night(s)";
         hotelCostEstimation.style.fontSize = "30px";
     }

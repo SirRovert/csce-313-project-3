@@ -27,7 +27,7 @@
                 <div id="panel_one" class="panel panel-default panel-1 panel-large">
                     <div class="panel-body">
                         <h1> Where are you from? </h1> <br>
-                        
+                        <button onclick="SlideDown(panel_six_wrapper)"> Scroll Down! </button><br><br>
                         <input
                         id="origin-input"
                         class="controls"
@@ -144,7 +144,7 @@
                         -->
                         <input type="number" id="guestNum" placeholder="Guest"><br>
                         <input type="number" id="nightNum" placeholder="Night"><br>
-                        <button onclick="SlideDown(panel_six_wrapper)"> Scroll Down! </button><br>
+                        <button onclick="SlideDown(panel_six_wrapper); addTaxSummary()"> Scroll Down! </button><br>
                         <button onclick="getHotelRec()">Recommend!</button><br>
                         <div id="container-hotel"></div>
                         <p id="hotelCostEstimation"></p>
@@ -157,6 +157,13 @@
                 <div id="panel_six" class="panel panel-6 panel-large">
                     <div class="panel-body">The sixth basic panel.
                         <button onclick="SlideDown(panel_seven_wrapper)"> Scroll Down! </button><br><br>
+
+                        <div id="summary" class="summary_class">
+                            <p> Summary:</p>
+                            <p id="summary_gas"> Gas: $0.00 </p>
+                            <p id="summary_hotel"> Hotel: $0.00 </p>
+                            <p id="summary_tax"> Est. Tax: $0.00 </p>
+                        </div>
                     </div>
                 </div>
             </div>

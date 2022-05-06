@@ -229,7 +229,8 @@ function displayFuelPrice(data, type) {
   let price = localDist*weeklyFuelPrice/localMPG;
   price = price.toFixed(2);
   fuelCost.innerHTML = "Estimate Cost: $ " + price;
-  increasePrice(price);
+  //increasePrice(price);
+  addGasSummary(price);
 }
 
 function addFuelCost() {
@@ -241,4 +242,5 @@ function addFuelCost() {
   let cost = costTxt.replace(/[^0-9\.]/g,'');
   console.log("cost: ", cost);
   increasePrice(cost);
+  addGasSummary(price);
 }
