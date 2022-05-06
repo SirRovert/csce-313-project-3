@@ -1,381 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-
-    <!-- Google API module-->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" type="text/css" href="css/map.css" />
-    <script src="js/map.js"></script>
-    <meta name="google-site-verification" content="x8WTGwS5mZoynKjcHc_y7lUFLDdt-qYyi9OC1AoowO0" />
-</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="css/landing.css">
 
 <body id="body" style="opacity: 0;" class="container-black">
 
-<div id="final_price" class="floating_bit">
-    <p id="final_price_text" class="floating_bit_text">$0.00</p>
-</div>
     <div class="container-fluid container-black">
         <div class="panel-group">
-
+    
             <!-- PANEL 1 -->
             <div id="panel_one_wrapper" class="slide-wrapper">
-                <div id="panel_one" class="panel panel-default panel-1 panel-large">
+                <div id="panel_landing" class="panel panel-default panel-L panel-xlarge">
                     <div class="panel-body">
-                        <button onclick="SlideDown(panel_six_wrapper)"> Scroll Down! </button><br><br>
-                        <div id="orig-inputs" class="origin-tab">
-                         <p>Where are you going from?</p> 
-                        
-                        <input
-                        id="origin-input"
-                        class="controls"
-                        type="text"
-                        placeholder="Enter an origin location"
-                        onblur="SlideDown(panel_two_wrapper)"
-                        /> 
-                      
-
-                    </div>
-                    </div>
-                    
-                </div>
-            </div>
-
-            <!-- PANEL 2 -->
-            <div id="panel_two_wrapper" class="slide-wrapper hidden">
-                <div id="panel_two" class="panel panel-2 panel-large">
-                    <div class="panel-body">
-                        
-                        <p> Where are you travelling to? </p> 
-                        <div id="dest-input" class="dest-tab">
-                        <div id="mode-selector" >
-                            
-                            <input type="radio" name="type" id="changemode-driving" 
-                            class="radio-checkbox" />
-                            <label for="changemode-driving" style="font-size:40px">Driving</label>
-                            <br>
-                            <input type="radio" name="type" id="changemode-transit" 
-                            class="radio-checkbox" />
-                            <label for="changemode-transit" style="font-size:40px">Transit</label>
-                            <br>
-                            <input type="radio"name="type" id="changemode-walking"  
-                            class="radio-checkbox" />
-                            <label for="changemode-walking" style="font-size:40px">Walking</label>
-                            
-                          </div>
-                        <input
-                            id="destination-input"
-                            class="controls"
-                            type="text"
-                            placeholder="Enter a destination location"
-                            onblur="SlideDown(panel_three_wrapper)"
-                        />
-                       
-                       
-                    </div>
-                        
-                    </div>
-                </div>
-            </div>
-
-
-
-            <!-- PANEL 3 -->
-            <div id="panel_three_wrapper" class="slide-wrapper hidden">
-                <div id="panel_three" class="panel panel-3 panel-large">
-                    <div class="panel-body" id="map_body">
-                        <h1>Map Direction: </h1>
-                        <div id="map"></div>
-
-                        <div class="map_container">
-                            <h2 class="info_display" id="distance-map">Distance: </h2>
-                            <h2 class="info_display" id="duration-map">Duration: </h2>
-                        </div>
-
-                        <button onclick="distanceOfTrip()" class="nice-button">Display Durations</button>   
-                        <button class="nice-button" style="background-color: black;color: white" onclick="SlideDown(panel_four_wrapper)"> Next</button>
-                        <button class="nice-button" onclick="DelaytoScroll(panel_one_wrapper)"> Change Origin? </button>
-                        <button class="nice-button" onclick="DelaytoScroll(panel_two_wrapper)"> Change Desination? </button>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- PANEL 4 -->
-            <div id="panel_four_wrapper" class="slide-wrapper hidden">
-                <div id="panel_four" class="panel panel-4 panel-large">
-                    <div class="panel-body">
-                        <div id="Gas Calculator" class="tab api-tab gas-div">
-                            
-                            <!-- Fuel Type -->
-                            <label for="gasType"> Select a gas type: </label>
-                            <select name="gasType" id="gasType">
-                                <option value=gasoline>Gasoline</option>
-                                <option value=diesel>Diesel</option>
-                                
-                            </select><br>
-
-                            <!-- Distance Input Box -->
-                           
-                            <label for="DisBox">Enter Distance Manually</label>
-                            <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()" class="gas-checkbox"><br>
-                            
-                            <label for="FuelCostBox">Enter Fuel Price Manually</label>
-                            <input type="checkbox" id="FuelCostBox" name="FuelCostBox" value="fuelcost" class="gas-checkbox"
-                                onclick="toggleFuel()"> <br>
-                            <input type="number" id="Distance" name="Distance" style="width:95%"
-                                placeholder="Distance in Mile" onblur="getDistance()"><br>
-                            <input type="number" id="FuelPrice" name="FuelPrice" style="width:95%"
-                                placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
-                            <input type="number" id="MPG" name="MPG" style="width:95%"
-                                placeholder="Vehicle Fuel Efficiency/MPG (avg is 25.4mpg)" onblur="getMPG()"><br><br>
-                            <button onclick="estimateCost()" class="nice-button"> Estimate </button>
-                            <button onclick="addFuelCost()" class="nice-button"> Add Cost </button>
-                            <button onclick="SlideDown(panel_five_wrapper)" class="nice-button" style="color: white;background-color: black">Next </button><br>
-
-                            <p id="fuelPriceDisplay"></p>
-                            <p id="fuelCost"></p>
-
+                        <h3> Trip Estimator  </h3>
+                        <h3> . . . . . . . . . . . . . . . . . . . . . . . . . . . . . </h3>
+                        </h3>
+                        <h1> Howdy! </h1>
+                        <h3>. . . . . . . . . . . . . . . . . . . . . . . . . . . . .</h3>
+                        <p> </p>
+                        <p>Select logo to begin!</p>
+                        <a href="website.html"> 
+                        <p></p>
+                        <img src="media/team13.png" alt="Team Logo 13" style="width:500px;height:500px;">
+                        </a>   
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- PANEL 5 -->
-            <div id="panel_five_wrapper" class="slide-wrapper hidden">
-                <div id="panel_hotel" class="panel panel-5 panel-large-adjustable">
-                    <div class="panel-body">
-                        <div class="hotel-reccomendation">
-                        <div id="hotel-page" class="hotel-tab">
-                        
-                        <div id="hotel-title" class="big-font">
-                            <p>Hotel Recommendation</p>
-                        </div>
-                        
-                        <!--
-                            now getting destination from the Second Panel
-                            <input type="text" id="destinationHotel" value="">
-                        -->
-                        <div id="hotel input" >
-                        <input type="number" id="guestNum" placeholder="No. of Guests" class="hotel-input"> 
-                        <input type="number" id="nightNum" placeholder="No. of Nights" class="hotel-input"><br>
-                        </div>
-                        <div id="hotel input2" > <br>
-                        <button onclick="getHotelRec()" class="nice-button">Search For Hotels...</button>
-                        <button onclick="SlideDown(panel_six_wrapper); addTaxSummary()" class="nice-button"> Confirm </button>
-                        <br>
-                        </div>
-                        <div id="container-hotel"></div>
-                        <p id="hotelCostEstimation"></p>
-                    </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- PANEL 6 -->
-            <div id="panel_six_wrapper" class="slide-wrapper hidden">
-                <div id="panel_six" class="panel panel-6 panel-large">
-                    <div class="panel-body">
-                        <h1> Restaurant Recommendations</h1>
-                        <button onclick="findNearbySearch('restaurant', destLat, destLng)" class="nice-button">Get Restaurants</button>
-                        <button onclick="SlideDown(panel_eight_wrapper)" class="nice-button"> Summary </button>
-                        <div id="big-bar-container">
-                            <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="1R-name">Name: </p> 
-                                   <p class="bar-field" id="1R-address">Adress: </p>
-                                   <p class="bar-field" id="1R-price">Price: </p>
-                                   <p class="bar-field" id="1R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="2R-name">Name: </p> 
-                                   <p class="bar-field" id="2R-address">Adress: </p>
-                                   <p class="bar-field" id="2R-price">Price: </p>
-                                   <p class="bar-field" id="2R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="3R-name">Name: </p> 
-                                   <p class="bar-field" id="3R-address">Adress: </p>
-                                   <p class="bar-field" id="3R-price">Price: </p>
-                                   <p class="bar-field" id="3R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="4R-name">Name: </p> 
-                                   <p class="bar-field" id="4R-address">Adress: </p>
-                                   <p class="bar-field" id="4R-price">Price: </p>
-                                   <p class="bar-field" id="4R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="5R-name">Name: </p> 
-                                   <p class="bar-field" id="5R-address">Adress: </p>
-                                   <p class="bar-field" id="5R-price">Price: </p>
-                                   <p class="bar-field" id="5R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="6R-name">Name: </p> 
-                                   <p class="bar-field" id="6R-address">Adress: </p>
-                                   <p class="bar-field" id="6R-price">Price: </p>
-                                   <p class="bar-field" id="6R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="7R-name">Name: </p> 
-                                   <p class="bar-field" id="7R-address">Adress: </p>
-                                   <p class="bar-field" id="7R-price">Price: </p>
-                                   <p class="bar-field" id="7R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="8R-name">Name: </p> 
-                                   <p class="bar-field" id="8R-address">Adress: </p>
-                                   <p class="bar-field" id="8R-price">Price: </p>
-                                   <p class="bar-field" id="8R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="9R-name">Name: </p> 
-                                   <p class="bar-field" id="9R-address">Adress: </p>
-                                   <p class="bar-field" id="9R-price">Price: </p>
-                                   <p class="bar-field" id="9R-rating">Rating: </p>
-                          
-                                </div>
-                              </div>
-                              <div id="bar-container">
-                                <div class="bar">
-                                   <p class="bar-header" id="10R-name">Name: </p> 
-                                   <p class="bar-field" id="10R-address">Adress: </p>
-                                   <p class="bar-field" id="10R-price">Price: </p>
-                                   <p class="bar-field" id="10R-rating">Rating: </p>
-                          
-                                </div>
-                            </div>  
-                        </div>
-                        
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 7 -->
-            <div id="panel_seven_wrapper" class="slide-wrapper hidden">
-                <div id="panel_seven" class="panel panel-7 panel-large">
-                    <div class="panel-body">
-                        <div id="summary" class="summary_class">
-                            <p> Summary:</p>
-                            <p id="summary_gas"> Gas: $0.00 </p>
-                            <p id="summary_hotel"> Hotel: $0.00 </p>
-                            <p id="summary_tax"> Est. Tax: $0.00 </p>
-                            <p id="summary_total"> Total: $0.00</p>
-                        </div>
-                        <div id="f-left" class="floating-left">
-                            <p> .</p>
-                        </div>
-                        <div id="f-right" class="floating-right">
-                            <p> . </p>
-                        </div>
-                        <button onclick="SlideDown(panel_nine_wrapper)"> Scroll Down! </button><br><br>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 8 -->
-            <div id="panel_eight_wrapper" class="slide-wrapper hidden">
-                <div id="panel_eight" class="panel panel-8 panel-large">
-                    <div class="panel-body">
-
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 9 -->
-            <div id="panel_nine_wrapper" class="slide-wrapper hidden">
-                <div id="panel_nine" class="panel panel-9 panel-large">
-                    <div class="panel-body">The ninth basic panel.
-                        <button onclick="SlideDown(panel_ten_wrapper)"> Scroll Down! </button><br><br>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 10 -->
-            <div id="panel_ten_wrapper" class="slide-wrapper hidden">
-                <div id="panel_ten" class="panel panel-10 panel-large">
-                    <div class="panel-body">The tenth basic panel.
-                        <button onclick="SlideDown(panel_eleven_wrapper)"> Scroll Down! </button><br><br>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 11 -->
-            <div id="panel_eleven_wrapper" class="slide-wrapper hidden">
-                <div id="panel_eleven" class="panel panel-11 panel-large">
-                    <div class="panel-body">The eleventh basic panel.
-                        <button onclick="SlideDown(panel_twelve_wrapper)"> Scroll Down! </button><br><br>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 12 -->
-            <div id="panel_twelve_wrapper" class="slide-wrapper hidden">
-                <div id="panel_twelve" class="panel panel-12 panel-large">
-                    <div class="panel-body">The twelth basic panel.
-
-                    </div>
-                </div>
-            </div>
-
         </div>
-    </div>
-
-
-
-
+    
 
 
 </body>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/landing.js"></script>
 
-<script type="text/javascript" src="js/yelpAPI.js"></script>
-<script type="text/javascript" src="js/fuel-price.js"></script>
-<script type="text/javascript" src="js/weather.js"></script>
-<script type="text/javascript" src="js/index_page.js"></script>
-<script type="text/javascript" src="js/leftmenu.js"></script>
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="js/hotel-rec.js"></script>
-
-
-<script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7QsA0b4O7V-LG-bq3Yg5fDUEbtBnxvpw&callback=initMap&libraries=places&v=weekly"
-      defer
-></script>
 
 </html>

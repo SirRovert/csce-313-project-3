@@ -158,7 +158,7 @@
     width:50%;
     margin-left: auto;
     margin-right: auto;
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .gas-checkbox {
@@ -206,8 +206,21 @@
     padding-top: 3rem;
 }
 
+.panel-7 {
+    background: linear-gradient(240deg, #145b70 0%, #09951e 100%);
+    color: white;
+    border-style:solid;
+    border-width: 0in;
+    border-bottom-width:0.05in;
+    border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+    text-align:center;
+    padding-top: 6rem;
+}
+
 .summary_class{
-    font-size:80px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    font-size:60px;
     background-color:rgb(212, 212, 212);
     color:black;
     border-radius:25px;
