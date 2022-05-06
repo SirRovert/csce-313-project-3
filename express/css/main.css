@@ -13,7 +13,15 @@
     
 }
 
-
+.nice-button{
+    border-style:solid;
+    border-width: 1px;
+    background-color:#f8fafa;
+    border-color: rgb(163, 163, 163);
+    border-radius: 12px;
+    border-top-left-radius:20px;
+    border-bottom-right-radius:20px;
+}
 
 
 .hidden {
@@ -71,9 +79,16 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #00ff00, #fff44f) 1;
     text-align:center;
-    padding-top: 3.5in;
-    overscroll-behavior-y:inherit;
+    padding-top: 20rem;
+   
   
+}
+
+.origin-tab {
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
 }
 
 .panel-2 {
@@ -85,7 +100,24 @@
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     height: 100%;
     text-align:center;
-    padding-top: 2in;
+    padding-top: 6rem;
+    
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
+.dest-tab {
+    width:40%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 60px;
+}
+
+.radio-checkbox {
+    border: 0px;
+    width: 2rem;
+    height: 2rem;
 }
 
 .panel-3 {
@@ -110,7 +142,7 @@
     border-bottom-width:0.05in;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
     text-align:center;
-    padding-top: 2in;
+    padding-top: 8rem;
     height: 100%;
 
 
@@ -134,8 +166,25 @@
     border-style:solid;
     border-width: 0in;
     border-bottom-width:0.05in;
+    text-align:center;
     border-image: linear-gradient(to right, #e5bdf6, #d8dede) 1;
+    padding-top: 6rem;
 }
+
+.hotel-tab{
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    
+}
+
+.hotel-input{
+    border-style:none;
+    border-radius: 10px;
+}
+
+
 
 .panel-6 {
     background: linear-gradient(240deg, #d3b50f 0%, #b45312 100%);
