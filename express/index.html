@@ -149,10 +149,13 @@
                         -->
                         <div id="hotel input" >
                         <input type="number" id="guestNum" placeholder="No. of Guests" class="hotel-input"> 
-                        <input type="number" id="nightNum" placeholder="No. of Nights" class="hotel-input">
+                        <input type="number" id="nightNum" placeholder="No. of Nights" class="hotel-input"><br>
                         </div>
-                        <button onclick="SlideDown(panel_six_wrapper); addTaxSummary()"> Scroll Down! </button><br>
-                        <button onclick="getHotelRec()" class="nice-button">Recommend!</button><br>
+                        <div id="hotel input2" > <br>
+                        <button onclick="getHotelRec()" class="nice-button">Search For Hotels...</button>
+                        <button onclick="SlideDown(panel_six_wrapper); addTaxSummary()" class="nice-button"> Confirm </button>
+                        <br>
+                        </div>
                         <div id="container-hotel"></div>
                         <p id="hotelCostEstimation"></p>
                     </div>
@@ -172,6 +175,7 @@
                             <p id="summary_gas"> Gas: $0.00 </p>
                             <p id="summary_hotel"> Hotel: $0.00 </p>
                             <p id="summary_tax"> Est. Tax: $0.00 </p>
+                            <p id="summary_total"> Total: $0.00</p>
                         </div>
                         <div id="f-left" class="floating-left">
                             <p> Insert stuff here :p</p>

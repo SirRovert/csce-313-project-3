@@ -191,7 +191,17 @@ function addTaxSummary() {
     const result = Number(numFormat).toFixed(2);
     var str = "Est. Tax: $" + result;
     var taxID = "summary_tax";
+    increasePrice(tax_price);
     document.getElementById(taxID).innerHTML = str; //update html field with new information
+    addTotalSummary();
     
-    
+}
+
+function addTotalSummary (){
+    var cost = hotel_price + gas_price + tax_price
+    const numFormat = Number(cost);
+    const result = Number(numFormat).toFixed(2);
+    var str = "Total $" + result;
+    var totalID = "summary_total";
+    document.getElementById(totalID).innerHTML = str;
 }
