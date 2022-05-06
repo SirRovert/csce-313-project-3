@@ -2,16 +2,68 @@
 // parameter when you first load the API. For example:
 // <script
 // src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places">
+
+let destPlaceID;
+let service;
+let destLng;
+let destLat;
+let originLat;
+let originLng;
+
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     mapTypeControl: false,
     center: { lat: -33.8688, lng: 151.2195 },
     zoom: 13,
   });
-  
+  service = new google.maps.places.PlacesService(map);
+
+
   new AutocompleteDirectionsHandler(map);
 }
 
+function translatePlace_ID(placeID){
+  var placeIDString = String(placeID);
+
+  const request = {
+      placeId: placeIDString,
+      fields: ['geometry']
+  }
+
+  console.log("translate function ran");
+  service.getDetails(request, (place, status) => {
+      if (
+        status === google.maps.places.PlacesServiceStatus.OK &&
+        place &&
+        place.geometry &&
+        place.geometry.location
+      ) {
+          destLat = place.geometry.location.lat();
+          destLng = place.geometry.location.lng();
+
+      }
+  });
+}
+
+function findNearbySearch(search_type, lat, lng){
+  var request = {
+    location: { lat: lat, lng: lng},
+    radius: '8000',
+    type: [search_type]
+  };
+
+  service.nearbySearch(request, callback);
+}
+
+function callback(results, status) {
+  if (status == google.maps.places.PlacesServiceStatus.OK) {
+    for (var i = 0; i < results.length; i++) {
+      console.log(results[i].name + " " + results[i].vicinity + " " + 
+      results[i].price_level + " " + results[i].rating);
+    }
+  }
+}
 
 class AutocompleteDirectionsHandler {
   map;
@@ -21,6 +73,7 @@ class AutocompleteDirectionsHandler {
   directionsService;
   directionsRenderer;
   places;
+  service;
   infoWindow;
 
   constructor(map) {
@@ -67,6 +120,8 @@ class AutocompleteDirectionsHandler {
     //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(originInput);
     //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
     //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
+
+    
   }
   // Sets a listener on a radio button to change the filter type on Places
   // Autocomplete.
@@ -78,6 +133,8 @@ class AutocompleteDirectionsHandler {
       this.route();
     });
   }
+
+
   setupPlaceChangedListener(autocomplete, mode) {
     autocomplete.bindTo("bounds", this.map);
     autocomplete.addListener("place_changed", () => {
@@ -93,11 +150,14 @@ class AutocompleteDirectionsHandler {
         console.log(place.place_id);
       } else {
         this.destinationPlaceId = place.place_id;
-        console.log(place.place_id);
+        translatePlace_ID(place.place_id);
       }
 
 
+
       this.route();
+
+      findNearbySearch('restaurant', destLat, destLng);
     });
   }
 
