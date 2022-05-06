@@ -98,11 +98,11 @@
             <!-- PANEL 4 -->
             <div id="panel_four_wrapper" class="slide-wrapper hidden">
                 <div id="panel_four" class="panel panel-4 panel-large">
-                    <div class="panel-body">The fourth basic panel.
-                        <div id="Gas Calculator" class="tab api-tab">
+                    <div class="panel-body">
+                        <div id="Gas Calculator" class="tab api-tab gas-div">
                             <h1>Fuel Estimation</h1><br>
                             <!-- Fuel Type -->
-                            <label for="gasType"> select a gas type </label>
+                            <label for="gasType"> Select a gas type: </label>
                             <select name="gasType" id="gasType">
                                 <option value=gasoline>Gasoline</option>
                                 <option value=diesel>Diesel</option>
@@ -110,9 +110,9 @@
                             </select><br>
 
                             <!-- Distance Input Box -->
-                            <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()">
+                            <input type="checkbox" id="DisBox" name="DisBox" value="dist" onclick="toggleDist()" class="gas-checkbox">
                             <label for="DisBox">Enter Distance Manually</label><br>
-                            <input type="checkbox" id="FuelCostBox" name="FuelCostBox" value="fuelcost"
+                            <input type="checkbox" id="FuelCostBox" name="FuelCostBox" value="fuelcost" class="gas-checkbox"
                                 onclick="toggleFuel()">
                             <label for="FuelCostBox">Enter Fuel Price Manually</label><br>
                             <input type="number" id="Distance" name="Distance" style="width:95%"
@@ -120,7 +120,7 @@
                             <input type="number" id="FuelPrice" name="FuelPrice" style="width:95%"
                                 placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
                             <input type="number" id="MPG" name="MPG" style="width:95%"
-                                placeholder="Miles/gal (avg is 25.4mpg)" onblur="getMPG()"><br><br>
+                                placeholder="Vehicle Fuel Efficiency/MPG (avg is 25.4mpg)" onblur="getMPG()"><br><br>
                             <button onclick="estimateCost()"> Estimate! </button>
                             <button onclick="addFuelCost()"> Add Cost! </button>
                             <button onclick="SlideDown(panel_five_wrapper)"> Scroll Down! </button><br><br>
@@ -137,6 +137,7 @@
             <div id="panel_five_wrapper" class="slide-wrapper hidden">
                 <div id="panel_hotel" class="panel panel-5 panel-large-adjustable">
                     <div class="panel-body">
+                        <div class="hotel-reccomendation">
                         <h1>Hotel Recommendation</h1>
                         <!--
                             now getting destination from the Second Panel
@@ -151,6 +152,7 @@
                     </div>
                 </div>
             </div>
+            </div>
 
             <!-- PANEL 6 -->
             <div id="panel_six_wrapper" class="slide-wrapper hidden">
@@ -163,6 +165,12 @@
                             <p id="summary_gas"> Gas: $0.00 </p>
                             <p id="summary_hotel"> Hotel: $0.00 </p>
                             <p id="summary_tax"> Est. Tax: $0.00 </p>
+                        </div>
+                        <div id="f-left" class="floating-left">
+                            <p> Insert stuff here :p</p>
+                        </div>
+                        <div id="f-right" class="floating-right">
+                            <p> And here too. </p>
                         </div>
                     </div>
                 </div>
