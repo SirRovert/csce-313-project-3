@@ -54,6 +54,7 @@ function findNearbySearch(search_type, lat, lng){
   };
 
   service.nearbySearch(request, callback);
+  console.log("query ran")
 }
 
 function callback(results, status) {
@@ -121,6 +122,7 @@ class AutocompleteDirectionsHandler {
     //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(destinationInput);
     //this.map.controls[google.maps.ControlPosition.TOP_LEFT].push(modeSelector);
 
+
     
   }
   // Sets a listener on a radio button to change the filter type on Places
@@ -157,7 +159,6 @@ class AutocompleteDirectionsHandler {
 
       this.route();
 
-      findNearbySearch('restaurant', destLat, destLng);
     });
   }
 
