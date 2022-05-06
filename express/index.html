@@ -26,7 +26,7 @@
             <div id="panel_one_wrapper" class="slide-wrapper">
                 <div id="panel_one" class="panel panel-default panel-1 panel-large">
                     <div class="panel-body">
-                        <button onclick="SlideDown(panel_seven_wrapper)"> Scroll Down! </button><br><br>
+                        <button onclick="SlideDown(panel_six_wrapper)"> Scroll Down! </button><br><br>
                         <div id="orig-inputs" class="origin-tab">
                          <p>Where are you going from?</p> 
                         
@@ -110,9 +110,6 @@
                 <div id="panel_four" class="panel panel-4 panel-large">
                     <div class="panel-body">
                         <div id="Gas Calculator" class="tab api-tab gas-div">
-                            <div id="fuel title" class="fuel-heading">
-                                <p>Fuel Estimation</p>
-                            </div>
                             
                             <!-- Fuel Type -->
                             <label for="gasType"> Select a gas type: </label>
@@ -136,9 +133,9 @@
                                 placeholder="Fuel Price Per Gallon" onblur="getGasPrice()"><br>
                             <input type="number" id="MPG" name="MPG" style="width:95%"
                                 placeholder="Vehicle Fuel Efficiency/MPG (avg is 25.4mpg)" onblur="getMPG()"><br><br>
-                            <button onclick="estimateCost()" class="nice-button"> Estimate! </button>
-                            <button onclick="addFuelCost()" class="nice-button"> Add Cost! </button>
-                            <button onclick="SlideDown(panel_five_wrapper)" class="nice-button"> Scroll Down! </button><br>
+                            <button onclick="estimateCost()" class="nice-button"> Estimate </button>
+                            <button onclick="addFuelCost()" class="nice-button"> Add Cost </button>
+                            <button onclick="SlideDown(panel_five_wrapper)" class="nice-button" style="color: white;background-color: black">Next </button><br>
 
                             <p id="fuelPriceDisplay"></p>
                             <p id="fuelCost"></p>
@@ -184,8 +181,111 @@
             <div id="panel_six_wrapper" class="slide-wrapper hidden">
                 <div id="panel_six" class="panel panel-6 panel-large">
                     <div class="panel-body">
+                        <h1> Restaurant Recommendations</h1>
+                        <button onclick="findNearbySearch('restaurant', destLat, destLng)" class="nice-button">Get Restaurants</button>
+                        <button onclick="SlideDown(panel_eight_wrapper)" class="nice-button"> Summary </button>
+                        <div id="big-bar-container">
+                            <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="1R-name">Name: </p> 
+                                   <p class="bar-field" id="1R-address">Adress: </p>
+                                   <p class="bar-field" id="1R-price">Price: </p>
+                                   <p class="bar-field" id="1R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="2R-name">Name: </p> 
+                                   <p class="bar-field" id="2R-address">Adress: </p>
+                                   <p class="bar-field" id="2R-price">Price: </p>
+                                   <p class="bar-field" id="2R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="3R-name">Name: </p> 
+                                   <p class="bar-field" id="3R-address">Adress: </p>
+                                   <p class="bar-field" id="3R-price">Price: </p>
+                                   <p class="bar-field" id="3R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="4R-name">Name: </p> 
+                                   <p class="bar-field" id="4R-address">Adress: </p>
+                                   <p class="bar-field" id="4R-price">Price: </p>
+                                   <p class="bar-field" id="4R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="5R-name">Name: </p> 
+                                   <p class="bar-field" id="5R-address">Adress: </p>
+                                   <p class="bar-field" id="5R-price">Price: </p>
+                                   <p class="bar-field" id="5R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="6R-name">Name: </p> 
+                                   <p class="bar-field" id="6R-address">Adress: </p>
+                                   <p class="bar-field" id="6R-price">Price: </p>
+                                   <p class="bar-field" id="6R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="7R-name">Name: </p> 
+                                   <p class="bar-field" id="7R-address">Adress: </p>
+                                   <p class="bar-field" id="7R-price">Price: </p>
+                                   <p class="bar-field" id="7R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="8R-name">Name: </p> 
+                                   <p class="bar-field" id="8R-address">Adress: </p>
+                                   <p class="bar-field" id="8R-price">Price: </p>
+                                   <p class="bar-field" id="8R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="9R-name">Name: </p> 
+                                   <p class="bar-field" id="9R-address">Adress: </p>
+                                   <p class="bar-field" id="9R-price">Price: </p>
+                                   <p class="bar-field" id="9R-rating">Rating: </p>
+                          
+                                </div>
+                              </div>
+                              <div id="bar-container">
+                                <div class="bar">
+                                   <p class="bar-header" id="10R-name">Name: </p> 
+                                   <p class="bar-field" id="10R-address">Adress: </p>
+                                   <p class="bar-field" id="10R-price">Price: </p>
+                                   <p class="bar-field" id="10R-rating">Rating: </p>
+                          
+                                </div>
+                            </div>  
+                        </div>
                         
 
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 7 -->
+            <div id="panel_seven_wrapper" class="slide-wrapper hidden">
+                <div id="panel_seven" class="panel panel-7 panel-large">
+                    <div class="panel-body">
                         <div id="summary" class="summary_class">
                             <p> Summary:</p>
                             <p id="summary_gas"> Gas: $0.00 </p>
@@ -199,108 +299,7 @@
                         <div id="f-right" class="floating-right">
                             <p> . </p>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PANEL 7 -->
-            <div id="panel_seven_wrapper" class="slide-wrapper hidden">
-                <div id="panel_seven" class="panel panel-7 panel-large">
-                    <div class="panel-body">The seventh basic panel.
-                        <h1> Restaurants recommendations</h1>
-                        <button onclick="findNearbySearch('restaurant', destLat, destLng)" class="nice-button">Get Restaurants</button>
-
-                        <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="1R-name">Name: </p> 
-                               <p class="bar-field" id="1R-address">Adress: </p>
-                               <p class="bar-field" id="1R-price">Price: </p>
-                               <p class="bar-field" id="1R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="2R-name">Name: </p> 
-                               <p class="bar-field" id="2R-address">Adress: </p>
-                               <p class="bar-field" id="2R-price">Price: </p>
-                               <p class="bar-field" id="2R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="3R-name">Name: </p> 
-                               <p class="bar-field" id="3R-address">Adress: </p>
-                               <p class="bar-field" id="3R-price">Price: </p>
-                               <p class="bar-field" id="3R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="4R-name">Name: </p> 
-                               <p class="bar-field" id="4R-address">Adress: </p>
-                               <p class="bar-field" id="4R-price">Price: </p>
-                               <p class="bar-field" id="4R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="5R-name">Name: </p> 
-                               <p class="bar-field" id="5R-address">Adress: </p>
-                               <p class="bar-field" id="5R-price">Price: </p>
-                               <p class="bar-field" id="5R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="6R-name">Name: </p> 
-                               <p class="bar-field" id="6R-address">Adress: </p>
-                               <p class="bar-field" id="6R-price">Price: </p>
-                               <p class="bar-field" id="6R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="7R-name">Name: </p> 
-                               <p class="bar-field" id="7R-address">Adress: </p>
-                               <p class="bar-field" id="7R-price">Price: </p>
-                               <p class="bar-field" id="7R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="8R-name">Name: </p> 
-                               <p class="bar-field" id="8R-address">Adress: </p>
-                               <p class="bar-field" id="8R-price">Price: </p>
-                               <p class="bar-field" id="8R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="9R-name">Name: </p> 
-                               <p class="bar-field" id="9R-address">Adress: </p>
-                               <p class="bar-field" id="9R-price">Price: </p>
-                               <p class="bar-field" id="9R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                          <div id="bar-container">
-                            <div class="bar">
-                               <p class="bar-header" id="10R-name">Name: </p> 
-                               <p class="bar-field" id="10R-address">Adress: </p>
-                               <p class="bar-field" id="10R-price">Price: </p>
-                               <p class="bar-field" id="10R-rating">Rating: </p>
-                      
-                            </div>
-                          </div>
-                        <button onclick="SlideDown(panel_eight_wrapper)"> Scroll Down! </button><br><br>
+                        <button onclick="SlideDown(panel_nine_wrapper)"> Scroll Down! </button><br><br>
                     </div>
                 </div>
             </div>
@@ -308,8 +307,8 @@
             <!-- PANEL 8 -->
             <div id="panel_eight_wrapper" class="slide-wrapper hidden">
                 <div id="panel_eight" class="panel panel-8 panel-large">
-                    <div class="panel-body">The eighth basic panel.
-                        <button onclick="SlideDown(panel_nine_wrapper)"> Scroll Down! </button><br><br>
+                    <div class="panel-body">
+
                     </div>
                 </div>
             </div>

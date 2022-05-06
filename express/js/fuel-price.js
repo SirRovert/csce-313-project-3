@@ -8,10 +8,10 @@ const fuelBox = document.getElementById("FuelPrice");
 
 // DISTANCE FOR JOSH :D
 function getDistance() {
-    const val = document.getElementById('Distance').value;
-    console.log(val);
-    return val;
-}
+    //const val = document.getElementById('Distance').value;
+    console.log(distance);
+    return distance;
+} 
 
 function getGasPrice() {
     const val = document.getElementById('FuelPrice').value;
@@ -71,9 +71,7 @@ function estimateCost() {
     // TODO: get distance calculated form point A to B from Josh
     // If not checked, get distance from the map
     
-    dis = 100;
-    var offset = getRandDist(-15, 15);
-    dis += offset;
+    dis = distance;
 
   } else if (document.getElementById('DisBox').checked) {
     dis = getDistance();
@@ -226,9 +224,8 @@ function displayFuelPrice(data, type) {
   // DISTANCE FOR JOSH :D
   // incase the distance input is invalid
   if (localDist == null || localDist == "") {
-    localDist = 100;
-    var offset = getRandDist(-15, 15);
-    localDist += offset;
+    localDist = distance;
+    
   }
   console.log("TEST: " + localDist + " " + localMPG);
 

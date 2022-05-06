@@ -108,3 +108,7 @@ body {
   margin: 10px; 
 }
 
+#big-bar-container {
+  align-items: center;
+}
+
